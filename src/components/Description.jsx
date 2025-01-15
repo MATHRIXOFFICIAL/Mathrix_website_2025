@@ -1,18 +1,19 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import Image from "next/image";
 import "./desc.css";
 
 export default function Description() {
-  const Background = "/images/bk.gif";
+  const Background = "/images/bk.gif"; // Ensure this is a static path in the 'public' directory
   const container = useRef();
   const contentRef = useRef(null);
   const h2Ref = useRef(null);
-  const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {
-    setIsClient(true); // Ensure animations only run on the client
-  }, []);
+  // Framer Motion scroll progress
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start start", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
 
   useEffect(() => {
     if (typeof window !== "undefined" && h2Ref.current) {
@@ -24,31 +25,19 @@ export default function Description() {
         },
         { threshold: 0.5 }
       );
-
       observer.observe(h2Ref.current);
 
       return () => observer.disconnect();
     }
   }, []);
 
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start start", "end start"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
-
-  if (!isClient) return null; // Prevent server-side render mismatches
-
   return (
     <div className="h-screen overflow-hidden relative" ref={container}>
       <motion.div style={{ y }} className="absolute inset-0">
-        <Image
+        <img
           src={Background}
           alt="Background"
-          layout="fill"
-          objectFit="cover"
-          priority
+          className="w-full h-full object-cover"
         />
       </motion.div>
 
@@ -76,9 +65,7 @@ export default function Description() {
             <p
               className={`text-[2.5vw] uppercase text-left max-w-[80vw] leading-none typing-animation`}
             >
-              From solving complex equations to exploring cutting-edge
-              technologies, Mathrix provides an engaging platform for learners
-              of all levels.
+              EPSILON TO INFINITY
             </p>
           </div>
         </div>

@@ -13,7 +13,8 @@
     "lenis": "^1.1.19",
     "next": "^15.1.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-icons": "^5.4.0"
   },
   "devDependencies": {
     "eslint": "^8",

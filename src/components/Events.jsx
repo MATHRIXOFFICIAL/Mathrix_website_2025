@@ -54,6 +54,13 @@ export default function Events() {
               );
             })}
           </div>
+          <div className="gif-add-on">
+            <img
+              src="/images/comp.gif"
+              alt="3D Effect Add-on"
+              className="floating-gif"
+            />
+          </div>
           <div className="buttonbuy">
             <Button />
           </div>

@@ -1,24 +1,24 @@
-'use client';
-import { useEffect } from 'react';
-import Lenis from 'lenis'
-import Intro from '@/components/Intro';
-import Description from '@/components/Description';
-import Section from '@/components/Section';
-import Events from '@/components/Events';
-import Workshop from '@/components/Workshop';
-import SectionWorkshop from '@/components/SectionWorkshop';
+"use client";
+import { useEffect } from "react";
+import Lenis from "lenis";
+import Intro from "@/components/Intro";
+import Description from "@/components/Description";
+import Section from "@/components/Section";
+import Events from "@/components/Events";
+import Workshop from "@/components/Workshop";
+import SectionWorkshop from "@/components/SectionWorkshop";
+import Footer from "@/components/Footer";
 export default function Home() {
-
-  useEffect( () => {
-    const lenis = new Lenis()
+  useEffect(() => {
+    const lenis = new Lenis();
 
     function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
 
-    requestAnimationFrame(raf)
-  }, [])
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
     <main>
@@ -28,11 +28,13 @@ export default function Home() {
       <Description />
       {/* title */}
       <Section />
-      <Events/>
+      <Events />
       {/* Workshop */}
       <SectionWorkshop />
       <Workshop />
-      <div className='h-[20vh] bg-black'></div>
+
+      <div className="h-[20vh] bg-black"></div>
+      <Footer />
     </main>
-  )
+  );
 }

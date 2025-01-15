@@ -1,11 +1,35 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import Image from "next/image";
+import "./desc.css";
 
 export default function Description() {
-  const Background = "/images/bk.gif"; // Use a GIF from assets
+  const Background = "/images/bk.gif";
   const container = useRef();
   const contentRef = useRef(null);
   const h2Ref = useRef(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Ensure animations only run on the client
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && h2Ref.current) {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            h2Ref.current.classList.add("reveal");
+          }
+        },
+        { threshold: 0.5 }
+      );
+
+      observer.observe(h2Ref.current);
+
+      return () => observer.disconnect();
+    }
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: container,
@@ -14,36 +38,17 @@ export default function Description() {
 
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          h2Ref.current.classList.add("reveal");
-        }
-      },
-      {
-        threshold: 0.5,
-      }
-    );
-
-    if (h2Ref.current) {
-      observer.observe(h2Ref.current);
-    }
-
-    return () => {
-      if (h2Ref.current) {
-        observer.unobserve(h2Ref.current);
-      }
-    };
-  }, []);
+  if (!isClient) return null; // Prevent server-side render mismatches
 
   return (
     <div className="h-screen overflow-hidden relative" ref={container}>
       <motion.div style={{ y }} className="absolute inset-0">
-        <img
+        <Image
           src={Background}
           alt="Background"
-          className="w-full h-full object-cover"
+          layout="fill"
+          objectFit="cover"
+          priority
         />
       </motion.div>
 

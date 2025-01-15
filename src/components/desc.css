@@ -1,0 +1,84 @@
+.divcont {
+  align-items: center;
+}
+
+
+
+
+
+
+.divabout
+{
+  display: grid;
+  /* background-color: aqua; */
+    grid-template-columns: 50% 50%;
+    /* column-gap: 17rem; */
+    /* margin-top: 0px; */
+    /* align-items: center; */
+    /* margin-top: 20px; */
+    /* background-color: bisque; */
+    /* width: 100%; */
+}
+
+
+
+.divpara p{
+  /* font-size: 4rem; */
+  /* color: orange; */
+}
+
+
+.head{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  gap: 1rem;
+  /* margin: 0; */
+  
+
+}
+
+
+
+
+
+
+.h2jan {
+  animation-duration: 2s;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  animation-timing-function: ease-out;
+  opacity: 0;
+  animation-name: none; 
+}
+
+.h2jan.reveal {
+  animation-name: slideInLeft;
+  opacity: 1;
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.h2math{
+  font-size: 4rem;
+}
+
+
+
+
+
+
+.divmath p{
+  /* color: orange; */
+}
+
+

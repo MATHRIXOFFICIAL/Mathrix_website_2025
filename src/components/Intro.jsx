@@ -1,5 +1,12 @@
 import React, { useRef, useEffect, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaGithub,
+} from "react-icons/fa";
 
 export default function Intro() {
   const Background = "/images/math.mp4"; // Corrected path for the video
@@ -10,6 +17,11 @@ export default function Intro() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen((prev) => !prev); // Toggle menu open/close
+  };
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -19,7 +31,7 @@ export default function Intro() {
   });
 
   useEffect(() => {
-    const countdownDate = new Date("2025-03-01T00:00:00").getTime(); // Countdown date
+    const countdownDate = new Date("2025-03-28 00:00:00").getTime(); // Countdown date
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -57,6 +69,46 @@ export default function Intro() {
           Your browser does not support the video tag.
         </video>
       </motion.div>
+
+      {/* Sidebar Menu */}
+      <div className={`sidebar ${menuOpen ? "open" : ""}`}>
+        <button className="close-btn" onClick={toggleMenu}>
+          Close
+        </button>
+        <ul className="menu-links">
+          <li>
+            <a href="#events">Events</a>
+          </li>
+          <li>
+            <a href="#workshops">Workshops</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div className="social-links">
+          <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <FaFacebook />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noreferrer">
+            <FaTwitter />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <FaInstagram />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://github.com" target="_blank" rel="noreferrer">
+            <FaGithub />
+          </a>
+        </div>
+      </div>
+
+      {/* Menu Toggle Button */}
+      <button className="menu-btn" onClick={toggleMenu}>
+        Menu
+      </button>
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
         <div className="typing-text-container">

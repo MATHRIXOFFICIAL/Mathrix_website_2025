@@ -3,7 +3,7 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import "./desc.css";
 
 export default function Description() {
-  const Background = "/images/bk.gif"; // Ensure this is a static path in the 'public' directory
+  const Background = "/images/lap.mp4"; // Ensure this is a static path in the 'public' directory
   const container = useRef();
   const contentRef = useRef(null);
   const h2Ref = useRef(null);

@@ -1,0 +1,247 @@
+.fulldiv{
+ max-width: 100%;
+ /* background-color: tan; */
+ padding-top: 20px;
+ display: flex;
+ align-items: center;
+ align-items: center;
+ justify-content:center ;
+ margin-top: 80px;
+}
+
+.topcont{
+ display: flex;
+ /* background-color: blue; */
+ max-width: 1400px;
+ align-items: center;
+ justify-content: space-evenly;
+ gap: 20px;
+
+
+}
+
+.left{
+ width: 50%;
+}
+
+
+.left h1{
+ font-size: 96px;
+ margin-bottom: 10px;
+} 
+
+.left h3{
+ margin-top: 0px;
+ font-size: 72px;
+ margin-bottom: 10px;
+}
+
+.left p{
+ margin-top: 0px;
+ font-size: 24px;
+}
+
+.right{
+ width :50%;
+}
+
+
+.imgdiv{
+ width: 500px;
+ height: 400px;
+ /* background-color: aqua; */
+}
+
+.right img {
+  /* position: relative;  */
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+
+}
+
+.workshopsecond
+{
+ /* background-color: antiquewhite; */
+ padding: 20px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.workshoppass
+{
+ background-color: aqua;
+ /* padding: 20px; */
+ /* max-width: 1400px !important; */
+ width: 1300px;
+ border-radius: 20px;
+}
+ 
+.workshoppass h3{
+ text-align: center;
+ font-size: 24px;
+ font-weight: bold;
+ margin-bottom: 0px;
+}
+
+.workshoppass p{
+ text-align: center;
+ font-size: 18px;
+ font-weight: bold;
+}
+
+.upcoming{
+ text-align: center ;
+ margin-top: 30px;
+ margin-bottom: 30px;
+}
+
+.workshopcardcont{
+ /* background-color: black; */
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+
+
+.cardinside
+{
+ /* max-width: 1300px !important; */
+ width: 1200px;
+ /* background-color: aqua; */
+ padding: 10px;
+ display: grid;
+ place-items: center;
+ row-gap: 40px;
+ grid-template-columns: repeat(3,1fr);
+
+}
+
+
+/* From Uiverse.io by Novaxlo */ 
+.card {
+  width: 340px;
+  height: 510px;
+  background: lightgrey;
+  border-radius: 20px;
+  box-shadow: -4px 4px 0px 5px rgb(50, 50, 50, 0.2);
+  border: solid 2px white;
+  overflow: hidden;
+  position: relative;
+  /* transition: all 0.5s ease; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+   transition: margin-top 0.3s ease-in-out;
+}
+
+.card:hover{
+  margin-top: -20px;
+
+}
+
+
+
+
+
+#cardtop {
+  width: 100%;
+  height: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease;
+  color: #fc6969;
+}
+
+
+
+#cardbottom {
+  width: 100%;
+  height: 100%;
+  border-end-start-radius: 20px;
+  border-end-end-radius: 20px;
+  background-color: white;
+  font-weight: 500;
+  font-size: 20px;
+  /* padding: 10px; */
+  color: #fc6969;
+  /* margin-bottom: 20px; */
+}
+
+
+
+#cardbottomtitle   {
+ margin-top: 20px !important;
+  margin-bottom: 10px;
+  /* color: black; */
+  text-align: center;
+}
+
+
+.registerdiv{
+ /* background-color: black; */
+ /* margin-top: 10px !important; */
+ padding-top: 1px;
+ padding-bottom: 1px;
+
+
+}
+
+
+
+
+
+#cardnewfilter {
+  width: 115px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #fc6969;
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  font-weight: 500;
+}
+
+
+
+.divbutt{
+ margin-top: 10px;
+ display: flex;
+ align-items: center;
+ justify-content:center;
+ gap: 50px;
+ /* margin-bottom: 10px; */
+}
+
+.divbutt button{
+  width: 110px;
+  
+  padding: 9px;
+  outline: none;
+  background-color: yellow;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+}
+
+.divbutt button:hover{
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+

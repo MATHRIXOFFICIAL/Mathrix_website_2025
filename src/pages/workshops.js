@@ -129,23 +129,15 @@ export default function Intro() {
       <div className='workshopcardcont'>
         <div className='cardinside'>
           {Data.map((item, key) => (
-            <div className='card' key={key}>
-              <div id='cardnewfilter'>
-                <p>WORKSHOP</p>
+            <div class='card' key={key}>
+              <div className='worktag'>WORKSHOP</div>
+              <div class='image'>
+                <img src='/images/1.jpg' alt='' />
               </div>
-              <div id='cardbrightfilter'></div>
-              <div id='cardtop'>
-                <img src={item.img} alt={item.name} />{' '}
-              </div>
-              <div id='cardbottom'>
-                <div className="registerdiv">
-
-                <p id='cardbottomtitle'>Register</p>
-                </div>
-                <div className='divbutt'>
-                  <button className='btn'>View Details</button>
-                  <button className='btn'>Register</button>
-                </div>
+              <p className='title'>Register</p>
+              <div class='divbutt'>
+                <button>View Details</button>
+                <button>Register</button>
               </div>
             </div>
           ))}

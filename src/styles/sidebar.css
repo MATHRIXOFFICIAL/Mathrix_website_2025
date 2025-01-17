@@ -1,0 +1,124 @@
+.sidebar {
+  position: fixed;
+  z-index: 50;
+  top: 1.5rem;
+  left: -1rem;
+  background-color: rgba(31, 41, 55, 0.75);
+  width: 120px;
+  height: 40px;
+  background-color: #7873f5;
+  border-radius: 25px;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out; 
+ 
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  width: 480px ; 
+  height: 650px ; 
+}
+
+.sidebar .menu-links,
+.sidebar .social-links {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out ;
+  transition-delay: 0.3s; /* Delays the opacity transition until the sidebar is fully expanded */
+}
+
+.sidebar.open .menu-links,
+.sidebar.open .social-links {
+  opacity: 1;
+}
+
+.sidebar .menu-links {
+  text-align: center;
+  margin-top: 20%;
+}
+
+.sidebar .menu-links li {
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.sidebar .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.sidebar .social-links a {
+  font-size: 2rem;
+  color: white;
+}
+
+.typing-text-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 80px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  -webkit-background-clip: text;
+  animation: typing 4s steps(12) infinite, blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.but{
+  /* background-color: black; */
+  position: fixed;
+  /* left: 10px; */
+  color: black ;
+   width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  /* padding: 20px; */
+   font-size: 24px;
+   z-index: 60;
+   transition: background-color 0.3s ease-in-out; 
+}
+
+/* Menu Button */
+
+
+
+
+/* Countdown styles */
+.countdown-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.countdown-container div {
+  text-align: center;
+}
+
+.countdown-container p {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.countdown-container span {
+  font-size: 1.25rem;
+}

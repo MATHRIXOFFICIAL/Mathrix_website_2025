@@ -73,6 +73,7 @@
   background-color: #4299e1;
   color: #fff;
   font-size: 0.75rem;
+  /* padding: 2px 6px; */
   margin-top: 2px;
   padding: 7px;
   border-radius: 4px;
@@ -100,8 +101,8 @@
 }
 
 .power-icon {
-  width: 16px;
-  height: 16px;
+  width: 5px;
+  height: 5px;
   margin-right: 6px;
   border: 2px solid #a0aec0;
   border-radius: 50%;

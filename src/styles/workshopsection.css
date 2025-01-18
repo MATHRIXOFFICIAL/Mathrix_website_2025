@@ -166,7 +166,14 @@
   border: 1px solid transparent;
   overflow: hidden; 
   border: 4px solid yellow;
+    transition: margin-top 0.3s ease; 
+  /* transition: margin-top 0.3 ease-in; */
 }
+
+.card:hover{
+  margin-top: -20px;
+}
+
 
 .worktag {
   position: absolute; 

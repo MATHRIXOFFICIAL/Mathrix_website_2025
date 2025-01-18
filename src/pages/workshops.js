@@ -124,7 +124,7 @@ export default function Intro() {
         </div>
       </div>
 
-      <h1 className='upcoming'>Upcoming Events</h1>
+      <h1 className='upcoming'>Upcoming Workshop</h1>
 
       <div className='workshopcardcont'>
         <div className='cardinside'>

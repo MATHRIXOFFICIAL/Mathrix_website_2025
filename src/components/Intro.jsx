@@ -101,6 +101,9 @@ export default function Intro() {
             <Link href='/workshops'>Workshops</Link>
           </li>
           <li>
+            <Link href='/schedule'>Schedule</Link>
+          </li>
+          <li>
             <Link href='/contact'>Contact</Link>
           </li>
         </ul>

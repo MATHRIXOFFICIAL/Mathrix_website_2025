@@ -47,6 +47,10 @@ export default function Intro() {
           <li>
             <Link href='/events'>Events</Link>
           </li>
+
+          <li>
+            <Link href='/schedule'>Schedule</Link>
+          </li>
           <li>
             <Link href='/workshops'>Workshops</Link>
           </li>

@@ -48,6 +48,10 @@ export default function Intro() {
           <li>
             <Link href='/events'>Events</Link>
           </li>
+
+          <li>
+            <Link href='/schedule'>Schedule</Link>
+          </li>
           <li>
             <Link href='/workshops'>Workshops</Link>
           </li>
@@ -119,52 +123,44 @@ export default function Intro() {
 
       <div className='workshopcardcont'>
         <div className='cardinside'>
-          {
-            Data.map((items,key)=>{
-              return (
-                <div className='tech-card-container' key={key}>
-                  <div className='tech-card'>
-                    <div className='monitor-frame'>
-                      <div className='monitor-buttons'>
-                        <div className='monitor-button red'></div>
-                        <div className='monitor-button yellow'></div>
-                        <div className='monitor-button green'></div>
-                      </div>
-                    </div>
-                    <img
-                      src='/images/1.jpg'
-                      alt='React'
-                      className='card-image'
-                    />
-                    <div className='card-content'>
-                      <div className='card-header'>
-                        <h2 className='card-title'>Registration Fee</h2>
-                        <span className='card-category'>View Details</span>
-                      </div>
-                     
-                    </div>
-                    <div className='card-footer'>
-                      <div className='tech-label'>
-                        <div className='power-icon'></div>
-                        Tech
-                      </div>
-                      <a
-                        href='https://reactjs.org/'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                        className='learn-more-btn'
-                      >
-                        Buy Tickets
-                      </a>
+          {Data.map((items, key) => {
+            return (
+              <div className='tech-card-container' key={key}>
+                <div className='tech-card'>
+                  <div className='monitor-frame'>
+                    <div className='monitor-buttons'>
+                      <div className='monitor-button red'></div>
+                      <div className='monitor-button yellow'></div>
+                      <div className='monitor-button green'></div>
                     </div>
                   </div>
-                  <div className='monitor-stand'></div>
-                  <div className='monitor-base'></div>
+                  <img src='/images/1.jpg' alt='React' className='card-image' />
+                  <div className='card-content'>
+                    <div className='card-header'>
+                      <h2 className='card-title'>Registration Fee</h2>
+                      <span className='card-category'>View Details</span>
+                    </div>
+                  </div>
+                  <div className='card-footer'>
+                    <div className='tech-label'>
+                      <div className='power-icon'></div>
+                      Tech
+                    </div>
+                    <a
+                      href='https://reactjs.org/'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='learn-more-btn'
+                    >
+                      Buy Tickets
+                    </a>
+                  </div>
                 </div>
-              )
-            })
-          }
-         
+                <div className='monitor-stand'></div>
+                <div className='monitor-base'></div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </div>

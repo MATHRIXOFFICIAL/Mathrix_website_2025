@@ -41,32 +41,39 @@ export default function Description() {
         />
       </motion.div>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-        <div className="head">
-          <h2 className="h2jan mx-10 my-20 animated-gradient" ref={h2Ref}>
+      <div className="absolute inset-0 flex md:flex-row flex-col-reverse  items-center justify-center text-center">
+        <div className="md:w-3/5 md:h-1/2 w-full h-auto">
+          <h2 className="h2jan px-10 py-20 animated-gradient" ref={h2Ref}>
             March 28 to March 29
           </h2>
-          <h2 className="h2math animated-gradient">About Mathrix</h2>
-        </div>
-
-        <div
-          className="flex relative overflow-hidden divcont mx-5 mb-5 divabout"
-          ref={contentRef}
-        >
           <div className="divpara">
-            <p className="fade-in">
+            <p className="fade-in px-10 -mt-5 text-sm md:text-base">
               Mathrix is an annual mathematics and technology event designed to
               inspire and educate the next generation of innovators and
               thinkers. Experience hands-on workshops, insightful lectures, and
-              exciting competitions.
+              exciting competitions. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
             </p>
           </div>
-          <div className="divmath">
-            <p
-              className={`text-[2.5vw] uppercase text-left max-w-[80vw] leading-none typing-animation`}
-            >
-              EPSILON TO INFINITY
-            </p>
+        </div>
+        <div className="h-1/2 md:w-2/5 sm:w-2/3 h-auto flex flex-wrap items-center pl-5">
+          <div>
+            <h2 className="h2math animated-gradient text-left">
+              About Mathrix
+            </h2>
+            <div className="divpara mt-5">
+              <p
+                className={`text-[2.5vw] uppercase text-left max-w-[80vw] leading-none typing-animation`}
+              >
+                EPSILON TO INFINITY
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -109,15 +116,21 @@ export default function Description() {
           white-space: nowrap;
           overflow: hidden;
           border-right: 2px solid rgba(255, 255, 255, 0.75);
-          animation: typing 4s steps(40, end), blink 0.5s step-end infinite;
+          animation: typing 4s steps(40, end) infinite, blink 0.5s step-end infinite;
         }
 
         @keyframes typing {
-          from {
+          0% {
             width: 0;
           }
-          to {
-            width: 100%;
+          50% {
+            width: 100%; /* Fully typed */
+          }
+          85% {
+            width: 100%; /* Hold fully typed state */
+          }
+          100% {
+            width: 0; /* Reset to hidden */
           }
         }
 

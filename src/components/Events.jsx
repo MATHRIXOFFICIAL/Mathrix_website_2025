@@ -33,7 +33,7 @@ export default function Events() {
   return (
     <>
       <div className="flex my-5 relative" ref={contentRef}>
-        <div className="divevents">
+        <div className="divevents w-full pr-5">
           <h2 ref={h2Ref} className="text-center text-4xl font-bold mb-8">
             Upcoming Events
           </h2>
@@ -54,13 +54,13 @@ export default function Events() {
               );
             })}
           </div>
-          <div className="gif-add-on">
+          {/* <div className="gif-add-on">
             <img
               src="/images/comp.gif"
               alt="3D Effect Add-on"
               className="floating-gif"
             />
-          </div>
+          </div> */}
           <div className="buttonbuy">
             <Button />
           </div>

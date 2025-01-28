@@ -5,8 +5,9 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedin,
-  FaGithub,
+  FaGithub
 } from 'react-icons/fa'
+import { IoMdCloseCircle } from "react-icons/io";
 import Link from 'next/link'
 import '../styles/sidebar.css' // Ensure the path to CSS is correct
 
@@ -71,8 +72,8 @@ export default function Intro() {
 
   return (
     <div className='h-screen overflow-hidden relative' ref={container}>
-      <motion.div style={{ y }} className='absolute inset-0'>
-        <video
+      <motion.div style={{ y }} className='absolute inset-0 bg-red-400'>
+        {/* <video
           className='w-full h-full object-cover'
           autoPlay
           muted
@@ -81,18 +82,18 @@ export default function Intro() {
         >
           <source src={Background} type='video/mp4' />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </motion.div>
 
+        <button onClick={toggleMenu} aria-label='Toggle menu' className={`but mt-6 ${menuOpen ? '' : 'hover:-translate-x-4'}`}>
+          {menuOpen ? <div className="flex justify-end mr-7 text-xl"><IoMdCloseCircle /></div> : 'Menu'}
+        </button>
       <motion.div
-        className={`sidebar   ${menuOpen ? 'open' : ''}`}
+        className={`sidebar  ${menuOpen ? 'open' : ''}`}
         variants={variants}
         animate={menuOpen ? 'open' : 'close'}
         initial='close'
       >
-        <button onClick={toggleMenu} aria-label='Toggle menu' className='but'>
-          {menuOpen ? 'Close' : 'Menu'}
-        </button>
         <ul className='menu-links'>
           <li>
             <Link href='/events'>Events</Link>

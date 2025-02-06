@@ -46,6 +46,12 @@ module.exports = {
         trail: "trail 1s ease-in-out",
         opacity: "opacity 1s ease-in-out",
       },
+      colors: {
+        "red-500": "#EB5160",
+        "purple-500": "#8F3985",
+        "green-500": "#8DAA91",
+        "blue-500": "#888DA7",
+      },
     },
   },
   plugins: [],

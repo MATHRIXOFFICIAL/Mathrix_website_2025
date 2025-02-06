@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaRegClock } from 'react-icons/fa6'
-import { IoLocationOutline } from 'react-icons/io5'
+import Timeline from "../components/Timeline"
 import {
   FaFacebook,
   FaTwitter,
@@ -35,68 +34,7 @@ const timelineVariants = {
   }),
 }
 
-const events = [
-  {
-    date: '11 March 2020',
-    title: 'Our company starts its operations',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
-    time: '2PM',
-  },
-  {
-    date: '11 March 2020',
-    title: 'Our company starts its operations',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
-    time: '2PM',
-  },
 
-  {
-    date: '11 March 2020',
-    title: 'Our company starts its operations',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
-    time: '2PM',
-  },
-
-  {
-    date: '11 March 2020',
-    title: 'Our company starts its operations',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
-    time: '2PM',
-  },
-
-  {
-    date: '11 March 2020',
-    title: 'Our company starts its operations',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
-    time: '2PM',
-  },
-
-  {
-    date: '11 March 2020',
-    title: 'Our company starts its operations',
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
-    time: '2PM',
-  },
-  {
-    date: '19 March 2020',
-    title: 'First customer',
-    description: 'Quisque ornare dui nibh, sagittis egestas nisi luctus nec...',
-    time: '2PM',
-  },
-  {
-    date: '24 June 2020',
-    title: 'Our team exceeds 10 people',
-    description:
-      'Orci varius natoque penatibus et magnis dis parturient montes...',
-    time: '2PM',
-  },
-  {
-    date: '15 October 2020',
-    title: 'Earned the first million $!',
-    description:
-      'Nulla ac tellus convallis, pulvinar nulla ac, fermentum diam...',
-    time: '2PM',
-  },
-]
 
 export default function Intro() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -176,46 +114,13 @@ export default function Intro() {
             <h2 className='scheduletitle'>Schedule For MATHRIX'25</h2>
           </div>
 
-          <div className='container py-5'>
-            <div className='row'>
-              <div className='col-md-12'>
-                <div id='content'>
-                  <ul className='timeline-1 text-black'>
-                    {events.map((event, index) => (
-                      <motion.li
-                        key={index}
-                        className='event'
-                        // span={FaRegClock}
+          <div className="scheduletimeline">  
+            <Timeline />
 
-                        data-date={event.date}
-                        variants={timelineVariants}
-                        initial='hidden'
-                        whileInView='visible'
-                        viewport={{ once: true }}
-                        custom={index}
-                      >
-                        <h4 className='mb-3'>{event.title}</h4>
-                        <p>{event.description}</p>
-
-                        <div className='clock'>
-                          <div className='clockinside'>
-                            <FaRegClock />
-                            <span>{event.time}</span>
-                          </div>
-                          <div className='clockinside'>
-                            <IoLocationOutline />
-                            <span>Location</span>
-                          </div>
-                        </div>
-
-                        <div></div>
-                      </motion.li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+            
           </div>
+
+         
         </div>
       </div>
     </div>

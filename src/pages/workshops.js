@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import {
@@ -130,21 +131,24 @@ export default function Intro() {
 
       <h1 className='upcoming'>Upcoming Workshop</h1>
 
-      <div className='workshopcardcont'>
-        <div className='cardinside'>
-          {Data.map((item, key) => (
-            <div class='card' key={key}>
-              <div className='worktag'>WORKSHOP</div>
-              <div class='image'>
-                <img src='/images/1.jpg' alt='' />
+      <div className='cardworkshop'>
+
+
+        <div className='cardworkshopinside'>
+      
+
+
+          {Data.map((item, key) => {
+            return (
+              <div class='card' key={key}>
+                <div class='content'>
+                  <h2 class='title'>{item.name}</h2>
+                  <p class='copy'>{item.description}</p>
+                  <button class='btn'>Book Tickets</button>
+                </div>
               </div>
-              <p className='title'>Register</p>
-              <div class='divbutt'>
-                <button>View Details</button>
-                <button>Register</button>
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </div>

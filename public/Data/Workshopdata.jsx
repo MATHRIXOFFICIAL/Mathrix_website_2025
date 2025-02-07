@@ -4,7 +4,7 @@ const workshopData = [
     name: 'Workshop one',
     img: '../../public/images/2.jpg',
     description:
-      'This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf',
+      'This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff he description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff',
   },
   {
     id: 2,

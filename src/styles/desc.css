@@ -1,0 +1,115 @@
+/* Background Overlay */
+.bg-overlay {
+  filter: blur(8px); /* Increased blur effect */
+  opacity: 0.85; /* Slight transparency */
+}
+
+/* Glassmorphism Effect */
+.glass-box {
+  background: rgba(255, 255, 255, 0.15); /* More subtle white transparency */
+  backdrop-filter: blur(12px); /* Increased blur effect */
+  border-radius: 20px;
+  padding: 40px;
+  width: 70%;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(31, 38, 135, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  animation: fadeInScale 1.5s ease-in-out;
+}
+
+/* Fade In Scale Effect */
+@keyframes fadeInScale {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Text Colors */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #a56eff; /* Lavender shade */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Letter Drop Animation */
+.drop-bounce-text {
+  display: flex;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #d4a3ff; /* Light purple */
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+.drop-letter {
+  display: inline-block;
+  margin: 0 3px;
+}
+
+/* Description Text */
+.about-description {
+  font-size: 1.3rem;
+  color: rgba(220, 200, 255, 0.95); /* Softer purple shade */
+  margin-top: 15px;
+  opacity: 0;
+}
+
+/* Animated Gradient Text */
+.animated-gradient {
+  background: linear-gradient(45deg, #b36aff, #5a2df7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s infinite ease-in-out;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Bigger & Bolder Date */
+.event-date {
+  font-size: 3rem; /* Increased size */
+  font-weight: 800; /* Bolder */
+  color: #e1bfff; /* Softer lavender shade */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 1px rgba(186, 46, 228, 0.8); /* Glow effect */
+}
+
+/* Gradient Effect */
+.animated-gradient {
+  background: linear-gradient(45deg, #b36aff, #5a2df7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 4s infinite ease-in-out;
+}
+
+/* Smooth Gradient Animation */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

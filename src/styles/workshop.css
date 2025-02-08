@@ -7,7 +7,7 @@
 .background-overlay {
   position: absolute;
   inset: 0;
-  background: url("/images/comp1.gif") center/cover no-repeat;
+  background: url("/images/bg2.jpg") center/cover no-repeat;
   opacity: 0.6;
   z-index: -1;
   filter: blur(2px);
@@ -133,4 +133,57 @@
   100% {
     transform: translateY(0);
   }
+}
+
+.buttonbuy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.buttonbuy button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(
+    90deg,
+    #0f3a9d,
+    #0088ff
+  ); /* Blue cyber gradient */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 136, 255, 0.8); /* Neon glow effect */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add a hover effect with a glowing border */
+.buttonbuy button:hover {
+  background: linear-gradient(90deg, #005bff, #a81fd2);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 136, 255, 1); /* Stronger glow */
+}
+
+/* Add a pulsating effect */
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 136, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 136, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 136, 255, 0.8);
+  }
+}
+
+.buttonbuy button:active {
+  transform: scale(0.95);
+  animation: neonPulse 0.6s infinite alternate;
 }

@@ -2,29 +2,37 @@
   position: fixed;
   z-index: 50;
   top: 1.5rem;
-  /* left: -1rem; */
   right: -15px;
-  /* left: 0px; */
-  background-color: rgba(31, 41, 55, 0.75);
-  width: 120px;
-  height: 40px;
-  background-color: #7873f5;
+  background: rgba(
+    31,
+    41,
+    55,
+    0.85
+  ); /* Increased opacity for better visibility */
   border-radius: 25px;
-  transition: width 0.3s ease-in-out, height 0.3s ease-in-out; 
- 
+  backdrop-filter: blur(15px); /* Enhanced blur effect */
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
+  transition: all 0.4s ease-in-out; /* Smoothened transition */
 }
 
 .sidebar.open {
   transform: translateX(0);
-  width: 480px ; 
-  height: 650px ; 
+  width: 400px; /* Increased width for more content space */
+  height: 600px; /* Increased height */
+  background: rgba(
+    90,
+    85,
+    255,
+    0.95
+  ); /* Updated opacity and color for better readability */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6); /* Stronger shadow for emphasis */
 }
 
 .sidebar .menu-links,
 .sidebar .social-links {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out ;
-  transition-delay: 0.3s; /* Delays the opacity transition until the sidebar is fully expanded */
+  transition: opacity 0.6s ease-in-out; /* Longer fade-in duration */
+  transition-delay: 0.4s; /* Increased delay for smooth appearance */
 }
 
 .sidebar.open .menu-links,
@@ -34,27 +42,39 @@
 
 .sidebar .menu-links {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 10%; /* Adjusted for new sidebar height */
 }
 
 .sidebar .menu-links li {
-  font-size: 1.25rem;
-  color: white;
-  margin-bottom: 2rem;
+  font-size: 2rem; /* Larger font size for readability */
+  font-weight: bold;
+  color: #f3f4f6; /* Slightly lighter color */
+  margin-bottom: 2.5rem; /* Increased spacing */
   list-style: none;
+  transition: transform 0.4s ease-in-out; /* Smooth hover effect */
+}
+
+.sidebar .menu-links li:hover {
+  transform: scale(1.2); /* Slightly larger scale effect */
 }
 
 .sidebar .social-links {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 2.5rem; /* Increased gap */
+  margin-top: 3.5rem; /* Adjusted for layout balance */
 }
 
 .sidebar .social-links a {
-  font-size: 2rem;
+  font-size: 2.5rem; /* Larger icon size */
   text-decoration: none;
-  color: white;
+  color: #ffffff;
+  transition: transform 0.4s ease-in-out, color 0.3s ease-in-out; /* Added color transition */
+}
+
+.sidebar .social-links a:hover {
+  transform: rotate(20deg) scale(1.3); /* More dynamic hover effect */
+  color: #ff73d9; /* Accent color on hover */
 }
 
 .typing-text-container {
@@ -62,12 +82,26 @@
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 80px;
+  font-size: 95px; /* Larger text */
   font-weight: bold;
   color: transparent;
-  background: linear-gradient(45deg, #ff6ec4, #7873f5);
+  background: linear-gradient(
+    45deg,
+    #ff73d9,
+    #9083ff,
+    #5ae3ff
+  ); /* Updated gradient color */
   -webkit-background-clip: text;
-  animation: typing 4s steps(12) infinite, blink 0.5s step-end infinite;
+  animation: typing 4s steps(20) infinite, glow 2s infinite alternate; /* Adjusted animation timing */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 15px #ff73d9, 0 0 20px #9083ff;
+  }
+  to {
+    text-shadow: 0 0 30px #ff73d9, 0 0 40px #9083ff;
+  }
 }
 
 @keyframes typing {
@@ -79,40 +113,187 @@
   }
 }
 
-@keyframes blink {
+.but {
+  position: fixed;
+  right: -15px;
+  width: 140px; /* Wider button */
+  height: 60px; /* Taller button */
+  border-radius: 35px; /* Smoother corners */
+  font-size: 22px; /* Larger text */
+  background: linear-gradient(
+    45deg,
+    #9083ff,
+    #6a5acd,
+    #5ae3ff
+  ); /* Updated gradient color */
+  color: white;
+  z-index: 60;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
+
+.but:hover {
+  background: linear-gradient(
+    45deg,
+    #6a5acd,
+    #9083ff,
+    #ff73d9
+  ); /* Accent color on hover */
+  transform: scale(1.25); /* Stronger scale effect */
+}
+.sidebar {
+  position: fixed;
+  z-index: 50;
+  top: 1.5rem;
+  right: -15px;
+  background: rgba(
+    31,
+    41,
+    55,
+    0.85
+  ); /* Increased opacity for better visibility */
+  border-radius: 25px;
+  backdrop-filter: blur(15px); /* Enhanced blur effect */
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
+  transition: all 0.4s ease-in-out; /* Smoothened transition */
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  width: 400px; /* Increased width for more content space */
+  height: 600px; /* Increased height */
+  background: rgba(
+    90,
+    85,
+    255,
+    0.95
+  ); /* Updated opacity and color for better readability */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6); /* Stronger shadow for emphasis */
+}
+
+.sidebar .menu-links,
+.sidebar .social-links {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out; /* Longer fade-in duration */
+  transition-delay: 0.4s; /* Increased delay for smooth appearance */
+}
+
+.sidebar.open .menu-links,
+.sidebar.open .social-links {
+  opacity: 1;
+}
+
+.sidebar .menu-links {
+  text-align: center;
+  margin-top: 10%; /* Adjusted for new sidebar height */
+}
+
+.sidebar .menu-links li {
+  font-size: 2rem; /* Larger font size for readability */
+  font-weight: bold;
+  color: #f3f4f6; /* Slightly lighter color */
+  margin-bottom: 2.5rem; /* Increased spacing */
+  list-style: none;
+  transition: transform 0.4s ease-in-out; /* Smooth hover effect */
+}
+
+.sidebar .menu-links li:hover {
+  transform: scale(1.2); /* Slightly larger scale effect */
+}
+
+.sidebar .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem; /* Increased gap */
+  margin-top: 3.5rem; /* Adjusted for layout balance */
+}
+
+.sidebar .social-links a {
+  font-size: 2.5rem; /* Larger icon size */
+  text-decoration: none;
+  color: #ffffff;
+  transition: transform 0.4s ease-in-out, color 0.3s ease-in-out; /* Added color transition */
+}
+
+.sidebar .social-links a:hover {
+  transform: rotate(20deg) scale(1.3); /* More dynamic hover effect */
+  color: #ff73d9; /* Accent color on hover */
+}
+
+.typing-text-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 95px; /* Larger text */
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(
+    45deg,
+    #ff73d9,
+    #9083ff,
+    #5ae3ff
+  ); /* Updated gradient color */
+  -webkit-background-clip: text;
+  animation: typing 4s steps(20) infinite, glow 2s infinite alternate; /* Adjusted animation timing */
+}
+
+@keyframes glow {
   from {
-    border-right-color: rgba(255, 255, 255, 0.75);
+    text-shadow: 0 0 15px #ff73d9, 0 0 20px #9083ff;
   }
   to {
-    border-right-color: transparent;
+    text-shadow: 0 0 30px #ff73d9, 0 0 40px #9083ff;
   }
 }
 
-.but{
-  /* background-color: black; */
-  position: fixed;
-  /* left: 10px; */
-  right: -15px;
-  color: black ;
-   width: 100px;
-  height: 40px;
-  border-radius: 25px;
-  /* padding: 20px; */
-   font-size: 24px;
-   z-index: 60;
-   transition: background-color 0.3s ease-in-out; 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
-/* Menu Button */
+.but {
+  position: fixed;
+  right: -15px;
+  width: 140px; /* Wider button */
+  height: 60px; /* Taller button */
+  border-radius: 35px; /* Smoother corners */
+  font-size: 22px; /* Larger text */
+  background: linear-gradient(
+    45deg,
+    #9083ff,
+    #6a5acd,
+    #5ae3ff
+  ); /* Updated gradient color */
+  color: white;
+  z-index: 60;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+}
 
-
-
-
+.but:hover {
+  background: linear-gradient(
+    45deg,
+    #6a5acd,
+    #9083ff,
+    #ff73d9
+  ); /* Accent color on hover */
+  transform: scale(1.25); /* Stronger scale effect */
+}
 /* Countdown styles */
 .countdown-container {
   display: flex;
-  gap: 2rem;
+  gap: 5rem; /* Wider gap */
   justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  background: rgba(0, 0, 0, 0.6); /* Darker background for better contrast */
+  padding: 20px;
+  border-radius: 15px;
 }
 
 .countdown-container div {
@@ -120,10 +301,35 @@
 }
 
 .countdown-container p {
-  font-size: 3rem;
+  font-size: 7rem; /* Keep text large */
   font-weight: bold;
+  margin-bottom: 30px;
+  color: #1bdfed; /* Solid white text for clarity */
+  text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3); /* Subtle shadow instead of glow */
+  animation: none; /* Remove glow animation */
 }
 
 .countdown-container span {
-  font-size: 1.25rem;
+  font-size: 2rem; /* Keep labels large */
+  font-weight: bold;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.logo-container {
+  position: fixed;
+  top: 20px; /* Adjust spacing from top */
+  left: 20px; /* Adjust spacing from left */
+  z-index: 1000; /* Ensure it's always above other elements */
+}
+
+.logo-effect {
+  width: 80px; /* Adjust logo size */
+  height: auto;
+  filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8)); /* Subtle glow */
+  transition: all 0.4s ease-in-out;
+}
+
+.logo-effect:hover {
+  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 1)); /* Stronger glow */
+  transform: scale(1.1) rotate(3deg);
 }

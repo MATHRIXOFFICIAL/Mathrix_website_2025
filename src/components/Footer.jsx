@@ -82,6 +82,9 @@ export default function Footer() {
         <p className='developer-credits' onClick={handleShowLinkedIn}>
           Developed by TechMathrix
         </p>
+
+       
+
         {showLinkedIn && (
           <div className='linkedin-popup'>
             <a

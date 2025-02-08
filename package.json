@@ -20,9 +20,12 @@
     "react-dom": "^18.3.1",
     "react-icons": "^5.4.0",
     "react-intersection-observer": "^9.15.1",
+    "react-slick": "^0.30.3",
     "react-timeline-animation": "^1.2.3",
     "scrollmagic": "^2.0.8",
-    "scrollmagic-plugin-gsap": "^1.0.4"
+    "scrollmagic-plugin-gsap": "^1.0.4",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.2"
   },
   "devDependencies": {
     "eslint": "^8",

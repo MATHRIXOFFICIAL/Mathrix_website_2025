@@ -1,0 +1,126 @@
+
+
+.cardteam{
+  width: 210px;
+  height: 254px;
+  position: relative;
+  background: #f5f5f5;
+  color: #252525;
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 150%;
+  box-shadow: 0px 10px 20px rgba(80, 80, 80, 0.2);
+  transition: box-shadow .3s ease-in-out;
+}
+
+.cardteam-info {
+  position: absolute;
+  bottom: 1em;
+  width: 100%;
+  text-align: center;
+}
+
+/* Image */
+.cardteam-img{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: transform .3s ease-in-out;
+  z-index: 2;
+}
+
+.cardteam-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Buttons */
+.social-media {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 1rem;
+  transform: translateY(-6em);
+  z-index: 3;
+}
+
+.social-media li {
+  background: #f5f5f5;
+  display: inline-flex;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  transition: all .3s ease-in;
+}
+/* Icons */
+.social-media li svg {
+  --size: 20px;
+  width: var(--size);
+  height: var(--size);
+  fill: #252525;
+}
+
+/* Texts */
+.titleteam {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.subtitleteam {
+  letter-spacing: 1px;
+  font-size: 0.9em;
+}
+
+
+/* Hovers */
+.cardteam:hover {
+  box-shadow: 0px 15px 30px rgba(80, 80, 80, 0.3);
+}
+
+.cardteam:hover .cardteam-img {
+  transform: translateY(-5em);
+}
+
+.cardteam:hover .social-media li {
+  transform: translateY(-5%);
+  opacity: 1;
+}
+
+.cardteam:hover .social-media li:nth-child(1) {
+  transition-delay: 0s;
+}
+
+.cardteam:hover .social-media li:nth-child(2) {
+  transition-delay: .1s;
+}
+
+.cardteam:hover .social-media li:nth-child(3) {
+  transition-delay: .2s;
+}
+
+.mySwiper {
+  position: relative;
+  padding-bottom: 40px; 
+  /* Add extra space for pagination */
+}
+
+.swiper-pagination {
+  position: absolute;
+  
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  z-index: 10;
+}
+
+.teamheading{
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}

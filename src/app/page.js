@@ -40,7 +40,7 @@ export default function Home() {
       <SectionWorkshop />
       <Workshop />
       <SectionTeam/>
-      {/* <Team/> */}
+      <Team/>
 
 
       <div className="h-[20vh] bg-black"></div>

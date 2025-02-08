@@ -96,6 +96,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* padding-top: 20px; */
   margin-top: 20px;
   font-size: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -162,4 +163,10 @@
   to {
     opacity: 1;
   }
+}
+
+
+.avatar-stack{
+  justify-content: center;
+  align-items: center;
 }

@@ -1,33 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import Button from "../components/Button";
 import "../styles/workshop.css";
+import workshopData from "../../public/Data/Workshopdata";
+import { useRouter } from "next/navigation";
 
 export default function Workshop() {
   const contentRef = useRef(null);
   const h2Ref = useRef(null); // Reference for the h2 element
+  const router = useRouter(); // ✅ Correct function for App Router
 
-  const [workshopData] = useState([
-    {
-      name: "Intro to AI",
-      description: "Learn the basics of Artificial Intelligence.",
-      image: "/images/ai.jpg",
-    },
-    {
-      name: "Web Development",
-      description: "Build modern and responsive websites.",
-      image: "/images/web.jpg",
-    },
-    {
-      name: "Data Science",
-      description: "Analyze and visualize data effectively.",
-      image: "/images/data.jpg",
-    },
-    {
-      name: "Cybersecurity",
-      description: "Learn to protect systems from threats.",
-      image: "/images/cyber.jpg",
-    },
-  ]);
+  const handleRegisterClick = () => {
+    router.push("/workshops"); // ✅ Redirects correctly in App Router
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -53,7 +37,7 @@ export default function Workshop() {
   }, []);
 
   const handleViewAll = () => {
-    router.push("/events");
+    router.push("/workshops");
   };
 
   return (
@@ -70,20 +54,19 @@ export default function Workshop() {
                 <div key={key} className="card-container">
                   <div className="card">
                     <div className="img-content">
-                      <img src={items.image} alt={items.name} />
+                      <img src={items.img} alt={items.name} />
                     </div>
                     <div className="content">
                       <p className="heading">{items.name}</p>
-                      <p className="description">{items.description}</p>
                     </div>
                   </div>
                 </div>
               );
             })}
           </div>
-          <div className="glass-effect"></div>
-          <div className="button-container">
-            <Button />
+
+          <div className="buttonbuy">
+            <button onClick={handleRegisterClick}>Register</button>
           </div>
         </div>
       </div>

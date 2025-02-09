@@ -19,7 +19,7 @@ export default function Section() {
       <div className="absolute inset-0">
         <video
           className="w-full h-full object-cover"
-          src="/images/event.mp4" // Ensure the path to the video file is correct
+          src="/images/back2.mp4" // Ensure the path to the video file is correct
           autoPlay
           muted
           loop

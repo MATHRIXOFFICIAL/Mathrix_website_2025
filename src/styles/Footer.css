@@ -42,7 +42,7 @@
   font-weight: bold;
   margin-bottom: 15px;
   text-transform: uppercase;
-  color: #f1c40f;
+  color: #18e4b1;
   position: relative;
 }
 
@@ -51,7 +51,7 @@
   display: block;
   width: 50px;
   height: 2px;
-  background: #f1c40f;
+  background: #18e4b1;
   margin-top: 5px;
   animation: slideIn 1s ease-in-out;
 }
@@ -72,7 +72,7 @@
 }
 
 .footer-links a:hover {
-  color: #f1c40f;
+  color: #18e4b1;
   text-decoration: underline;
 }
 
@@ -88,7 +88,7 @@
 }
 
 .footer-social-icons a:hover {
-  color: #f1c40f;
+  color: #18e4b1;
   transform: scale(1.2);
 }
 
@@ -105,7 +105,7 @@
 
 .developer-credits {
   font-size: 14px;
-  color: #f1c40f;
+  color: #18e4b1;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -129,7 +129,7 @@
 }
 
 .linkedin-popup a {
-  color: #f1c40f;
+  color: #18e4b1;
   text-decoration: none;
 }
 
@@ -149,10 +149,10 @@
 @keyframes textGlow {
   0%,
   100% {
-    text-shadow: 0 0 10px #ff6e7f, 0 0 20px #bfe9ff;
+    text-shadow: 0 0 10px #18e4b1, 0 0 20px #bfe9ff;
   }
   50% {
-    text-shadow: 0 0 20px #ff6e7f, 0 0 40px #bfe9ff;
+    text-shadow: 0 0 20px #18e4b1, 0 0 40px #bfe9ff;
   }
 }
 

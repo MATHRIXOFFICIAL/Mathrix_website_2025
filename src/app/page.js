@@ -7,13 +7,12 @@ import Section from "@/components/Section";
 import Events from "@/components/Events";
 import Workshop from "@/components/Workshop";
 import SectionWorkshop from "@/components/SectionWorkshop";
-import SectionTeam from "../components/SectionTeam"
-import Team from "../components/Team"
+import SectionTeam from "../components/SectionTeam";
+import Team from "../components/Team";
 import Footer from "@/components/Footer";
 export default function Home() {
   useEffect(() => {
-    const lenis = new Lenis({
-    });
+    const lenis = new Lenis({});
 
     function raf(time) {
       lenis.raf(time);
@@ -25,10 +24,11 @@ export default function Home() {
 
   return (
     <main
-    style={{
+      style={{
         width: "100vw",
         height: "100vh",
-      }}>
+      }}
+    >
       {/* img */}
       <Intro />
       {/* about */}
@@ -39,9 +39,8 @@ export default function Home() {
       {/* Workshop */}
       <SectionWorkshop />
       <Workshop />
-      <SectionTeam/>
+      <SectionTeam />
       {/* <Team/> */}
-
 
       <div className="h-[20vh] bg-black"></div>
       <Footer />

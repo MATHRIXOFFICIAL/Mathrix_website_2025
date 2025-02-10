@@ -1,3 +1,18 @@
+.divevents {
+  position: relative;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.background-overlay {
+  position: absolute;
+  inset: 0;
+  background: url("/images/bg3.jpg") center/cover no-repeat;
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(2px);
+}
+
 .card-container {
   width: 300px;
   height: 350px;
@@ -110,15 +125,6 @@
 
 /* .eventgrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  place-items: center;
-  padding: 20px;
-  column-gap: 2rem;
-  row-gap: 2rem;
-} */
-
-.eventgrid {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   /* Dynamic columns */
   place-items: center;
@@ -131,15 +137,6 @@
   width: 100%;
 }
 
-/* .card {
-  max-width: 300px;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-} */
-
 .img-content img {
   width: 100%;
   height: auto;
@@ -147,19 +144,6 @@
 
 .content {
   padding: 1rem;
-}
-
-.gif-add-on {
-  position: absolute;
-  bottom: 70px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: floatEffect 3s ease-in-out infinite;
-}
-
-.floating-gif {
-  width: 100px;
-  height: auto;
 }
 
 @keyframes floatEffect {
@@ -201,22 +185,51 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .buttonbuy button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 12px 24px;
+  font-size: 18px;
   font-weight: bold;
-  color: white;
-  background: linear-gradient(90deg, #16a085, #2ecc71);
+  color: #ffffff;
+  background: linear-gradient(
+    90deg,
+    #0f3a9d,
+    #0088ff
+  ); /* Blue cyber gradient */
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 136, 255, 0.8); /* Neon glow effect */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Add a hover effect with a glowing border */
 .buttonbuy button:hover {
-  background: linear-gradient(90deg, #27ae60, #1abc9c);
+  background: linear-gradient(90deg, #005bff, #a81fd2);
   transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 136, 255, 1); /* Stronger glow */
+}
+
+/* Add a pulsating effect */
+@keyframes neonPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 136, 255, 0.8);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 136, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 136, 255, 0.8);
+  }
+}
+
+.buttonbuy button:active {
+  transform: scale(0.95);
+  animation: neonPulse 0.6s infinite alternate;
 }

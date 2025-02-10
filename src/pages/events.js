@@ -243,7 +243,6 @@ export default function Intro() {
           </div>
           <img src={img2} alt="Event" />
         </div>
-
         <h1
           // style={{ textShadow: "4px 4px 6px rgba(0, 0, 0, 0.5)" }}
           className="mt-10 flex items-center justify-center font-extrabold text-4xl"

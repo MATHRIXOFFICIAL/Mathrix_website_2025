@@ -18,7 +18,7 @@ export default function SectionWorkshop() {
       <div className="absolute inset-0">
         <video
           className="w-full h-full object-cover"
-          src="/images/lap2.mp4" // Ensure the path to the video file is correct
+          src="/images/back4.mp4" // Ensure the path to the video file is correct
           autoPlay
           muted
           loop

@@ -1,35 +1,47 @@
 const eventData = [
   {
     id: 1,
-    name: 'Event One',
-    img: '../../public/images/2.jpg',
+    name: "Pseudo2Code",
+    img: "../events/pseudocode.jpeg",
     description:
-      'This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf',
+      "This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf",
   },
   {
     id: 2,
-    name: 'Event Two',
-    img: '../../public/images/2.jpg',
-    description: 'This is the description for Event Two.',
+    name: "SQL Heist",
+    img: "../events/SQL_Heist.jpeg",
+    description: "This is the description for Event Two.",
   },
   {
     id: 3,
-    name: 'Event Three',
-    img: '../../public/images/2.jpg',
-    description: 'This is the description for Event Three.',
+    name: "Code Mathrix",
+    img: "../events/CodeMathrix.png",
+    description: "This is the description for Event Three.",
   },
   {
     id: 4,
-    name: 'Event Four',
-    img: '../../public/images/2.jpg',
-    description: 'This is the description for Event Four.',
+    name: "Infinity Adrift",
+    img: "../events/Infinity Adrift.webp",
+    description: "This is the description for Event Four.",
   },
   {
     id: 5,
-    name: 'Event Five',
-    img: '../../public/images/2.jpg',
-    description: 'This is the description for Event Five.',
+    name: "Breaking Math",
+    img: "../events/Numerix nexus .png",
+    description: "This is the description for Event Five.",
   },
-]
+  {
+    id: 6,
+    name: "Mystery Mansion",
+    img: "../events/mysterymansion.jpeg",
+    description: "This is the description for Event Five.",
+  },
+  {
+    id: 7,
+    name: " WordViz",
+    img: "../events/wordviz.jpeg",
+    description: "This is the description for Event Five.",
+  },
+];
 
 export default eventData;

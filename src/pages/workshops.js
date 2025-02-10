@@ -33,7 +33,6 @@ export default function Intro() {
             </div>
           </div>
         </div>
-
         <div className="workshopsecond">
           <div className="workshoppass">
             <h3>GET WORKSHOP PASS</h3>

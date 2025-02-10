@@ -81,7 +81,7 @@ export default function Intro() {
         >
           <source src={Background} type="video/mp4" />
           Your browser does not support the video tag.
-        </video>
+        </video> */}
       </motion.div>
 
       <button

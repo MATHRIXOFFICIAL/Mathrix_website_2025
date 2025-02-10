@@ -91,7 +91,6 @@ export default function Description() {
             Experience hands-on workshops, insightful lectures, and exciting
             competitions.
           </motion.p>
-
           {/* Date Text Appears with a Slide-In Effect */}
           <motion.h2
             className="event-date animated-gradient"

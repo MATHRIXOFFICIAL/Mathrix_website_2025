@@ -1,0 +1,68 @@
+.typing-animation {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    animation: typing 4s steps(40, end) infinite, blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    85% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    from {
+        border-right-color: rgba(255, 255, 255, 0.75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+    font-size: 40px;
+}
+
+.waviy span {
+    font-family: "Alfa Slab One", cursive;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+.waviy b {
+    color: red;
+    text-align: center;
+}
+
+@keyframes waviy {
+
+    0%,
+    40%,
+    100% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-5px);
+    }
+}

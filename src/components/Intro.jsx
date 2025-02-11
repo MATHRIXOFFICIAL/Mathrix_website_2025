@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import {
@@ -11,28 +12,23 @@ import { IoMdCloseCircle } from "react-icons/io";
 import Link from "next/link";
 import "../styles/sidebar.css";
 
-// Variants for menu animation
 const variants = {
-  open: {
-    width: 480,
-    height: 650,
-  },
-  close: {
-    width: 100,
-    height: 40,
-  },
+  open: { width: 480, height: 650 },
+  close: { width: 100, height: 40 },
 };
 
 export default function Intro() {
   const Background = "/images/back1.mp4";
   const Logo = "/images/logo.png";
+  const Logo1 = "/images/logo1.png"; // NEW animated logo
+
   const container = useRef();
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "150vh"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "0vh"]); // Fixed white screen issue
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
@@ -54,9 +50,7 @@ export default function Intro() {
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor(
-            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-          ),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
@@ -71,9 +65,9 @@ export default function Intro() {
 
   return (
     <div className="h-screen overflow-hidden relative" ref={container}>
-      <motion.div style={{ y }} className="absolute inset-0 bg-red-400">
+      <motion.div style={{ y }} className="absolute inset-0">
         <video
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover fixed top-0 left-0"
           autoPlay
           muted
           loop
@@ -105,57 +99,20 @@ export default function Intro() {
         initial="close"
       >
         <ul className="menu-links">
-          <li>
-            <Link href="/events">Events</Link>
-          </li>
-          <li>
-            <Link href="/workshops">Workshops</Link>
-          </li>
-          <li>
-            <Link href="/schedule">Schedule</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
+          <li><Link href="/events">Events</Link></li>
+          <li><Link href="/workshops">Workshops</Link></li>
+          <li><Link href="/schedule">Schedule</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
         </ul>
         <div className="social-links">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
         </div>
       </motion.div>
+
       <div className="logo-container">
         <motion.img
           src={Logo}
@@ -168,30 +125,25 @@ export default function Intro() {
         />
       </div>
 
+      {/* Replaced Typing Text with Animated Logo1 */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-        <div className="typing-text-container">
-          <span className="typing-text">MATHRIX'25</span>
-        </div>
-
+        <motion.img
+          src={Logo1}
+          alt="Animated Logo"
+          className="logo1-effect"
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          whileHover={{ scale: 1.2, rotate: -3 }}
+        />
+        
         <div className="mt-10 text-2xl font-bold">
           <p>Countdown to the Event:</p>
           <div className="countdown-container">
-            <div>
-              <p>{timeLeft.days}</p>
-              <span>Days</span>
-            </div>
-            <div>
-              <p>{timeLeft.hours}</p>
-              <span>Hours</span>
-            </div>
-            <div>
-              <p>{timeLeft.minutes}</p>
-              <span>Minutes</span>
-            </div>
-            <div>
-              <p>{timeLeft.seconds}</p>
-              <span>Seconds</span>
-            </div>
+            <div><p>{timeLeft.days}</p><span>Days</span></div>
+            <div><p>{timeLeft.hours}</p><span>Hours</span></div>
+            <div><p>{timeLeft.minutes}</p><span>Minutes</span></div>
+            <div><p>{timeLeft.seconds}</p><span>Seconds</span></div>
           </div>
         </div>
       </div>

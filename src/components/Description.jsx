@@ -86,10 +86,20 @@ export default function Description() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 2.5, duration: 0.8 }}
           >
-            Mathrix is an annual mathematics and technology event designed to
-            inspire and educate the next generation of innovators and thinkers.
-            Experience hands-on workshops, insightful lectures, and exciting
-            competitions.
+            Mathrix is the annual intercollegiate symposium where mathematics
+            meets technology! Hosted by the Department of Mathematics, College
+            of Engineering Guindy, Anna University, Mathrix is a one-of-a-kind
+            fest that brings together logic, innovation, and problem-solving
+            under one roof. Organized by the brilliant minds of M.Sc. Computer
+            Science (5 years), M.Sc. Information Technology (5 years), and M.Sc.
+            Mathematics (2 years), Mathrix is more than just a symposium—it's a
+            fusion of numbers, algorithms, and cutting-edge tech. With a perfect
+            blend of mathematical and technical events, this fest is designed to
+            challenge intellects, spark creativity, and push boundaries. From
+            thrilling competitions that test your mathematical prowess to
+            tech-driven challenges that fuel your coding skills, Mathrix is the
+            ultimate arena for innovators, problem-solvers, and
+            future disruptors.
           </motion.p>
           {/* Date Text Appears with a Slide-In Effect */}
           <motion.h2

@@ -101,7 +101,6 @@ export default function Description() {
             ultimate arena for innovators, problem-solvers, and
             future disruptors.
           </motion.p>
-
           {/* Date Text Appears with a Slide-In Effect */}
           <motion.h2
             className="event-date animated-gradient"

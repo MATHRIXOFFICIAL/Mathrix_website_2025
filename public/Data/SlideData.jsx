@@ -24,3 +24,4 @@ export const slideData = [
     src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/typewriter.jpg",
   },
 ];
+

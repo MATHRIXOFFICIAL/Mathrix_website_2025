@@ -12,6 +12,7 @@ export default function Events() {
   };
 
   return (
+
     <div className="divevents w-full pr-5">
       <div>
         <div className="background-overlay"></div>

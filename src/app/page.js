@@ -40,8 +40,8 @@ export default function Home() {
       {/* Workshop */}
       <SectionWorkshop />
       <Workshop />
-      <SectionTeam />
-      <Team />
+      {/* <SectionTeam />
+      <Team /> */}
       {/* <Contact /> */}
       <div className="h-[20vh] bg-black"></div>
       <Footer />

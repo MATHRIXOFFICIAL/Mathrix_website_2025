@@ -23,7 +23,7 @@
     "react-timeline-animation": "^1.2.3",
     "react-vertical-timeline-component": "^3.5.3",
     "scrollmagic": "^2.0.8",
-    "scrollmagic-plugin-gsap": "^1.0.4"
+    "scrollmagic-plugin-gsap": "^1.0.4",
     "swiper": "^11.2.2"
   },
   "devDependencies": {

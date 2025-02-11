@@ -1,4 +1,3 @@
-
 import React, { useRef, useEffect, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import {
@@ -50,7 +49,9 @@ export default function Intro() {
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
@@ -75,7 +76,7 @@ export default function Intro() {
         >
           <source src={Background} type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
+        </video>{" "}
       </motion.div>
 
       <button
@@ -99,17 +100,55 @@ export default function Intro() {
         initial="close"
       >
         <ul className="menu-links">
-          <li><Link href="/events">Events</Link></li>
-          <li><Link href="/workshops">Workshops</Link></li>
-          <li><Link href="/schedule">Schedule</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
+          <li>
+            <Link href="/events">Events</Link>
+          </li>
+          <li>
+            <Link href="/workshops">Workshops</Link>
+          </li>
+          <li>
+            <Link href="/schedule">Schedule</Link>
+          </li>
+          <li>
+            <Link href="/contact">Contact</Link>
+          </li>
         </ul>
         <div className="social-links">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTwitter />
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+          <a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaGithub />
+          </a>
         </div>
       </motion.div>
 
@@ -136,14 +175,26 @@ export default function Intro() {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           whileHover={{ scale: 1.2, rotate: -3 }}
         />
-        
+
         <div className="mt-10 text-2xl font-bold">
           <p>Countdown to the Event:</p>
           <div className="countdown-container">
-            <div><p>{timeLeft.days}</p><span>Days</span></div>
-            <div><p>{timeLeft.hours}</p><span>Hours</span></div>
-            <div><p>{timeLeft.minutes}</p><span>Minutes</span></div>
-            <div><p>{timeLeft.seconds}</p><span>Seconds</span></div>
+            <div>
+              <p>{timeLeft.days}</p>
+              <span>Days</span>
+            </div>
+            <div>
+              <p>{timeLeft.hours}</p>
+              <span>Hours</span>
+            </div>
+            <div>
+              <p>{timeLeft.minutes}</p>
+              <span>Minutes</span>
+            </div>
+            <div>
+              <p>{timeLeft.seconds}</p>
+              <span>Seconds</span>
+            </div>
           </div>
         </div>
       </div>

@@ -59,7 +59,7 @@ export default function Description() {
             className="drop-bounce-text"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.8 }}
+            transition={{ delay: 1, duration: 0.4 }}
           >
             {"EPSILON TO INFINITY".split("").map((char, index) => (
               <motion.span
@@ -68,7 +68,7 @@ export default function Description() {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{
-                  delay: 1 + index * 0.1, // Starts after About Mathrix finishes
+                  delay: 1 + index * 0.2, // Starts after About Mathrix finishes
                   type: "spring",
                   stiffness: 120,
                   damping: 10,

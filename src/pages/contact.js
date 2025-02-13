@@ -109,23 +109,25 @@ import React from "react";
 import { Boxes } from "../ui/background-boxes.jsx";
 import { cn } from "@/lib//utils";
 import "../app/globals.css";
+import { LampDemo } from "@/components/ComingSoon.jsx";
 
 export default function Intro() {
   return (
-    <div className="relative flex items-center justify-center h-screen overflow-hidden bg-slate-900">
-      {/* Background Animated Boxes */}
-      <Boxes />
+    // <div className="relative flex items-center justify-center h-screen overflow-hidden bg-slate-900">
+    //   {/* Background Animated Boxes */}
+    //   <Boxes />
 
-      {/* Overlay for better visibility */}
-      <div className="absolute inset-0 w-full h-full bg-black opacity-50 pointer-events-none"></div>
+    //   {/* Overlay for better visibility */}
+    //   <div className="absolute inset-0 w-full h-full bg-black opacity-50 pointer-events-none"></div>
 
-      {/* Text Content */}
-      <div className="relative z-20 text-center">
-        <h1 className="text-4xl font-bold text-white">Tailwind is Awesome</h1>
-        <p className="text-neutral-300 mt-2">
-          Framer Motion makes animations smooth and easy!
-        </p>
-      </div>
-    </div>
+    //   {/* Text Content */}
+    //   <div className="relative z-20 text-center">
+    //     <h1 className="text-4xl font-bold text-white">Tailwind is Awesome</h1>
+    //     <p className="text-neutral-300 mt-2">
+    //       Framer Motion makes animations smooth and easy!
+    //     </p>
+    //   </div>
+    // </div>
+    <LampDemo />
   );
 }

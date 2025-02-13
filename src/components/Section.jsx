@@ -1,5 +1,8 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
+import Ztext from "react-ztext";
+import "@/styles/section.css";
+// import { transform } from "next/dist/build/swc/generated-native";
 
 export default function Section() {
   const container = useRef();
@@ -37,6 +40,15 @@ export default function Section() {
         <motion.div style={{ y }} className="relative w-full h-full">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-20 mix-blend-overlay">
             <p className="text-[6vw] uppercase proshow">EVENTS</p>
+
+            {/* <h1>
+              <span data-z>1rem</span>
+            </h1>
+            <h1>
+              <span data-z data-z-layers="25" data-z-depth="60px">
+                60px
+              </span>
+            </h1> */}
           </div>
         </motion.div>
       </div>

@@ -1,15 +1,14 @@
+"use client";
+
 import React, { useRef, useEffect, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa";
-import { IoMdCloseCircle } from "react-icons/io";
-import Link from "next/link";
 import "../styles/sidebar.css";
+import MenuBar from "./MenuBar";
+// import { Boxes } from "../ui/background-boxes";
+import { cn } from "@/lib/utils";
+import Starfield from "./starBackground/Starfield";
+import ShootingStar from "./starBackground/ShootingStar";
+import "../styles/star.css";
 
 const variants = {
   open: { width: 480, height: 650 },
@@ -28,9 +27,6 @@ export default function Intro() {
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0vh", "0vh"]); // Fixed white screen issue
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => setMenuOpen((prev) => !prev);
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -65,8 +61,44 @@ export default function Intro() {
   }, []);
 
   return (
+    // <div className="container">
+    //   <div className="sky">
     <div className="h-screen overflow-hidden relative" ref={container}>
-      <motion.div style={{ y }} className="absolute inset-0">
+      <div className="z-0 inset-0 flex flex-row  overflow-hidden h-full absolute">
+        <div>
+          <img
+            className="pointer-events-auto brightness-50 hover:brightness-100 w-[50vw] h-full"
+            src="../IntroImage/1.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            className="brightness-50 hover:brightness-100 w-[50vw] h-full"
+            src="../IntroImage/2.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            className="brightness-50 hover:brightness-100 w-[50vw] h-full"
+            src="../IntroImage/3.jpg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            className="brightness-50 hover:brightness-100 w-[50vw] h-full"
+            src="../IntroImage/4.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      {/* <Starfield numStars={1700} size={1} duration={100} />
+          <Starfield numStars={700} size={2} duration={125} />
+          <Starfield numStars={200} size={3} duration={175} />
+          <ShootingStar /> */}
+      {/* <motion.div style={{ y }} className="absolute inset-0">
         <video
           className="w-full h-full object-cover fixed top-0 left-0"
           autoPlay
@@ -77,104 +109,31 @@ export default function Intro() {
           <source src={Background} type="video/mp4" />
           Your browser does not support the video tag.
         </video>{" "}
-      </motion.div>
-
-      <button
-        onClick={toggleMenu}
-        aria-label="Toggle menu"
-        className={`but mt-6 ${menuOpen ? "" : "hover:-translate-x-4"}`}
-      >
-        {menuOpen ? (
-          <div className="flex justify-end mr-7 text-xl">
-            <IoMdCloseCircle />
-          </div>
-        ) : (
-          "Menu"
-        )}
-      </button>
-
-      <motion.div
-        className={`sidebar ${menuOpen ? "open" : ""}`}
-        variants={variants}
-        animate={menuOpen ? "open" : "close"}
-        initial="close"
-      >
-        <ul className="menu-links">
-          <li>
-            <Link href="/events">Events</Link>
-          </li>
-          <li>
-            <Link href="/workshops">Workshops</Link>
-          </li>
-          <li>
-            <Link href="/schedule">Schedule</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
-        <div className="social-links">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub />
-          </a>
-        </div>
-      </motion.div>
+      </motion.div> */}
+      <MenuBar />
 
       <div className="logo-container">
         <motion.img
           src={Logo}
           alt="Mathrix Logo"
-          className="logo-effect"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          whileHover={{ scale: 1.1, rotate: 3 }}
+          className="logo-effect cursor-pointer"
         />
       </div>
 
       {/* Replaced Typing Text with Animated Logo1 */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-        <motion.img
-          src={Logo1}
-          alt="Animated Logo"
-          className="logo1-effect"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          whileHover={{ scale: 1.2, rotate: -3 }}
-        />
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 pointer-events-none">
+        {/* <motion.img
+              src={Logo1}
+              alt="Animated Logo"
+              className="logo1-effect"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              whileHover={{ scale: 1.2, rotate: -3 }}
+            /> */}
+        <h3 className="font-bold uppercase text-9xl flex justify-center items-center bg-gradient-to-b from-gray-300 to-black text-transparent bg-clip-text">
+          MATHRIX
+        </h3>
 
         <div className="mt-10 text-2xl font-bold">
           <p>Countdown to the Event:</p>
@@ -199,5 +158,7 @@ export default function Intro() {
         </div>
       </div>
     </div>
+    //   </div>
+    // </div>
   );
 }

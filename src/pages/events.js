@@ -1,39 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa";
-import Link from "next/link";
 import { img1, img2 } from "../../public/images/index";
-import "../styles/sidebar.css"; // Ensure the path to CSS is correct
-// import "../styles/eventsection.css";
-// import "../styles/workshopsection.css";
 import "../styles/Eventstyle.css";
 import "../app/globals.css";
-
-// Variants for menu animation
-const variants = {
-  open: {
-    width: 480,
-    height: 650,
-  },
-  close: {
-    width: 100,
-    height: 40,
-  },
-};
+import MenuBar from "@/components/MenuBar";
+import "../styles/schedule.css";
 
 export default function Intro() {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen((prev) => !prev); // Toggle menu open/close
-  };
-
   const [pageIsOpen, setPageIsOpen] = useState(false);
   const [currentCard, setCurrentCard] = useState(null);
   const cardsRef = useRef([]);
@@ -165,71 +137,10 @@ export default function Intro() {
   const paragraphText = `<p>Somebody once told me the world is gonna roll me...</p>`;
 
   return (
-    <div>
-      <motion.div
-        className={`sidebar ${menuOpen ? "open" : ""}`}
-        variants={variants}
-        animate={menuOpen ? "open" : "close"}
-        initial="close"
-      >
-        <button onClick={toggleMenu} aria-label="Toggle menu" className="but">
-          {menuOpen ? "Close" : "Menu"}
-        </button>
-        <ul className="menu-links">
-          <li>
-            <Link href="/events">Events</Link>
-          </li>
-
-          <li>
-            <Link href="/schedule">Schedule</Link>
-          </li>
-          <li>
-            <Link href="/workshops">Workshops</Link>
-          </li>
-          <li>
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
-        <div className="social-links">
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaFacebook aria-label="Facebook" />
-          </a>
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter aria-label="Twitter" />
-          </a>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram aria-label="Instagram" />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin aria-label="LinkedIn" />
-          </a>
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub aria-label="GitHub" />
-          </a>
-        </div>
-      </motion.div>
+    <div className="container">
+      <MenuBar />
       <div className="min-h-screen p-10">
-        <div className="flex justify-between gap-96">
+        <div className="flex justify-between gap-96 text-white">
           <div className="flex flex-col gap-4">
             <h1 className="text-6xl font-extrabold text-yellow-500">Events</h1>
             <h2 className="text-6xl font-extrabold">Mathrix'25</h2>
@@ -252,7 +163,7 @@ export default function Intro() {
         </h1>
 
         <div className="mt-5">
-          <div className="container">
+          <div className="containerr">
             <div className="card-column column-0">
               <div
                 className="card card-color-0"

@@ -27,7 +27,7 @@ const Accordion = () => {
       question: "Mathrix OB'S",
       answers: [
         <>
-          Ramanan <span className='accordinside2'>1000000</span>
+          Ramana <span className='accordinside2'>1000000</span>
         </>,
         <>
           Swetha <span className='accordinside2'>1000000</span>

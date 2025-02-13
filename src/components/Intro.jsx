@@ -5,19 +5,11 @@ import {
   FaTwitter,
   FaInstagram,
   FaLinkedin,
-<<<<<<< HEAD
-  FaGithub
-} from 'react-icons/fa'
-import { IoMdCloseCircle } from "react-icons/io";
-import Link from 'next/link'
-import '../styles/sidebar.css' // Ensure the path to CSS is correct
-=======
   FaGithub,
 } from "react-icons/fa";
 import { IoMdCloseCircle } from "react-icons/io";
 import Link from "next/link";
 import "../styles/sidebar.css";
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 
 // Variants for menu animation
 const variants = {
@@ -78,17 +70,10 @@ export default function Intro() {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className='h-screen overflow-hidden relative' ref={container}>
-      <motion.div style={{ y }} className='absolute inset-0 bg-red-400'>
-        {/* <video
-          className='w-full h-full object-cover'
-=======
     <div className="h-screen overflow-hidden relative" ref={container}>
       <motion.div style={{ y }} className="absolute inset-0 bg-red-400">
         <video
           className="w-full h-full object-cover"
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
           autoPlay
           muted
           loop
@@ -96,21 +81,9 @@ export default function Intro() {
         >
           <source src={Background} type="video/mp4" />
           Your browser does not support the video tag.
-        </video> */}
+        </video> 
       </motion.div>
 
-<<<<<<< HEAD
-        <button onClick={toggleMenu} aria-label='Toggle menu' className={`but mt-6 ${menuOpen ? '' : 'hover:-translate-x-4'}`}>
-          {menuOpen ? <div className="flex justify-end mr-7 text-xl"><IoMdCloseCircle /></div> : 'Menu'}
-        </button>
-      <motion.div
-        className={`sidebar  ${menuOpen ? 'open' : ''}`}
-        variants={variants}
-        animate={menuOpen ? 'open' : 'close'}
-        initial='close'
-      >
-        <ul className='menu-links'>
-=======
       <button
         onClick={toggleMenu}
         aria-label="Toggle menu"
@@ -132,7 +105,6 @@ export default function Intro() {
         initial="close"
       >
         <ul className="menu-links">
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
           <li>
             <Link href="/events">Events</Link>
           </li>

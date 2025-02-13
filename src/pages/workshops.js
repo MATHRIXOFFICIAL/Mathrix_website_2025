@@ -1,11 +1,6 @@
 "use client";
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-=======
 import React, { useState } from "react";
 import { motion } from "framer-motion";
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 import {
   FaFacebook,
   FaTwitter,
@@ -136,25 +131,6 @@ export default function Intro() {
 
       <h1 className="upcoming">Upcoming Workshop</h1>
 
-<<<<<<< HEAD
-      <div className='cardworkshop'>
-
-
-        <div className='cardworkshopinside'>
-      
-
-
-          {Data.map((item, key) => {
-            return (
-              <div class='card' key={key}>
-                <div class='content'>
-                  <h2 class='title'>{item.name}</h2>
-                  <p class='copy'>{item.description}</p>
-                  <button class='btn'>Book Tickets</button>
-                </div>
-              </div>
-            )
-=======
       <div className="cardworkshop">
         <div className="cardworkshopinside">
           {Data.map((item, key) => {
@@ -167,7 +143,6 @@ export default function Intro() {
                 </div>
               </div>
             );
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
           })}
         </div>
       </div>

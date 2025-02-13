@@ -127,48 +127,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   /* Dynamic columns */
-  place-items: center;
-  padding: 20px;
-<<<<<<< HEAD
-  column-gap: 2rem;
-  row-gap: 2rem;
-} */
-
-.eventgrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* Dynamic columns */
-  place-items: center;
-  padding: 20px;
-  gap: 2rem;
+  /* place-items: center; */
+  /* padding: 20px; */
+  /* gap: 2rem; */
   /* Combines column-gap and row-gap */
-}
 
-.card-container {
-  width: 100%;
-}
-
-/* .card {
-  max-width: 300px;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-} */
-
-.img-content img {
-  width: 100%;
-  height: auto;
-}
-
-.content {
-  padding: 1rem;
-=======
-  gap: 2rem;
-  /* Combines column-gap and row-gap */
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
-}
 
 .card-container {
   width: 100%;
@@ -250,9 +213,6 @@
 .buttonbuy button:hover {
   background: linear-gradient(90deg, #005bff, #a81fd2);
   transform: scale(1.1);
-<<<<<<< HEAD
-}
-=======
   box-shadow: 0 0 20px rgba(0, 136, 255, 1); /* Stronger glow */
 }
 
@@ -273,4 +233,3 @@
   transform: scale(0.95);
   animation: neonPulse 0.6s infinite alternate;
 }
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d

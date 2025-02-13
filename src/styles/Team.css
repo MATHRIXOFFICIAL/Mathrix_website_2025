@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-
-
-.cardteam{
-=======
 .cardteam {
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
   width: 210px;
   height: 254px;
   position: relative;
@@ -14,11 +8,7 @@
   overflow: hidden;
   line-height: 150%;
   box-shadow: 0px 10px 20px rgba(80, 80, 80, 0.2);
-<<<<<<< HEAD
-  transition: box-shadow .3s ease-in-out;
-=======
   transition: box-shadow 0.3s ease-in-out;
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 
 .cardteam-info {
@@ -29,17 +19,6 @@
 }
 
 /* Image */
-<<<<<<< HEAD
-.cardteam-img{
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: transform .3s ease-in-out;
-  z-index: 2;
-}
-
-.cardteam-img img{
-=======
 .cardteam-img {
   height: 100%;
   width: 100%;
@@ -49,7 +28,6 @@
 }
 
 .cardteam-img img {
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -75,11 +53,7 @@
   border-radius: 50%;
   cursor: pointer;
   opacity: 0;
-<<<<<<< HEAD
-  transition: all .3s ease-in;
-=======
   transition: all 0.3s ease-in;
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 /* Icons */
 .social-media li svg {
@@ -100,10 +74,6 @@
   font-size: 0.9em;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 /* Hovers */
 .cardteam:hover {
   box-shadow: 0px 15px 30px rgba(80, 80, 80, 0.3);
@@ -123,55 +93,30 @@
 }
 
 .cardteam:hover .social-media li:nth-child(2) {
-<<<<<<< HEAD
-  transition-delay: .1s;
-}
-
-.cardteam:hover .social-media li:nth-child(3) {
-  transition-delay: .2s;
-=======
   transition-delay: 0.1s;
 }
 
 .cardteam:hover .social-media li:nth-child(3) {
   transition-delay: 0.2s;
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 
 .mySwiper {
   position: relative;
-<<<<<<< HEAD
-  padding-bottom: 40px; 
-=======
   padding-bottom: 40px;
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
   /* Add extra space for pagination */
 }
 
 .swiper-pagination {
   position: absolute;
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
   /* left: 50%; */
   /* transform: translateX(-50%); */
   z-index: 10;
 }
 
-<<<<<<< HEAD
-.teamheading{
-=======
 .teamheading {
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
   font-size: 24px;
   text-align: center;
   padding: 10px;
   margin-bottom: 10px;
   font-weight: bold;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d

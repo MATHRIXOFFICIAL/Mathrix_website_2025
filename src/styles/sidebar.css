@@ -3,13 +3,6 @@
   z-index: 50;
   top: 1.5rem;
   right: -15px;
-<<<<<<< HEAD
-  /* left: 0px; */
-  background-color: rgba(31, 41, 55, 0.75);
-  background-color: #7873f5;
-  border-radius: 25px;
-  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
-=======
   background: rgba(
     31,
     41,
@@ -20,15 +13,10 @@
   backdrop-filter: blur(15px); /* Enhanced blur effect */
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
   transition: all 0.4s ease-in-out; /* Smoothened transition */
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 
 .sidebar.open {
   transform: translateX(0);
-<<<<<<< HEAD
-  width: 100px;
-  height: 400px;
-=======
   width: 400px; /* Increased width for more content space */
   height: 600px; /* Increased height */
   background: rgba(
@@ -38,20 +26,13 @@
     0.95
   ); /* Updated opacity and color for better readability */
   box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6); /* Stronger shadow for emphasis */
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 
 .sidebar .menu-links,
 .sidebar .social-links {
   opacity: 0;
-<<<<<<< HEAD
-  transition: opacity 0.5s ease-in-out;
-  transition-delay: 0.3s;
-  /* Delays the opacity transition until the sidebar is fully expanded */
-=======
   transition: opacity 0.6s ease-in-out; /* Longer fade-in duration */
   transition-delay: 0.4s; /* Increased delay for smooth appearance */
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 
 .sidebar.open .menu-links,
@@ -268,27 +249,6 @@
   }
 }
 
-<<<<<<< HEAD
-.but {
-  /* background-color: black; */
-  position: fixed;
-  /* left: 10px; */
-  right: -15px;
-  color: black;
-  width: 100px;
-  height: 40px;
-  border-radius: 25px;
-  /* padding: 20px; */
-  font-size: 18px;
-  background-color: #7873f5;
-  color: white;
-  z-index: 60;
-  transition: ease-in-out 0.3s;
-}
-
-.but:hover {
-  background-color: #7873f5;
-=======
 @keyframes typing {
   from {
     width: 0;
@@ -296,7 +256,6 @@
   to {
     width: 100%;
   }
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 
 .but {
@@ -353,10 +312,6 @@
 }
 
 .countdown-container span {
-<<<<<<< HEAD
-  font-size: 1.25rem;
-}
-=======
   font-size: 2rem; /* Keep labels large */
   font-weight: bold;
   color: #ffffff;
@@ -380,4 +335,3 @@
   filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 1)); /* Stronger glow */
   transform: scale(1.1) rotate(3deg);
 }
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d

@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-.contactdiv{
- display: flex;
- justify-self: center;
- align-items: center;
- flex-direction:column ;
-}
-
-.secondcontact{
- max-width: 1250px;
- display: flex;
- gap: 20px;
- padding: 10px;
- align-items: center;
- justify-content: center;
- /* background-color: antiquewhite; */
-}
-
-.contactleft{
- max-width:600px ;
- /* background-color: black; */
-}
-
-.contactright{
- width: 600px;
-}
-
-
-/* contact from
- */
-=======
 .contactdiv {
   display: flex;
   justify-self: center;
@@ -57,7 +26,6 @@
 
 /* contact from
     */
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 .orange {
   color: #ff7a01;
 }
@@ -68,9 +36,6 @@
   background-color: #001925;
   padding: 30px;
   border-left: 5px solid #ff7a01;
-<<<<<<< HEAD
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
-=======
   clip-path: polygon(
     0 0,
     100% 0,
@@ -78,7 +43,6 @@
     calc(100% - 20px) 100%,
     0 100%
   );
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 
 .heading {
@@ -159,13 +123,6 @@
   color: #ff7a01;
   font-weight: bold;
   background: #001925;
-<<<<<<< HEAD
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
-  transition: all 0.2s ease-in-out;
-}
-
-.form-container .form .button-container .reset-button-container .reset-button:hover {
-=======
   clip-path: polygon(
     0 0,
     100% 0,
@@ -181,31 +138,10 @@
   .button-container
   .reset-button-container
   .reset-button:hover {
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
   background: #ff7a01;
   color: #001925;
 }
 
-<<<<<<< HEAD
-.inputdiv{
- display: flex;
- /* align-items: center; */
- /* justify-self: center; */
-}
-
-
-.map{
- /* width: 50%; */
- /* background-color: #001925; */
-}
-
-
-
-
-/* socials */
-
-/* From Uiverse.io by vinodjangid07 */ 
-=======
 .inputdiv {
   display: flex;
   /* align-items: center; */
@@ -220,7 +156,6 @@
 /* socials */
 
 /* From Uiverse.io by vinodjangid07 */
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 .cardsocial {
   width: fit-content;
   height: fit-content;
@@ -242,65 +177,36 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-<<<<<<< HEAD
-  transition-duration: .3s;
-}
-
-.containerOnes{
- background-color: white;
-=======
   transition-duration: 0.3s;
 }
 
 .containerOnes {
   background-color: white;
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 /* instagram*/
 .containerOne:hover {
   background-color: #d62976;
-<<<<<<< HEAD
-  transition-duration: .3s;
-=======
   transition-duration: 0.3s;
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 /* twitter*/
 .containerTwo:hover {
   background-color: #00acee;
-<<<<<<< HEAD
-  transition-duration: .3s;
-=======
   transition-duration: 0.3s;
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 /* linkdin*/
 .containerThree:hover {
   background-color: #0072b1;
-<<<<<<< HEAD
-  transition-duration: .3s;
-}
-/* Whatsapp*/
-.containerFour:hover {
-  background-color: #128C7E;
-  transition-duration: .3s;
-=======
   transition-duration: 0.3s;
 }
 /* Whatsapp*/
 .containerFour:hover {
   background-color: #128c7e;
   transition-duration: 0.3s;
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 
 .socialContainer:active {
   transform: scale(0.9);
-<<<<<<< HEAD
-  transition-duration: .3s;
-=======
   transition-duration: 0.3s;
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 }
 
 .socialSvg {
@@ -327,18 +233,10 @@
   }
 }
 
-<<<<<<< HEAD
-.connectheading{
- color: #001925;
-}
-
-
-=======
 .connectheading {
   color: #001925;
 }
 
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
 /* for Accordin */
 
 .accordion {

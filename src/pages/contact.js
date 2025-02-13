@@ -13,7 +13,7 @@ import "../styles/eventsection.css";
 import "../styles/workshopsection.css";
 import Workshopimg from "../../public/images/1.jpg";
 import Data from "../../public/Data/Workshopdata";
-import Contact from "../../components/Contact";
+// import Contact from "../../components/Contact";
 
 // Variants for menu animation
 const variants = {
@@ -99,7 +99,7 @@ export default function Intro() {
         </div>
       </motion.div>
 
-      <Contact />
+      {/* <Contact /> */}
     </div>
   );
 }

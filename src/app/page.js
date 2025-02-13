@@ -43,7 +43,7 @@ export default function Home() {
       {/* <SectionTeam />
       <Team /> */}
       {/* <Contact /> */}
-      <div className="h-[20vh] bg-black"></div>
+      {/* <div className="h-[20vh] bg-black"></div> */}
       <Footer />
     </main>
   );

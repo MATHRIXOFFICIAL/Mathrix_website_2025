@@ -7,7 +7,7 @@
 .background-overlay {
   position: absolute;
   inset: 0;
-  background: url("/images/bg7.jpg") center/cover no-repeat;
+  background: url("/images/bg4.jpg") center/cover no-repeat;
   opacity: 0.6;
   z-index: -1;
   filter: blur(2px);
@@ -123,13 +123,12 @@
   -webkit-text-fill-color: transparent;
 }
 
- .eventgrid {
+.eventgrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   place-items: center;
   padding: 20px;
   gap: 2rem;
-
 }
 
 .card-container {

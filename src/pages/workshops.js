@@ -6,6 +6,7 @@ import Data from "../../public/Data/Workshopdata";
 import MenuBar from "@/components/MenuBar";
 import "../styles/schedule.css";
 import "../app/globals.css";
+import { LampDemo } from "@/components/ComingSoon";
 
 export default function Intro() {
   return (
@@ -16,24 +17,15 @@ export default function Intro() {
         <div className="fulldiv">
           <div className="topcont">
             <div className="left">
-              <h1>Workshops</h1>
-              <h3>Mathrix'25</h3>
-              <p>
-                Immerse yourself in hands-on learning experiences at Saarang's
-                dynamic workshops. Led by industry experts and talented
-                professionals, these sessions offer unique opportunities to
-                develop new skills and explore your interests in an engaging
-                environment.
-              </p>
-            </div>
-            <div className="right">
-              <div className="imgdiv">
-                <img src={Workshopimg} alt="Workshop" />
-              </div>
+              <h1 className="text-6xl font-extrabold text-teal-500">
+                Workshops
+              </h1>
+              <h2 className="text-6xl font-extrabold">Mathrix'25</h2>
             </div>
           </div>
         </div>
-        <div className="workshopsecond">
+      </div>
+      {/* <div className="workshopsecond">
           <div className="workshoppass">
             <h3>GET WORKSHOP PASS</h3>
             <p>
@@ -59,7 +51,9 @@ export default function Intro() {
               );
             })}
           </div>
-        </div>
+        </div> */}
+      <div className="min-h-screen w-full flex items-center justify-center bg-black">
+        <LampDemo />
       </div>
     </div>
   );

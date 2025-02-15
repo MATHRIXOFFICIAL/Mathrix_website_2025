@@ -2,31 +2,115 @@
   position: relative;
   padding: 20px;
   animation: fadeIn 1s ease-in-out;
+  overflow: hidden;
 }
 
+/* Black Background */
 .background-overlay {
   position: absolute;
-  inset: 0;
-  background: url("/images/bg2.jpg") center/cover no-repeat;
-  opacity: 0.6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
   z-index: -1;
-  filter: blur(2px);
+  overflow: hidden;
 }
 
-.glass-effect {
-  position: relative;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
-  backdrop-filter: blur(15px);
-  padding: 20px;
-  margin-top: 20px;
-  text-align: center;
+/* Matrix-Style Code Rain */
+.code-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
-.float-gif {
-  width: 150px;
-  height: auto;
-  animation: floatEffect 3s ease-in-out infinite;
+.code-rain span {
+  position: absolute;
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+  color: rgba(74, 231, 204, 0.7);
+  animation: fall 5s linear infinite;
+  opacity: 0;
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+/* Glowing Digital Lines */
+.digital-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: rgba(0, 255, 255, 0.5);
+  animation: lineMove 8s linear infinite;
+}
+
+@keyframes lineMove {
+  0% {
+    left: -5%;
+  }
+  100% {
+    left: 105%;
+  }
+}
+
+/* Rotating Data Points */
+.data-point {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: rgba(28, 230, 129, 0.8);
+  border-radius: 50%;
+  animation: movePoint 10s infinite ease-in-out, rotatePoint 6s infinite linear;
+}
+
+@keyframes movePoint {
+  0% {
+    top: 10%;
+    left: 10%;
+  }
+  25% {
+    top: 30%;
+    left: 70%;
+  }
+  50% {
+    top: 60%;
+    left: 40%;
+  }
+  75% {
+    top: 80%;
+    left: 20%;
+  }
+  100% {
+    top: 10%;
+    left: 10%;
+  }
+}
+
+@keyframes rotatePoint {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .section-title {
@@ -53,15 +137,15 @@
 
 .card-container {
   perspective: 1000px;
-  animation: floatEffect 2s ease-in-out infinite;
+  animation: floatEffect 4s ease-in-out infinite;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   transform-style: preserve-3d;
   transition: transform 0.5s;
 }
@@ -76,42 +160,30 @@
   object-fit: cover;
 }
 
-.content {
-  padding: 15px;
-  text-align: center;
-}
-
-.heading {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.description {
-  font-size: 1rem;
-  color: #555;
-}
-
-.button-container {
-  margin-top: 20px;
+.buttonbuy {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
+  margin-top: 20px;
 }
 
-.view-all-btn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: white;
-  background-color: #007bff;
+.buttonbuy button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(90deg, #0f3a9d, #0088ff);
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(74, 239, 187, 0.8), 0 0 20px rgba(58, 224, 188, 0.4);
 }
 
-.view-all-btn:hover {
-  background-color: #0056b3;
+.buttonbuy button:hover {
+  background: linear-gradient(90deg, #005bff, #a81fd2);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgb(72, 239, 153);
 }
 
 @keyframes fadeIn {
@@ -133,57 +205,4 @@
   100% {
     transform: translateY(0);
   }
-}
-
-.buttonbuy {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-.buttonbuy button {
-  padding: 12px 24px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #ffffff;
-  background: linear-gradient(
-    90deg,
-    #0f3a9d,
-    #0088ff
-  ); /* Blue cyber gradient */
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 136, 255, 0.8); /* Neon glow effect */
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Add a hover effect with a glowing border */
-.buttonbuy button:hover {
-  background: linear-gradient(90deg, #005bff, #a81fd2);
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(0, 136, 255, 1); /* Stronger glow */
-}
-
-/* Add a pulsating effect */
-@keyframes neonPulse {
-  0% {
-    box-shadow: 0 0 10px rgba(0, 136, 255, 0.8);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(0, 136, 255, 1);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(0, 136, 255, 0.8);
-  }
-}
-
-.buttonbuy button:active {
-  transform: scale(0.95);
-  animation: neonPulse 0.6s infinite alternate;
 }

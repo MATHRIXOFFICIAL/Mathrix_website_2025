@@ -4,6 +4,10 @@ import React, { useRef, useEffect, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import "../styles/sidebar.css";
 import MenuBar from "./MenuBar";
+// import { Boxes } from "../ui/background-boxes";
+import { cn } from "@/lib/utils";
+import Starfield from "./starBackground/Starfield";
+import ShootingStar from "./starBackground/ShootingStar";
 import "../styles/star.css";
 
 const variants = {
@@ -90,6 +94,22 @@ export default function Intro() {
           />
         </div>
       </div>
+      {/* <Starfield numStars={1700} size={1} duration={100} />
+          <Starfield numStars={700} size={2} duration={125} />
+          <Starfield numStars={200} size={3} duration={175} />
+          <ShootingStar /> */}
+      {/* <motion.div style={{ y }} className="absolute inset-0">
+        <video
+          className="w-full h-full object-cover fixed top-0 left-0"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src={Background} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>{" "}
+      </motion.div> */}
       <MenuBar />
 
       <div className="logo-container">
@@ -102,11 +122,21 @@ export default function Intro() {
 
       {/* Replaced Typing Text with Animated Logo1 */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 pointer-events-none">
+        {/* <motion.img
+              src={Logo1}
+              alt="Animated Logo"
+              className="logo1-effect"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
+              whileHover={{ scale: 1.2, rotate: -3 }}
+            /> */}
         <h3 className="font-bold uppercase text-9xl flex justify-center items-center bg-gradient-to-b from-gray-300 to-black text-transparent bg-clip-text">
           MATHRIX
         </h3>
 
         <div className="mt-10 text-2xl font-bold">
+          <p>Countdown to the Event:</p>
           <div className="countdown-container">
             <div>
               <p>{timeLeft.days}</p>

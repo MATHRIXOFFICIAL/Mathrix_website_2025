@@ -204,7 +204,19 @@
   color: #ff73d9; /* Accent color on hover */
 }
 
+/* @keyframes logo-bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
 
+/* Fixing White Screen Issue */
 video {
   position: fixed;
   top: 0;
@@ -272,7 +284,7 @@ video {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  background: rgba(255, 255, 255, 0.6); /* Darker background for better contrast */
+  background: rgba(0, 0, 0, 0.6); /* Darker background for better contrast */
   padding: 20px;
   border-radius: 15px;
 }
@@ -285,7 +297,7 @@ video {
   font-size: 2rem; /* Keep text large */
   font-weight: bold;
   margin-bottom: 30px;
-  color: #000000; /* Solid white text for clarity */
+  color: #eff4f5; /* Solid white text for clarity */
   text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3); /* Subtle shadow instead of glow */
   animation: none; /* Remove glow animation */
 }
@@ -293,7 +305,7 @@ video {
 .countdown-container span {
   font-size: 1rem; /* Keep labels large */
   font-weight: bold;
-  color: #131212;
+  color: #ffffff;
   text-transform: uppercase;
 }
 .logo-container {

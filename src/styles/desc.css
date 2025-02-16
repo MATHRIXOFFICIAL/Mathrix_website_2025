@@ -61,6 +61,7 @@
   color: rgba(220, 200, 255, 0.95); /* Softer purple shade */
   margin-top: 15px;
   opacity: 0;
+  text-align: justify !important;
 }
 
 /* Animated Gradient Text */

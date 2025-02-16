@@ -66,7 +66,7 @@ export default function Intro() {
         </div> */}
 
       {/* Replace with LampDemo (Coming Soon) */}
-      <div className="min-h-screen w-full flex items-center justify-center bg-black">
+      <div className="min-h-screen w-full flex items-center justify-center">
         <LampDemo />
       </div>
     </div>

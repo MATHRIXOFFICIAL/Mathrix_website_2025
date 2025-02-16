@@ -1,0 +1,25 @@
+.t-3d-effect {
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 1); /* Main text color */
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 5px;
+  position: relative;
+}
+
+.t-3d-effect::before,
+.t-3d-effect::after {
+  content: "EVENTS"; /* Full background shadow text */
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(48, 209, 166, 0.4); /* Shadow for 3D effect */
+  z-index: -1;
+  transform: translate(5px, 5px);
+}
+
+.t-3d-effect::after {
+  transform: translate(10px, 10px);
+  color: rgba(48, 209, 166, 0.4); /* Darker shadow for depth */
+}

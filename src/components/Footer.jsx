@@ -1,75 +1,77 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Footer.css";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
+
+const developers = [
+  {
+    name: "Aravindkumar",
+    img: "/images/aravind.jpg",
+    linkedin: "https://linkedin.com/in/amjath",
+  },
+  {
+    name: "Rajesh Babu",
+    img: "/images/rajesh.jpg",
+    linkedin: "https://linkedin.com/in/sagar",
+  },
+  {
+    name: "Vimalesh C T",
+    img: "/images/vimal1.jpg",
+    linkedin: "https://www.linkedin.com/in/vimalesh-c-t/",
+  },
+];
 
 export default function Footer() {
-  const [showLinkedIn, setShowLinkedIn] = useState(false);
-
-  const handleShowLinkedIn = () => {
-    setShowLinkedIn((prev) => !prev);
-  };
-
   return (
-    <footer className='footer-container'>
-      <div className='footer-content'>
-        <div className='footer-left'>
-          <h2 className='footer-logo'>MATHRIX</h2>
-          <p className='footer-description'>
+    <footer className="footer-container">
+      <div className="footer-content">
+        <div className="footer-left">
+          <h2 className="footer-logo">MATHRIX</h2>
+          <p className="footer-description">
             Explore the world of mathematics and computer technology with us.
             Join our events, workshops, and competitions to unlock your
             potential.
           </p>
         </div>
 
-        <div className='footer-center'>
-          <h3 className='footer-heading'>Quick Links</h3>
-          <ul className='footer-links'>
+        <div className="footer-center">
+          <h3 className="footer-heading">Quick Links</h3>
+          <ul className="footer-links">
             <li>
-              <a href='/about'>About Us</a>
+              <a href="/events">Events</a>
             </li>
             <li>
-              <a href='/events'>Events</a>
+              <a href="/schedule">Schedule</a>
             </li>
             <li>
-              <a href='/schedule'>Schedule</a>
+              <a href="/workshops">Workshops</a>
             </li>
             <li>
-              <a href='/workshops'>Workshops</a>
-            </li>
-            <li>
-              <a href='/contact'>Contact</a>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
         </div>
 
-        <div className='footer-right'>
-          <h3 className='footer-heading'>Follow Us</h3>
-          <div className='footer-social-icons'>
+        <div className="footer-right">
+          <h3 className="footer-heading">Follow Us</h3>
+          <div className="footer-social-icons">
             <a
-              href='https://facebook.com'
-              target='_blank'
-              rel='noopener noreferrer'
+              href="https://whatsapp.com/channel/0029VazaJQMJENy6iDroTr0B"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <FaFacebook />
+              <FaWhatsapp />
             </a>
             <a
-              href='https://twitter.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href='https://instagram.com'
-              target='_blank'
-              rel='noopener noreferrer'
+              href="https://www.instagram.com/mathrix_official/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaInstagram />
             </a>
             <a
-              href='https://linkedin.com'
-              target='_blank'
-              rel='noopener noreferrer'
+              href="https://www.linkedin.com/company/mathrix-2025"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaLinkedin />
             </a>
@@ -77,23 +79,26 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className='footer-bottom'>
+      <div className="footer-bottom">
         <p>&copy; 2025 Mathrix. All Rights Reserved.</p>
-        <p className='developer-credits' onClick={handleShowLinkedIn}>
-          Developed by TechMathrix
-        </p>
-        {showLinkedIn && (
-          <div className='linkedin-popup'>
-            <a
-              href='https://linkedin.com/in/techmathrix'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Visit Developer's LinkedIn
-            </a>
+        <div className="developer-corner">
+          <p className="developer-title">Developed by TechMathrix Team</p>
+          <div className="developer-corner-avatars">
+            {developers.map((dev, index) => (
+              <div key={index} className="developer-avatar">
+                <a
+                  href={dev.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={dev.img} alt={dev.name} className="developer-img" />
+                  <div className="developer-tooltip">{dev.name}</div>
+                </a>
+              </div>
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </footer>
-  )
+  );
 }

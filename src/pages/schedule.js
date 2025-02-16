@@ -22,7 +22,7 @@ export default function Intro() {
               Schedule For MATHRIX'25
             </h3>
             <h3 className="flex justify-center items-center text-4xl mt-5 font-semibold gradient-text">
-              March 14 - 23
+              March 15 , March 22 and March 29
             </h3>
           </div>
           <div className="mt-12 flex">

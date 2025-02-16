@@ -1,75 +1,77 @@
-import React, { useEffect, useRef, useState } from "react";
-import Button from "../components/Button";
+import React, { useEffect, useRef } from "react";
+import { useRouter } from "next/navigation";
 import "../styles/workshop.css";
 import workshopData from "../../public/Data/Workshopdata";
-import { useRouter } from "next/navigation";
 
 export default function Workshop() {
   const contentRef = useRef(null);
-  const h2Ref = useRef(null); // Reference for the h2 element
-  const router = useRouter(); // ✅ Correct function for App Router
-
-  const handleRegisterClick = () => {
-    router.push("/workshops"); // ✅ Redirects correctly in App Router
-  };
+  const router = useRouter();
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          h2Ref.current.classList.add("reveal");
-        }
-      },
-      {
-        threshold: 0.5,
-      }
-    );
-
-    if (h2Ref.current) {
-      observer.observe(h2Ref.current);
+    // Add matrix-style code rain dynamically
+    const codeRainContainer = document.querySelector(".code-rain");
+    const characters = "01XΩ∑πλ";
+    for (let i = 0; i < 100; i++) {
+      const span = document.createElement("span");
+      span.textContent =
+        characters[Math.floor(Math.random() * characters.length)];
+      span.style.left = `${Math.random() * 100}%`;
+      span.style.animationDelay = `${Math.random() * 5}s`;
+      codeRainContainer.appendChild(span);
     }
-
-    return () => {
-      if (h2Ref.current) {
-        observer.unobserve(h2Ref.current);
-      }
-    };
   }, []);
 
-  const handleViewAll = () => {
+  const handleRegisterClick = () => {
     router.push("/workshops");
   };
 
   return (
-    <>
-      <div ref={contentRef} className="workshop-container">
-        <div>
-          <div className="background-overlay"></div>
-          <h2 ref={h2Ref} className="section-title">
-            Workshops
-          </h2>
-          <div className="workshop-grid">
-            {workshopData.map((items, key) => {
-              return (
-                <div key={key} className="card-container">
-                  <div className="card">
-                    <div className="img-content">
-                      <img src={items.img} alt={items.name} />
-                    </div>
-                    <div className="content">
-                      <p className="heading">{items.name}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+    <div ref={contentRef} className="workshop-container">
+      <div className="background-overlay">
+        {/* Code Rain Effect */}
+        <div className="code-rain"></div>
 
-          <div className="buttonbuy">
-            <button onClick={handleRegisterClick}>Register</button>
-          </div>
-        </div>
+        {/* Glowing Digital Lines */}
+        {[...Array(5)].map((_, i) => (
+          <div
+            key={i}
+            className="digital-line"
+            style={{ left: `${i * 20}%` }}
+          ></div>
+        ))}
+
+        {/* Rotating Data Points */}
+        {[...Array(6)].map((_, i) => (
+          <div
+            key={i}
+            className="data-point"
+            style={{
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+            }}
+          ></div>
+        ))}
       </div>
-    </>
+
+      <h2 className="section-title">Workshops</h2>
+      <div className="workshop-grid">
+        {workshopData.map((items, key) => (
+          <div key={key} className="card-container">
+            <div className="card">
+              <div className="img-content">
+                <img src={items.img} alt={items.name} />
+              </div>
+              <div className="content">
+                <p className="heading">{items.name}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="buttonbuy">
+        <button onClick={handleRegisterClick}>Register</button>
+      </div>
+    </div>
   );
 }

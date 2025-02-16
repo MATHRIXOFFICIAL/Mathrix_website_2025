@@ -6,14 +6,14 @@
 
 /* Glassmorphism Effect */
 .glass-box {
-  background: rgba(255, 255, 255, 0.15); /* More subtle white transparency */
+  background: rgba(255, 255, 255, 0.05); /* More subtle white transparency */
   backdrop-filter: blur(12px); /* Increased blur effect */
   border-radius: 20px;
   padding: 40px;
   width: 70%;
   max-width: 800px;
   text-align: center;
-  box-shadow: 0 10px 35px rgba(31, 38, 135, 0.4);
+  /* box-shadow: 0 10px 35px rgba(31, 38, 135, 0.4); */
   border: 1px solid rgba(255, 255, 255, 0.25);
   animation: fadeInScale 1.5s ease-in-out;
 }
@@ -61,6 +61,7 @@
   color: rgba(220, 200, 255, 0.95); /* Softer purple shade */
   margin-top: 15px;
   opacity: 0;
+  text-align: justify !important;
 }
 
 /* Animated Gradient Text */

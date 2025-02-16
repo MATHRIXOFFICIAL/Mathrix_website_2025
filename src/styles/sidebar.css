@@ -3,163 +3,26 @@
   z-index: 50;
   top: 1.5rem;
   right: -15px;
-  background: rgba(
-    31,
-    41,
-    55,
-    0.85
-  ); /* Increased opacity for better visibility */
+  background: rgba(31, 41, 55, 0.85);
   border-radius: 25px;
-  backdrop-filter: blur(15px); /* Enhanced blur effect */
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
-  transition: all 0.4s ease-in-out; /* Smoothened transition */
-}
-
-.sidebar.open {
-  transform: translateX(0);
-  width: 400px; /* Increased width for more content space */
-  height: 600px; /* Increased height */
-  background: rgba(
-    90,
-    85,
-    255,
-    0.95
-  ); /* Updated opacity and color for better readability */
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6); /* Stronger shadow for emphasis */
-}
-
-.sidebar .menu-links,
-.sidebar .social-links {
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out; /* Longer fade-in duration */
-  transition-delay: 0.4s; /* Increased delay for smooth appearance */
-}
-
-.sidebar.open .menu-links,
-.sidebar.open .social-links {
-  opacity: 1;
-}
-
-.sidebar .menu-links {
-  text-align: center;
-  margin-top: 10%; /* Adjusted for new sidebar height */
-}
-
-.sidebar .menu-links li {
-  font-size: 2rem; /* Larger font size for readability */
-  font-weight: bold;
-  color: #f3f4f6; /* Slightly lighter color */
-  margin-bottom: 2.5rem; /* Increased spacing */
-  list-style: none;
-  transition: transform 0.4s ease-in-out; /* Smooth hover effect */
-}
-
-.sidebar .menu-links li:hover {
-  transform: scale(1.2); /* Slightly larger scale effect */
-}
-
-.sidebar .social-links {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem; /* Increased gap */
-  margin-top: 3.5rem; /* Adjusted for layout balance */
-}
-
-.sidebar .social-links a {
-  font-size: 2.5rem; /* Larger icon size */
-  text-decoration: none;
-  color: #ffffff;
-  transition: transform 0.4s ease-in-out, color 0.3s ease-in-out; /* Added color transition */
-}
-
-.sidebar .social-links a:hover {
-  transform: rotate(20deg) scale(1.3); /* More dynamic hover effect */
-  color: #ff73d9; /* Accent color on hover */
-}
-
-.typing-text-container {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 25rem; /* Larger text */
-  font-weight: bold;
-  color: transparent;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-.but {
-  position: fixed;
-  right: -15px;
-  width: 140px; /* Wider button */
-  height: 60px; /* Taller button */
-  border-radius: 35px; /* Smoother corners */
-  font-size: 22px; /* Larger text */
-  background: linear-gradient(
-    45deg,
-    #9083ff,
-    #6a5acd,
-    #5ae3ff
-  ); /* Updated gradient color */
-  color: white;
-  z-index: 60;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
   transition: all 0.4s ease-in-out;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
-}
-
-.but:hover {
-  background: linear-gradient(
-    45deg,
-    #6a5acd,
-    #9083ff,
-    #ff73d9
-  ); /* Accent color on hover */
-  transform: scale(1.25); /* Stronger scale effect */
-}
-.sidebar {
-  position: fixed;
-  z-index: 50;
-  top: 1.5rem;
-  right: -15px;
-  background: rgba(
-    31,
-    41,
-    55,
-    0.85
-  ); /* Increased opacity for better visibility */
-  border-radius: 25px;
-  backdrop-filter: blur(15px); /* Enhanced blur effect */
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
-  transition: all 0.4s ease-in-out; /* Smoothened transition */
 }
 
 .sidebar.open {
   transform: translateX(0);
-  width: 400px; /* Increased width for more content space */
-  height: 600px; /* Increased height */
-  background: rgba(
-    90,
-    85,
-    255,
-    0.95
-  ); /* Updated opacity and color for better readability */
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6); /* Stronger shadow for emphasis */
+  width: 400px;
+  height: 600px;
+  background: rgba(90, 85, 255, 0.95);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6);
 }
 
 .sidebar .menu-links,
 .sidebar .social-links {
   opacity: 0;
-  transition: opacity 0.6s ease-in-out; /* Longer fade-in duration */
-  transition-delay: 0.4s; /* Increased delay for smooth appearance */
+  transition: opacity 0.6s ease-in-out;
+  transition-delay: 0.4s;
 }
 
 .sidebar.open .menu-links,
@@ -169,55 +32,42 @@
 
 .sidebar .menu-links {
   text-align: center;
-  margin-top: 10%; /* Adjusted for new sidebar height */
+  margin-top: 10%;
 }
 
 .sidebar .menu-links li {
-  font-size: 2rem; /* Larger font size for readability */
+  font-size: 2rem;
   font-weight: bold;
-  color: #f3f4f6; /* Slightly lighter color */
-  margin-bottom: 2.5rem; /* Increased spacing */
+  color: #f3f4f6;
+  margin-bottom: 2.5rem;
   list-style: none;
-  transition: transform 0.4s ease-in-out; /* Smooth hover effect */
+  transition: transform 0.4s ease-in-out;
 }
 
 .sidebar .menu-links li:hover {
-  transform: scale(1.2); /* Slightly larger scale effect */
+  transform: scale(1.2);
 }
 
 .sidebar .social-links {
   display: flex;
   justify-content: center;
-  gap: 2.5rem; /* Increased gap */
-  margin-top: 3.5rem; /* Adjusted for layout balance */
+  gap: 2.5rem;
+  margin-top: 3.5rem;
 }
 
 .sidebar .social-links a {
-  font-size: 2.5rem; /* Larger icon size */
+  font-size: 2.5rem;
   text-decoration: none;
   color: #ffffff;
-  transition: transform 0.4s ease-in-out, color 0.3s ease-in-out; /* Added color transition */
+  transition: transform 0.4s ease-in-out, color 0.3s ease-in-out;
 }
 
 .sidebar .social-links a:hover {
-  transform: rotate(20deg) scale(1.3); /* More dynamic hover effect */
-  color: #ff73d9; /* Accent color on hover */
+  transform: rotate(20deg) scale(1.3);
+  color: #ff73d9;
 }
 
-/* @keyframes logo-bounce {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
-
-/* Fixing White Screen Issue */
-video {
+.video {
   position: fixed;
   top: 0;
   left: 0;
@@ -226,7 +76,6 @@ video {
   object-fit: cover;
   z-index: -1;
 }
-
 
 .countdown-3d-container {
   display: flex;
@@ -245,7 +94,6 @@ video {
   height: 100px;
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate-cube 10s infinite linear;
 }
 
 .face {
@@ -259,7 +107,7 @@ video {
   justify-content: center;
   font-size: 2rem;
   font-weight: bold;
-  color: #00ffcc;
+  color: #dce6e4;
   text-shadow: 0 0 10px #00ffcc;
 }
 
@@ -286,8 +134,13 @@ video {
   font-size: 1.2rem;
   color: #ffffff;
   text-transform: uppercase;
-  margin-top: 10px;
+  margin-bottom: 50px;
   letter-spacing: 1px;
+}
+
+/* Rotate only the seconds cube */
+.animate-rotate-cube .cube {
+  animation: rotate-cube 2s infinite linear;
 }
 
 @keyframes rotate-cube {
@@ -310,13 +163,13 @@ video {
 
 .logo-container {
   position: fixed;
-  top: 20px; /* Adjust spacing from top */
-  left: 20px; /* Adjust spacing from left */
-  z-index: 1000; /* Ensure it's always above other elements */
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
 }
 
 .logo-effect {
-  width: 75px; /* Adjust logo size */
+  width: 75px;
   height: auto;
   margin-left: 10px;
 }

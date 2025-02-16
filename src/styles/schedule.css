@@ -26,14 +26,8 @@
   background-size: var(--gap) var(--gap);
 }
 
-/* .custom-date {
-  color: white !important;
-  font-size: 20px !important;
-  font-weight: bold;
-} */
-
 .gradient-text {
-  background: linear-gradient(90deg, #4a90e2, #e94e77);
+  background: linear-gradient(90deg, #3fddb8, #10a47d);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: bold;

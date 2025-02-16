@@ -21,9 +21,9 @@ export default function Intro() {
             <h3 className="font-bold uppercase text-6xl flex justify-center items-center gradient-text">
               Schedule For MATHRIX'25
             </h3>
-            <h3 className="flex justify-center items-center text-4xl mt-5 font-semibold gradient-text">
+            {/* <h3 className="flex justify-center items-center text-4xl mt-5 font-semibold gradient-text">
               March 15 , March 22 and March 29
-            </h3>
+            </h3> */}
           </div>
           <div className="mt-12 flex">
             <VerticalTimeline>
@@ -42,11 +42,11 @@ export default function Intro() {
                     dateClassName="custom-date"
                   >
                     <div>
-                      <h3 className="text-black text-xl font-poppins font-semibold">
+                      <h3 className="text-black text-xl font-poppins font-bold">
                         {exp.name}
                       </h3>
                     </div>
-                    <ul className="my-5 list-disc ml-5 space-y-2">
+                    <ul className="my-5 list-disc ml-5 space-y-2 font-semibold">
                       {exp.points}
                     </ul>
                   </VerticalTimelineElement>

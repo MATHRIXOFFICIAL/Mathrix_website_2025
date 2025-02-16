@@ -1,3 +1,23 @@
+.bd {
+  background: #000000;
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(255, 255, 255, 0.2);
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  background-size: var(--gap) var(--gap);
+}
 .contactdiv {
   display: flex;
   justify-self: center;
@@ -27,7 +47,7 @@
 /* contact from
     */
 .orange {
-  color: #ff7a01;
+  color: #00b1ad;
 }
 
 .form-container {
@@ -35,7 +55,7 @@
   margin: 30px;
   background-color: #001925;
   padding: 30px;
-  border-left: 5px solid #ff7a01;
+  border-left: 5px solid #00b1ad;
   clip-path: polygon(
     0 0,
     100% 0,
@@ -47,14 +67,14 @@
 
 .heading {
   display: block;
-  color: white;
+  color: rgb(38, 226, 164);
   font-size: 1.5rem;
   font-weight: 800;
   margin-bottom: 20px;
 }
 
 .form-container .form .input {
-  color: #87a4b6;
+  color: #65dac9;
   width: 100%;
   background-color: #002733;
   border: none;
@@ -67,7 +87,7 @@
 }
 
 .form-container .form .input:focus {
-  border-left: 5px solid #ff7a01;
+  border-left: 5px solid #42f3d5;
 }
 
 .form-container .form .textarea {
@@ -76,7 +96,7 @@
   border: none;
   outline: none;
   background-color: #013747;
-  color: #ff7a01;
+  color: #42f3d5;
   font-weight: bold;
   resize: none;
   max-height: 150px;
@@ -86,7 +106,7 @@
 }
 
 .form-container .form .textarea:focus {
-  border-left: 5px solid #ff7a01;
+  border-left: 5px solid #42f3d5;
 }
 
 .form-container .form .button-container {
@@ -96,7 +116,7 @@
 
 .form-container .form .button-container .send-button {
   flex-basis: 70%;
-  background: #ff7a01;
+  background: #42f3d5;
   padding: 10px;
   color: #001925;
   text-align: center;
@@ -107,12 +127,12 @@
 
 .form-container .form .button-container .send-button:hover {
   background: transparent;
-  border: 1px solid #ff7a01;
-  color: #ff7a01;
+  border: 1px solid #42f3d5;
+  color: #42f3d5;
 }
 
 .form-container .form .button-container .reset-button-container {
-  filter: drop-shadow(1px 1px 0px #ff7a01);
+  filter: drop-shadow(1px 1px 0px #42f3d5);
   flex-basis: 30%;
 }
 
@@ -120,7 +140,7 @@
   position: relative;
   text-align: center;
   padding: 10px;
-  color: #ff7a01;
+  color: #42f3d5;
   font-weight: bold;
   background: #001925;
   clip-path: polygon(
@@ -138,7 +158,7 @@
   .button-container
   .reset-button-container
   .reset-button:hover {
-  background: #ff7a01;
+  background: #42f3d5;
   color: #001925;
 }
 
@@ -146,11 +166,6 @@
   display: flex;
   /* align-items: center; */
   /* justify-self: center; */
-}
-
-.map {
-  /* width: 50%; */
-  /* background-color: #001925; */
 }
 
 /* socials */
@@ -185,17 +200,17 @@
 }
 /* instagram*/
 .containerOne:hover {
-  background-color: #d62976;
+  background-color: #128c7e;
   transition-duration: 0.3s;
 }
 /* twitter*/
 .containerTwo:hover {
-  background-color: #00acee;
+  background-color: #128c7e;
   transition-duration: 0.3s;
 }
 /* linkdin*/
 .containerThree:hover {
-  background-color: #0072b1;
+  background-color: #128c7e;
   transition-duration: 0.3s;
 }
 /* Whatsapp*/
@@ -242,57 +257,90 @@
 .accordion {
   width: 100%;
   max-width: 550px;
+  margin-top: 30px;
   margin-left: 10px;
-  /* border: 1px solid #ccc; */
-  /* border-radius: 10px; */
-  overflow: hidden;
 }
 
 .accordion-item {
-  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px; /* Space between accordions */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .accordion-title {
-  padding: 9px;
-  /* width: 20px; */
-  height: 50px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
-  background: #f7f7f7;
+  background: linear-gradient(135deg, #1f2c34, #34dda2);
+  color: #ffffff;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.4s, transform 0.3s;
+  border: none;
+  border-radius: 8px;
 }
 
 .accordion-title:hover {
-  background: #e0e0e0;
+  background: linear-gradient(135deg, #25cd98, #35d6b1);
+  transform: scale(1.03); /* Subtle zoom on hover */
 }
 
 .accordion-content {
-  padding: 9px 15px;
+  padding: 15px;
   max-height: 0;
   overflow: hidden;
-  /* background-color: #0072b1; */
-  transition: max-height 0.3s ease-in-out;
+  background-color: rgba(255, 255, 255, 0.765);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0;
+  font-weight: 600;
+  color: #0d573d;
 }
 
 .accordion-content.open {
-  max-height: 200px; /* Adjust as needed */
+  max-height: 200px;
+  opacity: 1;
 }
 
 .accordinside {
-  margin-left: 370px;
+  margin-left: 300px;
 }
 
 .accordinside1 {
-  margin-left: 420px;
+  margin-left: 350px;
 }
 
 .accordinside2 {
-  margin-left: 460px;
+  margin-left: 380px;
 }
 
 .accordinside3 {
-  margin-left: 390px;
+  margin-left: 310px;
+}
+
+.icon {
+  transition: transform 0.4s;
+}
+
+.icon.rotate {
+  transform: rotate(180deg);
+}
+
+/* Animation for accordion expand effect */
+@keyframes fade-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.accordion-content.open p {
+  animation: fade-slide-in 0.6s ease forwards;
 }

@@ -52,7 +52,7 @@
 }
 
 /* Glowing Digital Lines */
-.digital-line {
+/* .digital-line {
   position: absolute;
   top: 0;
   left: 0;
@@ -60,7 +60,7 @@
   height: 100%;
   background: rgba(0, 255, 255, 0.5);
   animation: lineMove 8s linear infinite;
-}
+} */
 
 @keyframes lineMove {
   0% {
@@ -172,7 +172,7 @@
   font-size: 18px;
   font-weight: bold;
   color: #ffffff;
-  background: linear-gradient(90deg, #0f3a9d, #0088ff);
+  background: linear-gradient(90deg, #0f9d5b, #43d5a2);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -181,7 +181,7 @@
 }
 
 .buttonbuy button:hover {
-  background: linear-gradient(90deg, #005bff, #a81fd2);
+  background: linear-gradient(90deg, #179269, #1fd2b4);
   transform: scale(1.1);
   box-shadow: 0 0 20px rgb(72, 239, 153);
 }

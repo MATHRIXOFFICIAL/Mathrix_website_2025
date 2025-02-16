@@ -61,7 +61,7 @@ const MenuBar = () => {
             <a href="/workshops">Workshops</a>
           </li>
           <li>
-            <a href="/Contact">Contact</a>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
       </div>

@@ -44,21 +44,13 @@ export default function Description() {
             <Starfield numStars={700} size={2} duration={125} />
             <Starfield numStars={200} size={3} duration={175} />
             <ShootingStar />
-            {/* Background Image with Blur Effect */}
-            {/* <motion.div style={{ y }} className="absolute inset-0 bg-overlay">
-        <img
-          src={Background}
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
-      </motion.div> */}
 
             {/* Content Box with Glassmorphism */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
               <div className="glass-box">
                 {/* About Mathrix Appears First */}
                 <motion.h2
-                  className="font-bold uppercase text-6xl gradient-text"
+                  className="font-bold uppercase text-6xl grad-text"
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, ease: "easeOut" }}
@@ -73,25 +65,7 @@ export default function Description() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1, duration: 0.4 }}
                 >
-                  <Cover>
-                    EPSILON TO INFINITY
-                    {/* {"EPSILON TO INFINITY".split("").map((char, index) => (
-                    <motion.span
-                      key={index}
-                      className="drop-letter"
-                      initial={{ y: -100, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{
-                        delay: 1 + index * 0.2, // Starts after About Mathrix finishes
-                        type: "spring",
-                        stiffness: 120,
-                        damping: 10,
-                      }}
-                    >
-                      {char}
-                    </motion.span>
-                  ))} */}
-                  </Cover>
+                  <Cover>EPSILON TO INFINITY</Cover>
                 </motion.h2>
 
                 {/* Description Text Appears Last */}

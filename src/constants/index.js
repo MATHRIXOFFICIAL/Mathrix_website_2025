@@ -1,19 +1,19 @@
 export const Events = [
   {
     name: "Workshop",
-    date: "10:00 AM - 04:00 PM",
+    date: "15th MARCH",
     iconBg: "#33ffd3", // Unique color
     points: "Conducted by GOOGLE Developer & AZURE User Group Chennai.",
   },
   {
     name: "Open Source Session",
-    date: "09:00 AM - 12:00 PM",
+    date: "22nd MARCH",
     iconBg: "#33ffb8", // Unique color
     points: "Conducted by Developers Community",
   },
   {
     name: "MATHRIX'25",
-    date: "10:00 AM - 04:00 PM",
+    date: "29th MARCH",
     iconBg: "#33ff8b", // Unique color
     points:
       " Mathrix is the annual intercollegiate symposium where mathematics meets technology! Hosted by the Department of Mathematics, College of Engineering Guindy, Anna University.",

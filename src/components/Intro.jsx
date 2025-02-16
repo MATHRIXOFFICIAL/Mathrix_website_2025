@@ -109,10 +109,14 @@ export default function Intro() {
         <div className="mt-10 text-2xl font-bold">
           <div className="countdown-3d-container">
             {Object.entries(timeLeft).map(([label, value]) => (
-              <div key={label} className="countdown-3d-cube">
+              <div
+                key={label}
+                className={`countdown-3d-cube ${
+                  label === "seconds" ? "animate-rotate-cube" : ""
+                }`} // Add rotation only for seconds
+              >
                 <div className="cube">
                   <div className="face front">{value}</div>
-                  <div className="face back">{value}</div>
                   <div className="face left">{value}</div>
                   <div className="face right">{value}</div>
                   <div className="face top">{value}</div>

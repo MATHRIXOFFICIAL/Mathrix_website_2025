@@ -14,12 +14,12 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: rgba(48, 209, 166, 0.4); /* Shadow for 3D effect */
+  color: rgba(7, 157, 117, 0.71); /* Shadow for 3D effect */
   z-index: -1;
   transform: translate(5px, 5px);
 }
 
 .t-3d-effect::after {
   transform: translate(10px, 10px);
-  color: rgba(48, 209, 166, 0.4); /* Darker shadow for depth */
+  color: rgba(7, 157, 117, 0.71); /* Darker shadow for depth */
 }

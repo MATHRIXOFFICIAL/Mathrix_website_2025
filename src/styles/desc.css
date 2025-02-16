@@ -34,7 +34,7 @@
 .about-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #a56eff; /* Lavender shade */
+  color: #0bb791; /* Lavender shade */
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -45,7 +45,7 @@
   justify-content: center;
   font-size: 2.2rem;
   font-weight: bold;
-  color: #d4a3ff; /* Light purple */
+  color: #11c16c; /* Light purple */
   margin-top: 15px;
   letter-spacing: 1px;
 }
@@ -58,45 +58,26 @@
 /* Description Text */
 .about-description {
   font-size: 1.3rem;
-  color: rgba(220, 200, 255, 0.95); /* Softer purple shade */
+  color: rgba(221, 231, 227, 0.95); /* Softer purple shade */
   margin-top: 15px;
   opacity: 0;
   text-align: justify !important;
 }
 
 /* Animated Gradient Text */
-.animated-gradient {
-  background: linear-gradient(45deg, #b36aff, #5a2df7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-shift 4s infinite ease-in-out;
-}
-
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 /* Bigger & Bolder Date */
 .event-date {
   font-size: 3rem; /* Increased size */
   font-weight: 800; /* Bolder */
-  color: #e1bfff; /* Softer lavender shade */
+  color: #44f1af; /* Softer lavender shade */
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 0px 0px 1px rgba(186, 46, 228, 0.8); /* Glow effect */
+  text-shadow: 0px 0px 1px rgba(41, 186, 120, 0.838); /* Glow effect */
 }
 
 /* Gradient Effect */
 .animated-gradient {
-  background: linear-gradient(45deg, #b36aff, #5a2df7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-shift 4s infinite ease-in-out;

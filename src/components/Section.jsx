@@ -27,10 +27,15 @@ export default function Section() {
         />
       </div>
 
-      {/* Foreground Content */}
-      <div className="relative z-10 p-20 text-white w-full h-full flex flex-col justify-between"></div>
+      {/* Glassmorphic Overlay */}
+      <div className="absolute inset-0 bg-black/20 backdrop-blur-sm z-0"></div>
 
-      {/* Animated Text with Better Shadow Effect */}
+      {/* Foreground Content */}
+      <div className="relative z-10 p-20 text-white w-full h-full flex flex-col justify-between">
+        {/* Add your content here */}
+      </div>
+
+      {/* Animated Text with 3D Shadow Effect */}
       <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
         <motion.div style={{ y }} className="relative w-full h-full">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">

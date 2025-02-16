@@ -24,6 +24,7 @@ export default function SectionWorkshop() {
           alt="Background"
         />
       </div>
+      <div className="absolute inset-0 bg-black/20 backdrop-blur-sm z-0"></div>
 
       {/* Foreground Content */}
       <div className="relative z-10 p-20 text-white w-full h-full flex flex-col justify-between">

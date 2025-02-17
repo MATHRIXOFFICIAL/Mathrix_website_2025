@@ -10,10 +10,8 @@ const Map = () => {
         scrolling="no"
         marginheight="0"
         marginwidth="0"
-        src="https://maps.google.com/maps?width=400&amp;height=400&amp;hl=en&amp;q=12,%20Sardar%20Patel%20Rd,%20Anna%20University,%20Guindy,%20Chennai,%20Tamil%20Nadu%20600025+(Mathrix)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-      >
-        {/* <a href="https://www.gps.ie/">gps handsets</a> */}
-      </iframe>
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3814828773056!2d80.23291107377693!3d13.011361687307657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52679f723db9b1%3A0xc21402f114b44a69!2sDepartment%20of%20Mathematics!5e0!3m2!1sen!2sin!4v1739816291695!5m2!1sen!2sin"
+      ></iframe>
     </div>
   );
 };

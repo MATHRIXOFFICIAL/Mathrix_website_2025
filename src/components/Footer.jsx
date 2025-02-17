@@ -23,16 +23,26 @@ const developers = [
 export default function Footer() {
   return (
     <footer className="footer-container">
+      {/* Animated Logo */}
+      <div className="footer-logo-container">
+        <img
+          src="/images/logo.png"
+          alt="Mathrix Logo"
+          className="footer-logo-img"
+        />
+      </div>
+
       <div className="footer-content">
+        {/* Left Section */}
         <div className="footer-left">
-          <h2 className="footer-logo">MATHRIX</h2>
+          <h2 className="footer-logo-text">MATHRIX</h2>
           <p className="footer-description">
-            Explore the world of mathematics and computer technology with us.
-            Join our events, workshops, and competitions to unlock your
-            potential.
+            Explore the world of mathematics and technology with us. Join our
+            events, workshops, and competitions to unlock your potential.
           </p>
         </div>
 
+        {/* Center Links */}
         <div className="footer-center">
           <h3 className="footer-heading">Quick Links</h3>
           <ul className="footer-links">
@@ -51,36 +61,26 @@ export default function Footer() {
           </ul>
         </div>
 
+        {/* Right Section - Social Media */}
         <div className="footer-right">
           <h3 className="footer-heading">Follow Us</h3>
           <div className="footer-social-icons">
-            <a
-              href="https://whatsapp.com/channel/0029VazaJQMJENy6iDroTr0B"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://whatsapp.com/channel/0029VazaJQMJENy6iDroTr0B">
               <FaWhatsapp />
             </a>
-            <a
-              href="https://www.instagram.com/mathrix_official/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.instagram.com/mathrix_official/">
               <FaInstagram />
             </a>
-            <a
-              href="https://www.linkedin.com/company/mathrix-2025"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.linkedin.com/company/mathrix-2025">
               <FaLinkedin />
             </a>
           </div>
         </div>
       </div>
 
+      {/* Bottom Section - Developer Team */}
       <div className="footer-bottom">
-        <p>&copy; 2025 Mathrix. All Rights Reserved.</p>
+        <p>© 2025 Mathrix. All Rights Reserved.</p>
         <div className="developer-corner">
           <p className="developer-title">Developed by TechMathrix Team</p>
           <div className="developer-corner-avatars">

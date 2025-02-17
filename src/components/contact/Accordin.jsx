@@ -1,64 +1,64 @@
-import React, { useState } from 'react'
-import { FaChevronDown } from 'react-icons/fa' // Import down arrow icon
+import React, { useState } from "react";
+import { FaChevronDown } from "react-icons/fa"; // Import down arrow icon
 
 const Accordion = () => {
-  const [openIndex, setOpenIndex] = useState(null)
+  const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index)
-  }
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
   const accordionData = [
     {
-      question: 'General Inquiries [HR] :',
+      question: "General Inquiries  :",
       answers: [
         <>
-          HR 1 <span className='accordinside1'>1000000</span>
+          Gokul Ramana <span className="accordinside1">9342194955</span>
         </>,
         <>
-          HR 2 <span className='accordinside1'>1000000</span>
+          Swetha <span className="accordinside1">9360831815</span>
         </>,
         <>
-           <span className='accordinside3'>Mathrix@gnail.com</span>
+          <span className="accordinside3">mathrix2025@gmail.com</span>
         </>,
       ],
     },
     {
-      question: "Mathrix OB'S",
+      question: "Sponsor Inquiries",
       answers: [
         <>
-          Ramanan <span className='accordinside2'>1000000</span>
+          Harshidha <span className="accordinside2">9080436437</span>
         </>,
         <>
-          Swetha <span className='accordinside2'>1000000</span>
+          Metta Surendhar <span className="accordinside2">8122801247</span>
+        </>,
+        <>
+          Logeshwari<span className="accordinside2">8778158668</span>
+        </>,
+        <>
+          <span className="accordinside3">
+            mathrix.industrialrelations@gmail.com
+          </span>
         </>,
       ],
     },
-    {
-      question: 'Our Sponsors',
-      answers: [
-        <>
-          Sponsor <span className='accordinside'>Link to article</span>
-        </>,
-      ],
-    },
-  ]
+  ];
 
   return (
-    <div className='accordion'>
+    <div className="accordion">
       {accordionData.map((item, index) => (
-        <div key={index} className='accordion-item'>
+        <div key={index} className="accordion-item">
           <div
-            className='accordion-title'
+            className="accordion-title"
             onClick={() => toggleAccordion(index)}
           >
             <h3>{item.question}</h3>
             <FaChevronDown
-              className={`icon ${openIndex === index ? 'rotate' : ''}`}
+              className={`icon ${openIndex === index ? "rotate" : ""}`}
             />
           </div>
           <div
-            className={`accordion-content ${openIndex === index ? 'open' : ''}`}
+            className={`accordion-content ${openIndex === index ? "open" : ""}`}
           >
             {item.answers.map((answer, ansIndex) => (
               <p key={ansIndex}>{answer}</p>
@@ -67,7 +67,7 @@ const Accordion = () => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default Accordion
+export default Accordion;

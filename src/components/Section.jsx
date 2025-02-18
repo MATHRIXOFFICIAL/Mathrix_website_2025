@@ -25,6 +25,9 @@ export default function Section() {
           className="w-full h-full object-cover"
           src="/images/b1.jpg"
           alt="Background"
+          width={800}
+          height={600}
+          layout="intrinsic"
         />
       </div>
 

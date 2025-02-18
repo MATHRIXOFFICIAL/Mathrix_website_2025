@@ -31,6 +31,9 @@ export default function Footer() {
           src="/images/logo.png"
           alt="Mathrix Logo"
           className="footer-logo-img"
+          width={800}
+          height={600}
+          layout="intrinsic"
         />
       </div>
 
@@ -96,8 +99,11 @@ export default function Footer() {
                   <Image
                     src={dev.img}
                     alt={dev.name}
+                    width={100} // Set appropriate width
+                    height={100} // Set appropriate height
                     className="developer-img"
                   />
+
                   <div className="developer-tooltip">{dev.name}</div>
                 </Link>
               </div>

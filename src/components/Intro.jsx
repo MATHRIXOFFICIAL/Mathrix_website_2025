@@ -64,30 +64,42 @@ export default function Intro() {
       <div className="z-0 inset-0 flex flex-row  overflow-hidden h-full absolute">
         <div>
           <Image
-            className="pointer-events-auto brightness-50 hover:brightness-100 w-[50vw] h-full"
-            src="../IntroImage/1.jpg"
-            alt=""
+            className="pointer-events-auto brightness-50 hover:brightness-100"
+            src="/IntroImage/1.jpg" // Use absolute path from "public" folder
+            alt="Intro Image 1"
+            width={800} // Set appropriate width
+            height={600} // Set appropriate height
+            layout="intrinsic" // Optional: Adjusts size automatically
           />
         </div>
         <div>
           <Image
-            className="brightness-50 hover:brightness-100 w-[50vw] h-full"
-            src="../IntroImage/2.jpg"
-            alt=""
+            className="brightness-50 hover:brightness-100"
+            src="/IntroImage/2.jpg"
+            alt="Intro Image 2"
+            width={800}
+            height={600}
+            layout="intrinsic"
           />
         </div>
         <div>
           <Image
-            className="brightness-50 hover:brightness-100 w-[50vw] h-full"
-            src="../IntroImage/3.jpg"
-            alt=""
+            className="brightness-50 hover:brightness-100"
+            src="/IntroImage/3.jpg"
+            alt="Intro Image 3"
+            width={800}
+            height={600}
+            layout="intrinsic"
           />
         </div>
         <div>
           <Image
-            className="brightness-50 hover:brightness-100 w-[50vw] h-full"
-            src="../IntroImage/4.jpg"
-            alt=""
+            className="brightness-50 hover:brightness-100"
+            src="/IntroImage/4.jpg"
+            alt="Intro Image 4"
+            width={800}
+            height={600}
+            layout="intrinsic"
           />
         </div>
       </div>

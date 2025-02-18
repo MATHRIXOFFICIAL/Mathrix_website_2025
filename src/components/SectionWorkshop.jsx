@@ -23,6 +23,9 @@ export default function SectionWorkshop() {
           className="w-full h-full object-cover"
           src="/images/b2.jpg"
           alt="Background"
+          width={800}
+          height={600}
+          layout="intrinsic"
         />
       </div>
       <div className="absolute inset-0 bg-black/20 backdrop-blur-sm z-0"></div>

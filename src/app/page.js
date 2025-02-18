@@ -9,6 +9,7 @@ import Workshop from "@/components/Workshop";
 import SectionWorkshop from "@/components/SectionWorkshop";
 import SectionTeam from "../components/SectionTeam";
 import Team from "@/components/Team";
+
 // import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 export default function Home() {

@@ -31,6 +31,7 @@
     "react-vertical-timeline-component": "^3.5.3",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
+    "sharp": "^0.33.5",
     "swiper": "^11.2.2",
     "tailwind-merge": "^3.0.1"
   },

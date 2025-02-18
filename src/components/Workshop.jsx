@@ -60,7 +60,13 @@ export default function Workshop() {
           <div key={key} className="card-container">
             <div className="card">
               <div className="img-content">
-                <Image src={items.img} alt={items.name} />
+                <Image
+                  src={items.img}
+                  alt={items.name}
+                  width={800}
+                  height={600}
+                  layout="intrinsic"
+                />
               </div>
               <div className="content">
                 <p className="heading">{items.name}</p>

@@ -5,12 +5,6 @@ import React, { useRef, useEffect, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import "../styles/sidebar.css";
 import MenuBar from "./MenuBar";
-import "../styles/star.css";
-
-const variants = {
-  open: { width: 480, height: 650 },
-  close: { width: 100, height: 40 },
-};
 
 export default function Intro() {
   const Background = "/images/back1.mp4";
@@ -23,7 +17,7 @@ export default function Intro() {
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "0vh"]); // Fixed white screen issue
+  const y = useTransform(scrollYProgress, [0, 1], ["0vh", "0vh"]);
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -58,50 +52,17 @@ export default function Intro() {
   }, []);
 
   return (
-    // <div className="container">
-    //   <div className="sky">
     <div className="h-screen overflow-hidden relative" ref={container}>
-      <div className="z-0 inset-0 flex flex-row  overflow-hidden h-full absolute">
-        <div>
-          <Image
-            className="pointer-events-auto brightness-50 hover:brightness-100"
-            src="/IntroImage/1.jpg" // Use absolute path from "public" folder
-            alt="Intro Image 1"
-            width={800} // Set appropriate width
-            height={600} // Set appropriate height
-            layout="intrinsic" // Optional: Adjusts size automatically
-          />
-        </div>
-        <div>
-          <Image
-            className="brightness-50 hover:brightness-100"
-            src="/IntroImage/2.jpg"
-            alt="Intro Image 2"
-            width={800}
-            height={600}
-            layout="intrinsic"
-          />
-        </div>
-        <div>
-          <Image
-            className="brightness-50 hover:brightness-100"
-            src="/IntroImage/3.jpg"
-            alt="Intro Image 3"
-            width={800}
-            height={600}
-            layout="intrinsic"
-          />
-        </div>
-        <div>
-          <Image
-            className="brightness-50 hover:brightness-100"
-            src="/IntroImage/4.jpg"
-            alt="Intro Image 4"
-            width={800}
-            height={600}
-            layout="intrinsic"
-          />
-        </div>
+      <div className="z-0 inset-0 flex flex-row flex-wrap md:flex-nowrap overflow-hidden h-full absolute">
+        {[1, 2, 3, 4].map((num) => (
+          <div key={num} className="w-full h-full">
+            <img
+              className="w-full h-full object-cover brightness-50 hover:brightness-100"
+              src={`/IntroImage/${num}.jpg`}
+              alt={`Intro Image ${num}`}
+            />
+          </div>
+        ))}
       </div>
 
       <MenuBar />
@@ -114,19 +75,18 @@ export default function Intro() {
         />
       </div>
 
-      {/* Replaced Typing Text with Animated Logo1 */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 pointer-events-none">
-        <h3 className="font-bold uppercase text-9xl flex justify-center items-center bg-gradient-to-b from-gray-300 to-black text-transparent bg-clip-text">
+      <div className="absolute inset-0 flex flex-col gap-10 items-center justify-center text-center text-white z-10 pointer-events-none">
+        <h3 className="font-bold uppercase text-6xl md:text-9xl flex justify-center items-center bg-gradient-to-b from-gray-300 to-black text-transparent bg-clip-text">
           MATHRIX
         </h3>
-        <div className="mt-10 text-2xl font-bold">
+        <div className="mt-5 md:mt-10 text-xl md:text-2xl font-bold">
           <div className="countdown-3d-container">
             {Object.entries(timeLeft).map(([label, value]) => (
               <div
                 key={label}
                 className={`countdown-3d-cube ${
                   label === "seconds" ? "animate-rotate-cube" : ""
-                }`} // Add rotation only for seconds
+                }`}
               >
                 <div className="cube">
                   <div className="face front">{value}</div>

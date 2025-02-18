@@ -8,12 +8,12 @@ const developers = [
   {
     name: "Aravindkumar",
     img: "/images/aravind.jpg",
-    linkedin: "https://linkedin.com/in/amjath",
+    linkedin: "https://www.linkedin.com/in/aravindkumar-m-206702263/",
   },
   {
     name: "Rajesh Babu",
     img: "/images/rajesh.jpg",
-    linkedin: "https://linkedin.com/in/sagar",
+    linkedin: "https://www.linkedin.com/in/rajeshbabu2004/",
   },
   {
     name: "Vimalesh C T",

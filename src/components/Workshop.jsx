@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import "../styles/workshop.css";
 import workshopData from "../../public/Data/Workshopdata";
+import Image from "next/image";
 
 export default function Workshop() {
   const contentRef = useRef(null);
@@ -59,7 +60,7 @@ export default function Workshop() {
           <div key={key} className="card-container">
             <div className="card">
               <div className="img-content">
-                <img src={items.img} alt={items.name} />
+                <Image src={items.img} alt={items.name} />
               </div>
               <div className="content">
                 <p className="heading">{items.name}</p>

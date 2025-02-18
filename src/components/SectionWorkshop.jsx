@@ -1,6 +1,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import "@/styles/workshopsection.css";
+import Image from "next/image";
 
 export default function SectionWorkshop() {
   const container = useRef();
@@ -18,7 +19,7 @@ export default function SectionWorkshop() {
     >
       {/* Image Background */}
       <div className="absolute inset-0">
-        <img
+        <Image
           className="w-full h-full object-cover"
           src="/images/b2.jpg"
           alt="Background"

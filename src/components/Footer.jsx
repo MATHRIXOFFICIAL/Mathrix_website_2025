@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/Footer.css";
 import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
 
 const developers = [
   {
@@ -25,7 +27,7 @@ export default function Footer() {
     <footer className="footer-container">
       {/* Animated Logo */}
       <div className="footer-logo-container">
-        <img
+        <Image
           src="/images/logo.png"
           alt="Mathrix Logo"
           className="footer-logo-img"
@@ -47,16 +49,16 @@ export default function Footer() {
           <h3 className="footer-heading">Quick Links</h3>
           <ul className="footer-links">
             <li>
-              <a href="/events">Events</a>
+              <Link href="/events">Events</Link>
             </li>
             <li>
-              <a href="/schedule">Schedule</a>
+              <Link href="/schedule">Schedule</Link>
             </li>
             <li>
-              <a href="/workshops">Workshops</a>
+              <Link href="/workshops">Workshops</Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -65,15 +67,15 @@ export default function Footer() {
         <div className="footer-right">
           <h3 className="footer-heading">Follow Us</h3>
           <div className="footer-social-icons">
-            <a href="https://whatsapp.com/channel/0029VazaJQMJENy6iDroTr0B">
+            <Link href="https://whatsapp.com/channel/0029VazaJQMJENy6iDroTr0B">
               <FaWhatsapp />
-            </a>
-            <a href="https://www.instagram.com/mathrix_official/">
+            </Link>
+            <Link href="https://www.instagram.com/mathrix_official/">
               <FaInstagram />
-            </a>
-            <a href="https://www.linkedin.com/company/mathrix-2025">
+            </Link>
+            <Link href="https://www.linkedin.com/company/mathrix-2025">
               <FaLinkedin />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -86,14 +88,18 @@ export default function Footer() {
           <div className="developer-corner-avatars">
             {developers.map((dev, index) => (
               <div key={index} className="developer-avatar">
-                <a
+                <Link
                   href={dev.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={dev.img} alt={dev.name} className="developer-img" />
+                  <Image
+                    src={dev.img}
+                    alt={dev.name}
+                    className="developer-img"
+                  />
                   <div className="developer-tooltip">{dev.name}</div>
-                </a>
+                </Link>
               </div>
             ))}
           </div>

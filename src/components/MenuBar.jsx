@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../app/globals.css";
+import Link from "next/link";
 
 const MenuBar = () => {
   const [menuActive, setMenuActive] = useState(false);
@@ -49,19 +50,19 @@ const MenuBar = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <li>
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <a href="/events">Events</a>
+            <Link href="/events">Events</Link>
           </li>
           <li>
-            <a href="/schedule">Schedule</a>
+            <Link href="/schedule">Schedule</Link>
           </li>
           <li>
-            <a href="/workshops">Workshops</a>
+            <Link href="/workshops">Workshops</Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link href="/contact">Contact</Link>
           </li>
         </ul>
       </div>

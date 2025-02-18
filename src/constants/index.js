@@ -3,10 +3,10 @@ export const Events = [
     name: "Workshop",
     date: "15th MARCH",
     iconBg: "#33ffd3", // Unique color
-    points: "Conducted by GOOGLE Developer & AZURE User Group Chennai.",
+    points: "Conducted by GOOGLE Developer Community & AZURE User Group Chennai.",
   },
   {
-    name: "Open Source Session",
+    name: "Session",
     date: "22nd MARCH",
     iconBg: "#33ffb8", // Unique color
     points: "Conducted by Developers Community",

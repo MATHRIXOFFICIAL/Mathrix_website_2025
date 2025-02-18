@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useRef, useEffect, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import "../styles/sidebar.css";
@@ -62,28 +63,28 @@ export default function Intro() {
     <div className="h-screen overflow-hidden relative" ref={container}>
       <div className="z-0 inset-0 flex flex-row  overflow-hidden h-full absolute">
         <div>
-          <img
+          <Image
             className="pointer-events-auto brightness-50 hover:brightness-100 w-[50vw] h-full"
             src="../IntroImage/1.jpg"
             alt=""
           />
         </div>
         <div>
-          <img
+          <Image
             className="brightness-50 hover:brightness-100 w-[50vw] h-full"
             src="../IntroImage/2.jpg"
             alt=""
           />
         </div>
         <div>
-          <img
+          <Image
             className="brightness-50 hover:brightness-100 w-[50vw] h-full"
             src="../IntroImage/3.jpg"
             alt=""
           />
         </div>
         <div>
-          <img
+          <Image
             className="brightness-50 hover:brightness-100 w-[50vw] h-full"
             src="../IntroImage/4.jpg"
             alt=""

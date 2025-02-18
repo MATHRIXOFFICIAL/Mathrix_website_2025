@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const SponsorCard = ({ name, image, type }) => {
   return (
@@ -12,7 +13,7 @@ const SponsorCard = ({ name, image, type }) => {
         <div className="flex flex-col items-center mb-4">
           {/* Sponsor Image */}
           <div className="w-12 h-12 rounded-full bg-gray-300 mb-2 overflow-hidden">
-            <img
+            <Image
               src={image} // Replace with your sponsor image URL
               alt="Sponsor"
               className="w-full h-full object-cover"

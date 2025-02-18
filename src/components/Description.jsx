@@ -82,11 +82,11 @@ export default function Description() {
                   innovation, and problem-solving under one roof. Organized by
                   the brilliant minds of M.Sc. Computer Science (5 years), M.Sc.
                   Information Technology (5 years), and M.Sc. Mathematics (2
-                  years), Mathrix is more than just a symposium—it's a fusion of
-                  numbers, algorithms, and cutting-edge tech. With a perfect
-                  blend of mathematical and technical events, this fest is
-                  designed to challenge intellects, spark creativity, and push
-                  boundaries. From thrilling competitions that test your
+                  years), Mathrix is more than just a symposium—it&apos;s a
+                  fusion of numbers, algorithms, and cutting-edge tech. With a
+                  perfect blend of mathematical and technical events, this fest
+                  is designed to challenge intellects, spark creativity, and
+                  push boundaries. From thrilling competitions that test your
                   mathematical prowess to tech-driven challenges that fuel your
                   coding skills, Mathrix is the ultimate arena for innovators,
                   problem-solvers, and future disruptors.

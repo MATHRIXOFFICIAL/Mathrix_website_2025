@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState, useRef } from "react";
 import "../styles/events.css";
 import data from "../../public/Data/Eventsdata";
+import Image from "next/image";
 
 export default function Events() {
   const router = useRouter();
@@ -61,7 +62,7 @@ export default function Events() {
             <div className="card-container" key={key}>
               <div className="card">
                 <div className="img-content">
-                  <img src={items.img} alt={items.name} />
+                  <Image src={items.img} alt={items.name} />
                 </div>
                 <div className="content">
                   <p className="heading">{items.name}</p>

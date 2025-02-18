@@ -19,7 +19,7 @@ export default function Intro() {
         <div className="py-16">
           <div>
             <h3 className="font-bold uppercase text-6xl flex justify-center items-center gradient-text">
-              Schedule For MATHRIX'25
+              Schedule For MATHRIX&apos;25
             </h3>
             {/* <h3 className="flex justify-center items-center text-4xl mt-5 font-semibold gradient-text">
               March 15 , March 22 and March 29

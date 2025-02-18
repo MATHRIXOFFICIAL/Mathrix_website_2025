@@ -5,6 +5,7 @@ import { FaInstagram, FaWhatsapp, FaLinkedin } from "react-icons/fa";
 import Accordin from "./Contact/Accordin";
 import Map from "./contact/Map";
 import Footer from "./Footer";
+import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -16,24 +17,24 @@ const Contact = () => {
           {/* Connect text before social icons */}
           <div className="contactsocial">
             <div className="cardsocial">
-              <a
+              <Link
                 href="https://www.instagram.com/mathrix_official/"
                 className="socialContainer containerOne"
               >
                 <FaInstagram />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://whatsapp.com/channel/0029VazaJQMJENy6iDroTr0B"
                 className="socialContainer containerTwo"
               >
                 <FaWhatsapp />
-              </a>
-              <a
+              </Link>
+              <Link
                 href="https://www.linkedin.com/company/mathrix-2025"
                 className="socialContainer containerThree"
               >
                 <FaLinkedin />
-              </a>
+              </Link>
             </div>
           </div>
           {/* Google Map */}

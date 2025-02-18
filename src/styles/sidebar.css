@@ -79,9 +79,10 @@
 
 .countdown-3d-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .countdown-3d-cube {
@@ -90,55 +91,54 @@
 }
 
 .cube {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   position: relative;
   transform-style: preserve-3d;
 }
 
 .face {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #dce6e4;
   text-shadow: 0 0 10px #00ffcc;
 }
 
 .face.front {
-  transform: rotateY(0deg) translateZ(50px);
+  transform: rotateY(0deg) translateZ(40px);
 }
 .face.back {
-  transform: rotateY(180deg) translateZ(50px);
+  transform: rotateY(180deg) translateZ(40px);
 }
 .face.left {
-  transform: rotateY(-90deg) translateZ(50px);
+  transform: rotateY(-90deg) translateZ(40px);
 }
 .face.right {
-  transform: rotateY(90deg) translateZ(50px);
+  transform: rotateY(90deg) translateZ(40px);
 }
 .face.top {
-  transform: rotateX(90deg) translateZ(50px);
+  transform: rotateX(90deg) translateZ(40px);
 }
 .face.bottom {
-  transform: rotateX(-90deg) translateZ(50px);
+  transform: rotateX(-90deg) translateZ(40px);
 }
 
 .countdown-label {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #ffffff;
   text-transform: uppercase;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   letter-spacing: 1px;
 }
 
-/* Rotate only the seconds cube */
 .animate-rotate-cube .cube {
   animation: rotate-cube 2s infinite linear;
 }
@@ -169,7 +169,7 @@
 }
 
 .logo-effect {
-  width: 75px;
+  width: 60px;
   height: auto;
   margin-left: 10px;
 }

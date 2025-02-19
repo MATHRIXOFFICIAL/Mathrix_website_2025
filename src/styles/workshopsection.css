@@ -1,25 +1,112 @@
+/* ============================= */
+/* 🌍 Universal Section Styling  */
+/* ============================= */
+.section-workshop-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full-screen height */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ============================= */
+/* 📷 Background Image Styling   */
+/* ============================= */
+.section-workshop-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================= */
+/* 🌑 Black Overlay (Desktop Only) */
+/* ============================= */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+/* Hide Overlay on Mobile & Small Screens */
+@media (max-width: 768px) {
+  .bg-overlay {
+    display: none;
+  }
+}
+
+/* ============================= */
+/* ✍ Foreground Content         */
+/* ============================= */
+.section-workshop-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================= */
+/* 🔠 Animated "WORKSHOPS" Text      */
+/* ============================= */
 .text-3d-effect {
-  font-size: 8rem;
+  font-size: clamp(2.5rem, 8vw, 8rem); /* Auto scales based on screen size */
   font-weight: 900;
-  color: rgba(255, 255, 255, 0.9); /* Main text color */
+  color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 5px;
   position: relative;
+  text-align: center;
+  white-space: nowrap;
 }
 
+/* 3D Shadow Effect */
 .text-3d-effect::before,
 .text-3d-effect::after {
   content: "WORKSHOPS";
   position: absolute;
   top: 0;
   left: 0;
-  color: rgba(7, 157, 117, 0.71); /* Shadow for 3D effect */
+  color: rgba(7, 157, 117, 0.71);
   z-index: -1;
   transform: translate(5px, 5px);
 }
 
 .text-3d-effect::after {
   transform: translate(10px, 10px);
-  color: rgba(7, 157, 117, 0.71); /* Darker shadow for depth */
+  color: rgba(7, 157, 117, 0.71);
+}
+
+/* ============================= */
+/* 📱 Mobile-Specific Adjustments */
+/* ============================= */
+@media (max-width: 1024px) {
+  /* Tablet */
+  .text-3d-effect {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Large mobile */
+  .text-3d-effect {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Small mobile */
+  .text-3d-effect {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
 }

@@ -1,4 +1,4 @@
-/* Footer Container */
+/* 🌍 Footer Base Styling */
 .footer-container {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: #ffffff;
@@ -11,7 +11,7 @@
   overflow-x: hidden;
 }
 
-/* Center Content */
+/* 📌 Footer Content Layout */
 .footer-content {
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +22,7 @@
   text-align: center;
 }
 
-/* Sections */
+/* 🏆 Footer Sections */
 .footer-left,
 .footer-center,
 .footer-right {
@@ -30,7 +30,7 @@
   min-width: 280px;
 }
 
-/* Animated Logo */
+/* 🎨 Animated Logo */
 .footer-logo-container {
   display: flex;
   justify-content: center;
@@ -49,7 +49,7 @@
   transform: scale(1.2);
 }
 
-/* Footer Logo Text */
+/* 🔠 Footer Text */
 .footer-logo-text {
   font-size: 36px;
   font-weight: bold;
@@ -58,7 +58,6 @@
   -webkit-text-fill-color: transparent;
 }
 
-/* Footer Description */
 .footer-description {
   font-size: 14px;
   line-height: 1.8;
@@ -66,7 +65,7 @@
   margin: 0 auto;
 }
 
-/* Footer Headings */
+/* 🛠 Quick Links */
 .footer-heading {
   font-size: 20px;
   font-weight: bold;
@@ -75,7 +74,6 @@
   color: #18e4b1;
 }
 
-/* Quick Links */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -96,7 +94,7 @@
   text-decoration: underline;
 }
 
-/* Social Icons */
+/* 📲 Social Icons */
 .footer-social-icons {
   display: flex;
   justify-content: center;
@@ -114,24 +112,30 @@
   transform: scale(1.2);
 }
 
-/* Developer Section */
+/* ========================= */
+/* 🧑‍💻 Developer Section Below Social Icons */
+/* ========================= */
 .footer-bottom {
   margin-top: 30px;
   text-align: center;
   width: 100%;
 }
 
+/* 🌟 Developer Corner */
 .developer-corner {
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
+  position: relative; /* Changed from absolute */
+  margin-top: 20px; /* Adds spacing below social icons */
   background: rgba(0, 0, 0, 0.8);
   padding: 10px 15px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   z-index: 10;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* 🔠 Developer Text */
 .developer-title {
   font-size: 14px;
   font-weight: bold;
@@ -140,6 +144,7 @@
   text-align: center;
 }
 
+/* 🏆 Developer Profile Icons */
 .developer-corner-avatars {
   display: flex;
   justify-content: center;
@@ -147,6 +152,7 @@
   gap: 10px;
 }
 
+/* 🖼 Avatar Styling */
 .developer-avatar {
   position: relative;
   width: 40px;
@@ -185,4 +191,62 @@
 
 .developer-avatar:hover .developer-tooltip {
   opacity: 1;
+}
+
+/* ======================== */
+/* 📱 Responsive Styles     */
+/* ======================== */
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-logo-text {
+    font-size: 28px;
+  }
+  .footer-description {
+    font-size: 12px;
+  }
+  .footer-heading {
+    font-size: 18px;
+  }
+  .footer-links li {
+    margin: 8px 0;
+  }
+  .footer-social-icons {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 30px 10px;
+  }
+  .footer-logo-img {
+    width: 100px;
+  }
+  .footer-logo-text {
+    font-size: 24px;
+  }
+  .footer-description {
+    font-size: 11px;
+  }
+  .footer-heading {
+    font-size: 16px;
+  }
+  .footer-links li {
+    margin: 6px 0;
+  }
+  .footer-social-icons {
+    font-size: 18px;
+    gap: 10px;
+  }
+  .developer-avatar {
+    width: 35px;
+    height: 35px;
+  }
 }

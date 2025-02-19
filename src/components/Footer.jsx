@@ -25,18 +25,6 @@ const developers = [
 export default function Footer() {
   return (
     <footer className="footer-container">
-      {/* Animated Logo */}
-      <div className="footer-logo-container">
-        <Image
-          src="/images/logo.png"
-          alt="Mathrix Logo"
-          className="footer-logo-img"
-          width={800}
-          height={600}
-          layout="intrinsic"
-        />
-      </div>
-
       <div className="footer-content">
         {/* Left Section */}
         <div className="footer-left">
@@ -80,36 +68,32 @@ export default function Footer() {
               <FaLinkedin />
             </Link>
           </div>
+
+          {/* ✅ Developer Section Directly Below Social Icons */}
+          <div className="developer-corner">
+            <p className="developer-title">Developed by TechMathrix Team</p>
+            <div className="developer-corner-avatars">
+              {developers.map((dev, index) => (
+                <div key={index} className="developer-avatar">
+                  <Link href={dev.linkedin} target="_blank">
+                    <Image
+                      src={dev.img}
+                      alt={dev.name}
+                      width={60}
+                      height={60}
+                      className="developer-img"
+                    />
+                    <div className="developer-tooltip">{dev.name}</div>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Bottom Section - Developer Team */}
       <div className="footer-bottom">
         <p>© 2025 Mathrix. All Rights Reserved.</p>
-        <div className="developer-corner">
-          <p className="developer-title">Developed by TechMathrix Team</p>
-          <div className="developer-corner-avatars">
-            {developers.map((dev, index) => (
-              <div key={index} className="developer-avatar">
-                <Link
-                  href={dev.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={dev.img}
-                    alt={dev.name}
-                    width={100} // Set appropriate width
-                    height={100} // Set appropriate height
-                    className="developer-img"
-                  />
-
-                  <div className="developer-tooltip">{dev.name}</div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </footer>
   );

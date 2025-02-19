@@ -54,7 +54,7 @@ export default function Intro() {
   return (
     <div className="h-screen overflow-hidden relative" ref={container}>
       <div className="z-0 inset-0 flex flex-row flex-wrap md:flex-nowrap overflow-hidden h-full absolute">
-        {[1, 2, 3, 4].map((num) => (
+        {[2, 3, 1, 4].map((num) => (
           <div key={num} className="w-full h-full">
             <img
               className="w-full h-full object-cover brightness-50 hover:brightness-100"

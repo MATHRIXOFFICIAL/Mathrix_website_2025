@@ -1,19 +1,30 @@
-/* Background Overlay */
 .bg-overlay {
-  filter: blur(8px); /* Increased blur effect */
-  opacity: 0.85; /* Slight transparency */
+  filter: blur(8px);
+  opacity: 0.85;
+}
+
+/* Responsive Background */
+@media (max-width: 768px) {
+  .bg-overlay {
+    filter: blur(6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-overlay {
+    filter: blur(4px);
+  }
 }
 
 /* Glassmorphism Effect */
 .glass-box {
-  background: rgba(255, 255, 255, 0.05); /* More subtle white transparency */
-  backdrop-filter: blur(12px); /* Increased blur effect */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 40px;
-  width: 70%;
+  width: 80%;
   max-width: 800px;
   text-align: center;
-  /* box-shadow: 0 10px 35px rgba(31, 38, 135, 0.4); */
   border: 1px solid rgba(255, 255, 255, 0.25);
   animation: fadeInScale 1.5s ease-in-out;
 }
@@ -29,14 +40,40 @@
     opacity: 1;
   }
 }
+@media (max-width: 768px) {
+  .glass-box {
+    width: 90%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-box {
+    width: 95%;
+    padding: 20px;
+  }
+}
 
 /* Text Colors */
 .about-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #0bb791; /* Lavender shade */
+  color: #0bb791;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+/* Reduce Font Size for Mobile */
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
 }
 
 /* Letter Drop Animation */
@@ -45,35 +82,68 @@
   justify-content: center;
   font-size: 2.2rem;
   font-weight: bold;
-  color: #5ddd9f; /* Light purple */
+  color: #5ddd9f;
   margin-top: 15px;
   letter-spacing: 1px;
+}
+
+/* Reduce Title on Small Screens */
+@media (max-width: 768px) {
+  .drop-bounce-text {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .drop-bounce-text {
+    font-size: 1.5rem;
+  }
 }
 
 .drop-letter {
   display: inline-block;
   margin: 0 3px;
 }
-
-/* Description Text */
 .about-description {
   font-size: 1.3rem;
-  color: rgba(221, 231, 227, 0.95); /* Softer purple shade */
+  color: rgba(221, 231, 227, 0.95);
   margin-top: 15px;
-  opacity: 0;
-  text-align: justify !important;
+  text-align: justify;
 }
 
-/* Animated Gradient Text */
+/* Adjust Description Text Size */
+@media (max-width: 768px) {
+  .about-description {
+    font-size: 1.1rem;
+  }
+}
 
-/* Bigger & Bolder Date */
+@media (max-width: 480px) {
+  .about-description {
+    font-size: 1rem;
+  }
+}
+/* Animated Gradient Text */
 .event-date {
-  font-size: 3rem; /* Increased size */
-  font-weight: 800; /* Bolder */
-  color: #44f1af; /* Softer lavender shade */
+  font-size: 3rem;
+  font-weight: 800;
+  color: #44f1af;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 0px 0px 1px rgba(41, 186, 120, 0.838); /* Glow effect */
+  text-shadow: 0px 0px 1px rgba(41, 186, 120, 0.838);
+}
+
+/* Adjust Date Size */
+@media (max-width: 768px) {
+  .event-date {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-date {
+    font-size: 2rem;
+  }
 }
 
 /* Gradient Effect */

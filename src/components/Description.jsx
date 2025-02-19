@@ -5,12 +5,10 @@ import { Cover } from "@/ui/cover";
 import Starfield from "./starBackground/Starfield";
 import ShootingStar from "./starBackground/ShootingStar";
 import "../styles/star.css";
-// import "../styles/schedule.css";
 
 export default function Description() {
   const Background = "/images/bg1.jpg"; // Ensure this is a valid path
   const container = useRef();
-  const contentRef = useRef(null);
   const h2Ref = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -50,7 +48,7 @@ export default function Description() {
               <div className="glass-box">
                 {/* About Mathrix Appears First */}
                 <motion.h2
-                  className="font-bold uppercase text-6xl grad-text"
+                  className="about-title"
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, ease: "easeOut" }}
@@ -91,9 +89,10 @@ export default function Description() {
                   coding skills, Mathrix is the ultimate arena for innovators,
                   problem-solvers, and future disruptors.
                 </motion.p>
+
                 {/* Date Text Appears with a Slide-In Effect */}
                 <motion.h2
-                  className="event-date animated-gradient"
+                  className="event-date"
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 3, duration: 1 }}

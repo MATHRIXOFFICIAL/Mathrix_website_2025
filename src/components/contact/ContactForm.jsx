@@ -1,5 +1,6 @@
 import { useState } from "react";
 // import "../../styles/contact.css"
+import "@/app/globals.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -21,9 +22,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container dmsans">
       <div className="form">
-        <span className="heading">Contact Us</span>
+        <span className="heading hammersmith">Contact Us</span>
 
         <input placeholder="Name" type="text" class="input" />
         <input placeholder="Mobile" id="mobile" type="tel" class="input" />

@@ -40,7 +40,7 @@ export default function SectionWorkshop() {
         <motion.div style={{ y }} className="relative w-full h-full">
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-20 mix-blend-overlay">
             <div className="relative z-10 flex flex-col items-center justify-center">
-              <div className="text-3d-effect">WORKSHOPS</div>
+              <div className="text-3d-effect hammersmith">WORKSHOPS</div>
             </div>
           </div>
         </motion.div>

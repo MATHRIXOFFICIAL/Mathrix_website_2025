@@ -69,14 +69,14 @@ export default function Workshop() {
                 />
               </div>
               <div className="content">
-                <p className="heading">{items.name}</p>
+                <p className="heading dmsans">{items.name}</p>
               </div>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="buttonbuy">
+      <div className="buttonbuy dmsans">
         <button onClick={handleRegisterClick}>Register</button>
       </div>
     </div>

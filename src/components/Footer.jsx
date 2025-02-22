@@ -24,10 +24,10 @@ const developers = [
 
 export default function Footer() {
   return (
-    <footer className="footer-container">
+    <footer className="footer-container montserrat text-lg">
       <div className="footer-content">
         {/* Left Section */}
-        <div className="footer-left">
+        <div className="footer-left flex flex-col gap-10">
           <h2 className="footer-logo-text">MATHRIX</h2>
           <p className="footer-description">
             Explore the world of mathematics and technology with us. Join our

@@ -17,6 +17,33 @@
     overflow-x: hidden; /* Prevent horizontal scrolling */
   }
 
+  .hammersmith {
+    font-family: "Hammersmith One", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+
+  .montserrat {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+  .dmsans {
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  .dmsans-600 {
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
   /* .subhead-text {
     @apply font-semibold sm:text-3xl text-xl relative;
   } */

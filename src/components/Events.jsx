@@ -56,7 +56,7 @@ export default function Events() {
         {/* Particles appear when section is visible */}
       </div>
       <div>
-        <h2 className="text-center text-4xl font-bold mb-8 text-white">
+        <h2 className="text-center text-4xl font-bold mb-8 text-white dmsans">
           Upcoming Events
         </h2>
         <div className="eventgrid">
@@ -73,7 +73,7 @@ export default function Events() {
                   />
                 </div>
                 <div className="content">
-                  <p className="heading">{items.name}</p>
+                  <p className="heading dmsans">{items.name}</p>
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function Events() {
         </div>
       </div>
 
-      <div className="buttonbuy">
+      <div className="buttonbuy dmsans">
         <button onClick={handleRegisterClick}>Register</button>
       </div>
     </div>

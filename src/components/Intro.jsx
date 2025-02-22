@@ -5,6 +5,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import "../styles/sidebar.css";
 import MenuBar from "./MenuBar";
+import "@/app/globals.css";
 
 export default function Intro() {
   const Background = "/images/back1.mp4";
@@ -53,11 +54,11 @@ export default function Intro() {
 
   return (
     <div className="h-screen overflow-hidden relative" ref={container}>
-      <div className="z-0 inset-0 flex flex-row flex-wrap md:flex-nowrap overflow-hidden h-full absolute">
+      <div className="z-0 inset-0 grid grid-cols-2 lg:grid-cols-4 overflow-hidden h-full absolute">
         {[2, 3, 1, 4].map((num) => (
           <div key={num} className="w-full h-full">
             <img
-              className="w-full h-full object-cover brightness-50 hover:brightness-100"
+              className="w-full h-full aspect-square object-cover brightness-50 hover:brightness-100"
               src={`/IntroImage/${num}.jpg`}
               alt={`Intro Image ${num}`}
             />
@@ -76,7 +77,7 @@ export default function Intro() {
       </div>
 
       <div className="absolute inset-0 flex flex-col gap-10 items-center justify-center text-center text-white z-10 pointer-events-none">
-        <h3 className="font-bold uppercase text-6xl md:text-9xl flex justify-center items-center bg-gradient-to-b from-gray-300 to-black text-transparent bg-clip-text">
+        <h3 className="font-bold hammersmith uppercase text-6xl md:text-9xl flex justify-center items-center bg-gradient-to-b from-gray-300 to-black text-transparent bg-clip-text">
           MATHRIX
         </h3>
         <div className="mt-5 md:mt-10 text-xl md:text-2xl font-bold">
@@ -88,7 +89,7 @@ export default function Intro() {
                   label === "seconds" ? "animate-rotate-cube" : ""
                 }`}
               >
-                <div className="cube">
+                <div className="cube hammersmith">
                   <div className="face front">{value}</div>
                   <div className="face left">{value}</div>
                   <div className="face right">{value}</div>

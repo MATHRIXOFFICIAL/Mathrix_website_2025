@@ -48,7 +48,7 @@ export default function Description() {
               <div className="glass-box">
                 {/* About Mathrix Appears First */}
                 <motion.h2
-                  className="about-title"
+                  className="about-title hammersmith"
                   initial={{ opacity: 0, y: -50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, ease: "easeOut" }}
@@ -58,7 +58,7 @@ export default function Description() {
 
                 {/* EPSILON TO INFINITY Drops in Next */}
                 <motion.h2
-                  className="drop-bounce-text"
+                  className="drop-bounce-text hammersmith"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1, duration: 0.4 }}
@@ -68,7 +68,7 @@ export default function Description() {
 
                 {/* Description Text Appears Last */}
                 <motion.p
-                  className="about-description"
+                  className="about-description dmsans"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 2.5, duration: 0.8 }}
@@ -92,7 +92,7 @@ export default function Description() {
 
                 {/* Date Text Appears with a Slide-In Effect */}
                 <motion.h2
-                  className="event-date"
+                  className="event-date hammersmith"
                   initial={{ opacity: 0, x: -100 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 3, duration: 1 }}

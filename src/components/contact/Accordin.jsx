@@ -49,7 +49,7 @@ const Accordion = () => {
       {accordionData.map((item, index) => (
         <div key={index} className="accordion-item">
           <div
-            className="accordion-title"
+            className="accordion-title hammersmith"
             onClick={() => toggleAccordion(index)}
           >
             <h3>{item.question}</h3>
@@ -58,7 +58,9 @@ const Accordion = () => {
             />
           </div>
           <div
-            className={`accordion-content ${openIndex === index ? "open" : ""}`}
+            className={`accordion-content dmsans ${
+              openIndex === index ? "open" : ""
+            }`}
           >
             {item.answers.map((answer, ansIndex) => (
               <p key={ansIndex}>{answer}</p>

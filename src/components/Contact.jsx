@@ -6,14 +6,16 @@ import Accordin from "./../components/contact/Accordin";
 import Map from "./contact/Map";
 import Footer from "./Footer";
 import Link from "next/link";
+import MenuBar from "./MenuBar";
 
 const Contact = () => {
   return (
     <div className="contactdiv">
+      <MenuBar />
       <div className="secondcontact">
         {/* Left Section - Socials + Map + Accordion */}
         <div className="contactleft">
-          <h1 className="connectheading">Connect</h1>{" "}
+          <h1 className="connectheading hammersmith">Connect</h1>{" "}
           {/* Connect text before social icons */}
           <div className="contactsocial">
             <div className="cardsocial">

@@ -18,7 +18,7 @@ export default function Intro() {
       <section className="max-container">
         <div className="py-16">
           <div>
-            <h3 className="font-bold uppercase text-6xl flex justify-center items-center gradient-text">
+            <h3 className="font-bold uppercase text-6xl flex justify-center items-center gradient-text hammersmith">
               Schedule For MATHRIX&apos;25
             </h3>
             {/* <h3 className="flex justify-center items-center text-4xl mt-5 font-semibold gradient-text">
@@ -39,14 +39,14 @@ export default function Intro() {
                       borderBottomColor: exp.iconBg,
                       boxShadow: "none",
                     }}
-                    dateClassName="custom-date"
+                    dateClassName="custom-date hammersmith"
                   >
                     <div>
-                      <h3 className="text-black text-xl font-poppins font-bold">
+                      <h3 className="text-black text-xl font-poppins font-bold hammersmith">
                         {exp.name}
                       </h3>
                     </div>
-                    <ul className="my-5 list-disc ml-5 space-y-2 font-semibold">
+                    <ul className="my-5 list-disc ml-5 space-y-2 font-semibold dmsans">
                       {exp.points}
                     </ul>
                   </VerticalTimelineElement>

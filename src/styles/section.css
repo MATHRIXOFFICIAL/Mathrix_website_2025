@@ -1,21 +1,21 @@
-/* Section Container - No Empty Black Space */
+/* Ensure the section takes full height without extra spacing */
 .section-container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full screen height */
+  min-height: 100vh;
   overflow: hidden;
   width: 100%;
 }
 
-/* Background Image - Covers Entire Section */
+/* Background Image */
 .section-bg {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures full coverage */
+  object-fit: cover;
 }
 
 /* Overlay */
@@ -26,24 +26,11 @@
   backdrop-filter: blur(5px);
 }
 
-/* Foreground Content */
-.section-content {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-/* 3D Text - Fully Responsive */
+/* 3D Text */
 .t-3d-effect {
-  font-size: 6rem; /* Default */
+  font-size: 6rem;
   font-weight: 900;
-  color: rgba(255, 255, 255, 1);
+  color: white;
   text-transform: uppercase;
   line-height: 1;
   letter-spacing: 5px;
@@ -52,23 +39,20 @@
   white-space: nowrap;
 }
 
-/* Adjust text size for different screens */
+/* Mobile & Tablet Responsiveness */
 @media (max-width: 1024px) {
-  /* Tablet */
   .t-3d-effect {
     font-size: 4rem;
   }
 }
 
 @media (max-width: 768px) {
-  /* Large mobile */
   .t-3d-effect {
     font-size: 3rem;
   }
 }
 
 @media (max-width: 480px) {
-  /* Small mobile */
   .t-3d-effect {
     font-size: 2rem;
     letter-spacing: 2px;

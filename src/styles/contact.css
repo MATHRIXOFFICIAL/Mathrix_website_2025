@@ -396,3 +396,128 @@
 .accordion-content.open p {
   animation: fade-slide-in 0.5s ease forwards;
 }
+
+/* Fully Optimized Responsive CSS */
+@media (max-width: 1280px) {
+  .secondcontact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactleft,
+  .contactright {
+    width: 100%;
+  }
+  .form-container,
+  .accordion {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bd {
+    padding: 15px;
+  }
+  .accordion-title {
+    font-size: 16px;
+  }
+  .socialContainer {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  .form-container {
+    max-width: 85%;
+  }
+  .map iframe {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bd {
+    padding: 10px;
+  }
+  .accordion-title {
+    font-size: 12px;
+  }
+  .socialContainer {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  .form-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+  .map iframe {
+    height: 280px;
+    width: 100%;
+  }
+  .accordion-item {
+    width: 100%;
+  }
+  .accordion-title,
+  .accordion-content {
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion {
+    max-width: 100%;
+  }
+  .socialContainer {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  .form-container {
+    padding: 10px;
+    max-width: 100%;
+  }
+  .map iframe {
+    height: 250px;
+    width: 100%;
+  }
+  .contactleft,
+  .contactright {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .secondcontact {
+    padding: 10px;
+    gap: 20px;
+  }
+  .accordion-item {
+    width: 100%;
+  }
+  .accordion-title,
+  .accordion-content {
+    padding: 8px;
+    font-size: 14px;
+  }
+  .accordion-content p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .accordion-title h3 {
+    font-size: 16px;
+    text-align: left;
+  }
+  .accordion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .accordion-content p {
+    width: 100%;
+    text-align: center;
+  }
+}

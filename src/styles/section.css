@@ -1,18 +1,77 @@
-h1 {
-  font-size: 10vw;
-  color: #ffc107;
-  margin: 30px;
+/* Ensure the section takes full height without extra spacing */
+.section-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  width: 100%;
 }
 
-.z-text {
-  transform: rotateX(30deg) rotateY(-30deg);
-  transition: transform 1s;
+/* Background Image */
+.section-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-[data-z]:hover .z-text {
-  transform: rotateX(-30deg) rotateY(30deg);
+/* Overlay */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
 }
 
-.z-layer:not(:first-child) {
-  color: #bf9105;
+/* 3D Text */
+.t-3d-effect {
+  font-size: 6rem;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 5px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Mobile & Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .t-3d-effect {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .t-3d-effect {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .t-3d-effect {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* 3D Shadow Effect */
+.t-3d-effect::before,
+.t-3d-effect::after {
+  content: "EVENTS";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(7, 157, 117, 0.71);
+  z-index: -1;
+  transform: translate(5px, 5px);
+}
+
+.t-3d-effect::after {
+  transform: translate(10px, 10px);
+  color: rgba(7, 157, 117, 0.71);
 }

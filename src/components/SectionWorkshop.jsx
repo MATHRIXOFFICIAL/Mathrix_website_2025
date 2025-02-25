@@ -1,5 +1,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
+import "@/styles/workshopsection.css";
 
 export default function SectionWorkshop() {
   const container = useRef();
@@ -7,32 +9,24 @@ export default function SectionWorkshop() {
     target: container,
     offset: ["start end", "end start"],
   });
+
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
-    <div
-      ref={container}
-      className="relative flex items-center justify-center h-[100vh] overflow-hidden bg-gray-800"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
-    >
-      <div className="absolute inset-0">
-        <video
-          className="w-full h-full object-cover"
-          src="/images/back4.mp4" // Ensure the path to the video file is correct
-          autoPlay
-          muted
-          loop
-          playsInline
-        ></video>
+    <div ref={container} className="section-workshop-container">
+      <div className="section-workshop-bg">
+        <Image
+          src="/images/b2.jpg"
+          alt="Workshop Background"
+          width={1920}
+          height={1080}
+          priority
+        />
       </div>
-      <div className="relative z-10 p-20 text-white w-full h-full flex flex-col justify-between"></div>
-      <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
-        <motion.div style={{ y }} className="relative w-full h-full">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-20 mix-blend-overlay ">
-            {" "}
-            {/* Adjust blending mode */}
-            <p className="text-[6vw] uppercase proshow">WORKSHOP</p>
-          </div>
+      <div className="bg-overlay"></div>
+      <div className="section-workshop-content">
+        <motion.div style={{ y }} className="motion-text">
+          <div className="text-3d-effect">WORKSHOPS</div>
         </motion.div>
       </div>
     </div>

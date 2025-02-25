@@ -1,102 +1,100 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/Footer.css";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
+
+const developers = [
+  {
+    name: "Aravindkumar",
+    img: "/images/aravind.jpg",
+    linkedin: "https://www.linkedin.com/in/aravindkumar-m-206702263/",
+  },
+  {
+    name: "Rajesh Babu",
+    img: "/images/rajesh.jpg",
+    linkedin: "https://www.linkedin.com/in/rajeshbabu2004/",
+  },
+  {
+    name: "Vimalesh C T",
+    img: "/images/vimal1.jpg",
+    linkedin: "https://www.linkedin.com/in/vimalesh-c-t/",
+  },
+];
 
 export default function Footer() {
-  const [showLinkedIn, setShowLinkedIn] = useState(false);
-
-  const handleShowLinkedIn = () => {
-    setShowLinkedIn((prev) => !prev);
-  };
-
   return (
-    <footer className='footer-container'>
-      <div className='footer-content'>
-        <div className='footer-left'>
-          <h2 className='footer-logo'>MATHRIX</h2>
-          <p className='footer-description'>
-            Explore the world of mathematics and computer technology with us.
-            Join our events, workshops, and competitions to unlock your
-            potential.
+    <footer className="footer-container montserrat text-lg">
+      <div className="footer-content">
+        {/* Left Section */}
+        <div className="footer-left flex flex-col gap-10">
+          <h2 className="footer-logo-text">MATHRIX</h2>
+          <p className="footer-description">
+            Explore the world of mathematics and technology with us. Join our
+            events, workshops, and competitions to unlock your potential.
           </p>
         </div>
 
-        <div className='footer-center'>
-          <h3 className='footer-heading'>Quick Links</h3>
-          <ul className='footer-links'>
+        {/* Center Links */}
+        <div className="footer-center">
+          <h3 className="footer-heading">Quick Links</h3>
+          <ul className="footer-links">
             <li>
-              <a href='/about'>About Us</a>
+              <Link href="/events">Events</Link>
             </li>
             <li>
-              <a href='/events'>Events</a>
+              <Link href="/schedule">Schedule</Link>
             </li>
             <li>
-              <a href='/schedule'>Schedule</a>
+              <Link href="/workshops">Workshops</Link>
             </li>
             <li>
-              <a href='/workshops'>Workshops</a>
-            </li>
-            <li>
-              <a href='/contact'>Contact</a>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </div>
 
-        <div className='footer-right'>
-          <h3 className='footer-heading'>Follow Us</h3>
-          <div className='footer-social-icons'>
-            <a
-              href='https://facebook.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <FaFacebook />
-            </a>
-            <a
-              href='https://twitter.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <FaTwitter />
-            </a>
-            <a
-              href='https://instagram.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+        {/* Right Section - Social Media */}
+        <div className="footer-right">
+          <h3 className="footer-heading">Follow Us</h3>
+          <div className="footer-social-icons">
+            <Link href="https://whatsapp.com/channel/0029VazaJQMJENy6iDroTr0B">
+              <FaWhatsapp />
+            </Link>
+            <Link href="https://www.instagram.com/mathrix_official/">
               <FaInstagram />
-            </a>
-            <a
-              href='https://linkedin.com'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+            </Link>
+            <Link href="https://www.linkedin.com/company/mathrix-2025">
               <FaLinkedin />
-            </a>
+            </Link>
+          </div>
+
+          {/* ✅ Developer Section Directly Below Social Icons */}
+          <div className="developer-corner">
+            <p className="developer-title">Developed by TechMathrix Team</p>
+            <div className="developer-corner-avatars">
+              {developers.map((dev, index) => (
+                <div key={index} className="developer-avatar">
+                  <Link href={dev.linkedin} target="_blank">
+                    <Image
+                      src={dev.img}
+                      alt={dev.name}
+                      width={60}
+                      height={60}
+                      className="developer-img"
+                    />
+                    <div className="developer-tooltip">{dev.name}</div>
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      <div className='footer-bottom'>
-        <p>&copy; 2025 Mathrix. All Rights Reserved.</p>
-        <p className='developer-credits' onClick={handleShowLinkedIn}>
-          Developed by TechMathrix
-        </p>
-
-       
-
-        {showLinkedIn && (
-          <div className='linkedin-popup'>
-            <a
-              href='https://linkedin.com/in/techmathrix'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              Visit Developer's LinkedIn
-            </a>
-          </div>
-        )}
+      <div className="footer-bottom">
+        <p>© 2025 Mathrix. All Rights Reserved.</p>
       </div>
     </footer>
-  )
+  );
 }

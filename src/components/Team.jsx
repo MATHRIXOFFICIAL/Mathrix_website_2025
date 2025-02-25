@@ -8,6 +8,8 @@ import "../styles/Team.css";
 import { Pagination, Autoplay } from "swiper/modules";
 import TeamImg from "../../public/images/1.jpg";
 import data from "../../public/Data/TeamMembers";
+import Image from "next/image";
+import Link from "next/link";
 
 const Team = () => {
   return (
@@ -26,35 +28,35 @@ const Team = () => {
             <div className="cardteam">
               <div className="cardteam-img">
                 {/* <img src={TeamImg} alt={card.title} /> */}
-                <img src="/images/1.jpg" alt="{data.name}" />
+                <Image src="/images/1.jpg" alt="{data.name}" />
               </div>
               <ul className="social-media">
                 <li>
-                  <a
+                  <Link
                     href={card.github}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaGithub />
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href={card.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaLinkedin />
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     href={card.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <FaInstagram />
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <div className="cardteam-info">

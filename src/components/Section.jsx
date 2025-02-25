@@ -1,7 +1,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import "@/styles/section.css";
-// import { transform } from "next/dist/build/swc/generated-native";
+import Image from "next/image";
 
 export default function Section() {
   const container = useRef();
@@ -9,46 +9,34 @@ export default function Section() {
     target: container,
     offset: ["start end", "end start"],
   });
+
+  // Smooth scrolling effect
   const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
 
   return (
     <div
       ref={container}
-      className="relative flex items-center justify-center h-[100vh] overflow-hidden bg-gray-800"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
+      className="relative flex items-center justify-center h-screen overflow-hidden bg-gray-800"
     >
-      {/* Video Background */}
-      <div className="absolute inset-0">
-        <video
+      <div className="absolute inset-0 w-full h-full">
+        <Image
           className="w-full h-full object-cover"
-          src="/images/back2.mp4" // Ensure the path to the video file is correct
-          autoPlay
-          muted
-          loop
-          playsInline
-        ></video>
+          src="/images/b1.jpg"
+          alt="Background"
+          width={1920}
+          height={600}
+        />
       </div>
 
-      {/* Foreground Content */}
-      <div className="relative z-10 p-20 text-white w-full h-full flex flex-col justify-between">
-        {/* Additional content can go here */}
+      <div className="absolute inset-0 bg-black/20 backdrop-blur-sm z-0"></div>
+
+      <div className="relative z-10 px-6 text-white flex flex-col justify-center w-full h-full text-center">
+        {/* Content here */}
       </div>
 
-      {/* Animated Text */}
-      <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
-        <motion.div style={{ y }} className="relative w-full h-full">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-20 mix-blend-overlay">
-            <p className="text-[6vw] uppercase proshow">EVENTS</p>
-
-            {/* <h1>
-              <span data-z>1rem</span>
-            </h1>
-            <h1>
-              <span data-z data-z-layers="25" data-z-depth="60px">
-                60px
-              </span>
-            </h1> */}
-          </div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+        <motion.div style={{ y }} className="relative w-full text-center">
+          <div className="t-3d-effect">EVENTS</div>
         </motion.div>
       </div>
     </div>

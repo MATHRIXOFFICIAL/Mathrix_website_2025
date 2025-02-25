@@ -1,5 +1,6 @@
 import "../../app/globals.css";
 import Background from "../../../public/images/1.jpg";
+import Image from "next/image";
 
 export default function AboutMathrix() {
   return (
@@ -15,7 +16,7 @@ export default function AboutMathrix() {
 
         <div className="flex flex-wrap md:flex-nowrap bg-yellow-500 align-center w-full p-4 md:p-10">
           <div className="w-full md:w-1/2">
-            <img
+            <Image
               src={Background}
               alt="Background"
               className="w-full h-full object-cover bg-red-400"

@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
 
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: 'Rubik', sans-serif;
-  --font-serif: 'Cardo', serif;
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
 }
-
-
-
 
 @media (min-width: 600px) {
   .page-content {
@@ -33,11 +30,9 @@
   text-align: center;
   color: whitesmoke;
   /* background-color: whitesmoke; */
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 
-              0 2px 2px rgba(0, 0, 0, 0.1), 
-              0 4px 4px rgba(0, 0, 0, 0.1), 
-              0 8px 8px rgba(0, 0, 0, 0.1),
-              0 16px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 600px) {
@@ -47,7 +42,7 @@
 }
 
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -61,7 +56,7 @@
 }
 
 .card::after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;
@@ -78,15 +73,15 @@
     hsla(0, 0%, 0%, 0.123) 39.4%,
     hsla(0, 0%, 0%, 0.182) 46.6%,
     hsla(0, 0%, 0%, 0.249) 53.1%,
-    hsla(0, 0%, 0%, 0.320) 58.9%,
+    hsla(0, 0%, 0%, 0.32) 58.9%,
     hsla(0, 0%, 0%, 0.394) 64.3%,
     hsla(0, 0%, 0%, 0.468) 69.3%,
-    hsla(0, 0%, 0%, 0.540) 74.1%,
+    hsla(0, 0%, 0%, 0.54) 74.1%,
     hsla(0, 0%, 0%, 0.607) 78.8%,
     hsla(0, 0%, 0%, 0.668) 83.6%,
     hsla(0, 0%, 0%, 0.721) 88.7%,
     hsla(0, 0%, 0%, 0.762) 94.1%,
-    hsla(0, 0%, 0%, 0.790) 100%
+    hsla(0, 0%, 0%, 0.79) 100%
   );
   transform: translateY(-50%);
   transition: transform calc(var(--d) * 2) var(--e);
@@ -170,9 +165,7 @@
   .content > *:not(.title) {
     opacity: 0;
     transform: translateY(1rem);
-    transition:
-      transform var(--d) var(--e),
-      opacity var(--d) var(--e);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
   }
 
   .card:hover,
@@ -210,8 +203,6 @@
   }
 }
 
-
-
 .upcoming {
   text-align: center;
   margin-top: 2rem;
@@ -228,9 +219,7 @@
   margin-top: 1rem;
 }
 
-
-
-.cardworkshopinside{
+.cardworkshopinside {
   /* display: flex; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

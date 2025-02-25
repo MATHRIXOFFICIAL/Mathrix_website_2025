@@ -1,7 +1,6 @@
 export const slideData = [
   {
-    index: 0,
-<<<<<<< HEAD
+
     headline: 'New Fashion Apparel',
     button: 'Shop now',
     src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg',
@@ -25,7 +24,8 @@ export const slideData = [
     src: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/typewriter.jpg',
   },
 ]
-=======
+
+
     headline: "New Fashion Apparel",
     button: "Shop now",
     src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/fashion.jpg",
@@ -49,4 +49,4 @@ export const slideData = [
     src: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/225363/typewriter.jpg",
   },
 ];
->>>>>>> 5cf142bfd3f2ab3e12ba58cc8e22d4a85556468d
+

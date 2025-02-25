@@ -4,7 +4,9 @@ const workshopData = [
     name: "Sesssion",
     img: "../events/session.jpeg",
     description:
+
       "This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf  This is the description for Event One. ccddvdvvvdvdv ffdsff fff fdsnfjf dsfjf",
+
   },
   {
     id: 2,

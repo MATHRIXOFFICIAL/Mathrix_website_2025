@@ -60,7 +60,8 @@ const Contact = () => {
         </div>
 
         <div className='contactright'>
-          <ContactForm />
+          <ContactFo
+          rm />
         </div>
       </div>
     </div>

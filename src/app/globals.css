@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .max-container {
+    @apply max-w-7xl mx-auto sm:p-16 pb-12 !pt-[50px] px-8 min-h-[calc(100vh-80px)];
+  }
+
+  /* .subhead-text {
+    @apply font-semibold sm:text-3xl text-xl relative;
+  } */
+}

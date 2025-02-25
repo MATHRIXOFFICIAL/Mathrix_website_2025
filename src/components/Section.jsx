@@ -16,37 +16,27 @@ export default function Section() {
   return (
     <div
       ref={container}
-      className="relative flex items-center justify-center h-[100vh] overflow-hidden bg-gray-800"
-      style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
+      className="relative flex items-center justify-center h-screen overflow-hidden bg-gray-800"
     >
-      {/* Background Image */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
         <Image
           className="w-full h-full object-cover"
           src="/images/b1.jpg"
           alt="Background"
-          width={800}
+          width={1920}
           height={600}
-          layout="intrinsic"
         />
       </div>
 
-      {/* Glassmorphic Overlay */}
       <div className="absolute inset-0 bg-black/20 backdrop-blur-sm z-0"></div>
 
-      {/* Foreground Content */}
-      <div className="relative z-10 p-20 text-white w-full h-full flex flex-col justify-between">
-        {/* Add your content here */}
+      <div className="relative z-10 px-6 text-white flex flex-col justify-center w-full h-full text-center">
+        {/* Content here */}
       </div>
 
-      {/* Animated Text with 3D Shadow Effect */}
-      <div className="fixed top-[-10vh] left-0 h-[120vh] w-full">
-        <motion.div style={{ y }} className="relative w-full h-full">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-            <div className="relative flex flex-col items-center justify-center">
-              <div className="t-3d-effect hammersmith">EVENTS</div>
-            </div>
-          </div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+        <motion.div style={{ y }} className="relative w-full text-center">
+          <div className="t-3d-effect">EVENTS</div>
         </motion.div>
       </div>
     </div>

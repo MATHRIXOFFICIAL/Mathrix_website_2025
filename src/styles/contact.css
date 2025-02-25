@@ -190,6 +190,10 @@
     transition: all 0.2s ease-in-out;
   }
 
+  .error{
+    color: #1db085;
+  }
+
   .form-container
     .form
     .button-container
@@ -527,6 +531,21 @@
     }
   }
 
+  .reset-button{
+       flex-basis: 70%;
+    background: #42f3d5;
+    padding: 10px;
+    color: #001925;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid transparent;
+  }
+
+  .reset-button:hover{
+    background: transparent;
+    border: 1px solid #42f3d5;
+    color: #42f3d5;
+  }
 
 
 

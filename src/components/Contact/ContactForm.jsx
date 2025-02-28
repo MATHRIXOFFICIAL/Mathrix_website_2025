@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import emailjs from 'emailjs-com'
 import '@/app/globals.css'
 
 const ContactForm = () => {
@@ -10,6 +11,7 @@ const ContactForm = () => {
   })
 
   const [errors, setErrors] = useState({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -27,21 +29,21 @@ const ContactForm = () => {
       newErrors.name = 'Name can only contain letters and spaces'
     }
 
-    // Mobile validation
+    // Mobile validation (exactly 10 digits, starts with 6-9)
     if (!formData.mobile.trim()) {
       newErrors.mobile = 'Mobile number is required'
-    } else if (!/^[6-9]\d{9}$/.test(formData.mobile)) {
+    } else if (!/^[6-9][0-9]{9}$/.test(formData.mobile)) {
       newErrors.mobile = 'Enter a valid 10-digit mobile number'
     }
 
-    // Email validation
+    // Email validation (standard format check)
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required'
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Enter a valid email address'
     }
 
-    // Message validation
+    // Message validation (minimum 10 characters)
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required'
     } else if (formData.message.length < 10) {
@@ -52,13 +54,39 @@ const ContactForm = () => {
     return Object.keys(newErrors).length === 0
   }
 
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (validate()) {
-      alert('Form Submitted Successfully!')
-      setFormData({ name: '', mobile: '', email: '', message: '' })
-      setErrors({})
-    
+
+    if (!validate()) return
+
+    setIsSubmitting(true)
+
+    // EmailJS credentials (Replace with your actual credentials)
+    const serviceID = 'your_service_id' // Replace with your EmailJS service ID
+    const templateID = 'your_template_id' // Replace with your EmailJS template ID
+    const publicKey = 'your_public_key' // Replace with your EmailJS public key
+
+    const templateParams = {
+      name: formData.name,
+      mobile: formData.mobile,
+      email: formData.email,
+      message: formData.message,
+    }
+
+    emailjs
+      .send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        alert('Email sent successfully!')
+        setFormData({ name: '', mobile: '', email: '', message: '' })
+        setErrors({})
+      })
+      .catch((error) => {
+        alert('Failed to send email. Please try again later.')
+      })
+      .finally(() => {
+        setIsSubmitting(false)
+      })
   }
 
   return (
@@ -66,6 +94,7 @@ const ContactForm = () => {
       <div className='form'>
         <span className='heading hammersmith'>Contact Us</span>
         <form onSubmit={handleSubmit}>
+          {errors.name && <p className='error'>{errors.name}</p>}
           <input
             placeholder='Name'
             type='text'
@@ -74,8 +103,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
           />
-          {errors.name && <p className='error'>{errors.name}</p>}
-
+          {errors.mobile && <p className='error'>{errors.mobile}</p>}
           <input
             placeholder='Mobile'
             type='tel'
@@ -84,8 +112,8 @@ const ContactForm = () => {
             value={formData.mobile}
             onChange={handleChange}
           />
-          {errors.mobile && <p className='error'>{errors.mobile}</p>}
 
+          {errors.email && <p className='error'>{errors.email}</p>}
           <input
             placeholder='Email'
             type='email'
@@ -94,7 +122,7 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
           />
-          {errors.email && <p className='error'>{errors.email}</p>}
+          {errors.message && <p className='error'>{errors.message}</p>}
 
           <textarea
             placeholder='Say Hello'
@@ -104,11 +132,14 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
           />
-          {errors.message && <p className='error'>{errors.message}</p>}
 
           <div className='button-container'>
-            <button type='submit' className='send-button'>
-              Submit
+            <button
+              type='submit'
+              className='send-button'
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? 'Sending...' : 'Submit'}
             </button>
             <button
               type='button'

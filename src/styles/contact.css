@@ -32,10 +32,11 @@
     max-width: 1250px;
     display: flex;
     flex-wrap: wrap;
-    gap: 40px; /* Space between left & right sections */
+    gap: 40px;
     padding: 20px;
+    /* align-items: flex-start; */
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   .contactleft,
@@ -88,19 +89,23 @@
   }
 
   .form-container {
-    max-width: 700px;
+    /* width: 100%; */
+    min-width: 500px;
+    /* margin-right: -30px; */
     margin: 30px;
     background-color: #001925;
     padding: 30px;
     border-left: 5px solid #00b1ad;
-    clip-path: polygon(
+    /* clip-path: polygon(
       0 0,
       100% 0,
       100% calc(100% - 20px),
       calc(100% - 20px) 100%,
       0 100%
-    );
+    ); */
   }
+
+ 
 
   .heading {
     display: block;
@@ -180,18 +185,19 @@
     color: #42f3d5;
     font-weight: bold;
     background: #001925;
-    clip-path: polygon(
+    /* clip-path: polygon(
       0 0,
       100% 0,
       100% calc(100% - 10px),
       calc(100% - 10px) 100%,
       0 100%
-    );
+    ); */
     transition: all 0.2s ease-in-out;
   }
 
   .error{
     color: #1db085;
+    /* margin-bottom: 10px; */
   }
 
   .form-container
@@ -418,7 +424,8 @@
     }
     .form-container,
     .accordion {
-      max-width: 90%;
+min-width: 90%;
+      /* max-width: 90%; */
     }
   }
 
@@ -435,7 +442,8 @@
       font-size: 20px;
     }
     .form-container {
-      max-width: 85%;
+      min-width: 80%;
+      /* max-width: 85%; */
     }
     .map iframe {
       height: 300px;
@@ -457,7 +465,7 @@
     }
     .form-container {
       padding: 15px;
-      max-width: 100%;
+      min-width: 100%;
     }
     .map iframe {
       height: 280px;
@@ -484,7 +492,7 @@
     }
     .form-container {
       padding: 10px;
-      max-width: 100%;
+      min-width: 100%;
     }
     .map iframe {
       height: 250px;
@@ -575,7 +583,7 @@
   }
 
   .form-container {
-    max-width: 90%;
+    min-width: 90%;
   }
 
   .accordion {
@@ -607,7 +615,7 @@
 
   .form-container {
     padding: 20px;
-    max-width: 95%;
+    min-width: 95%;
   }
 
   .accordion {
@@ -644,7 +652,7 @@
 
   .form-container {
     padding: 15px;
-    max-width: 100%;
+    min-width: 100%;
   }
 
   .accordion-title {

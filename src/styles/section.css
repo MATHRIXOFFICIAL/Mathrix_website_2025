@@ -39,9 +39,25 @@
   white-space: nowrap;
 }
 
+/* 3D Text */
+.t-3d-effect1 {
+  font-size: 6rem;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 5px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+}
+
 /* Mobile & Tablet Responsiveness */
 @media (max-width: 1024px) {
   .t-3d-effect {
+    font-size: 4rem;
+  }
+  .t-3d-effect1 {
     font-size: 4rem;
   }
 }
@@ -50,10 +66,18 @@
   .t-3d-effect {
     font-size: 3rem;
   }
+  .t-3d-effect1 {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 480px) {
   .t-3d-effect {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .t-3d-effect1 {
     font-size: 2rem;
     letter-spacing: 2px;
   }
@@ -72,6 +96,22 @@
 }
 
 .t-3d-effect::after {
+  transform: translate(10px, 10px);
+  color: rgba(7, 157, 117, 0.71);
+}
+
+.t-3d-effect1::before,
+.t-3d-effect1::after {
+  content: "WORKSHOPS";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(7, 157, 117, 0.71);
+  z-index: -1;
+  transform: translate(5px, 5px);
+}
+
+.t-3d-effect1::after {
   transform: translate(10px, 10px);
   color: rgba(7, 157, 117, 0.71);
 }

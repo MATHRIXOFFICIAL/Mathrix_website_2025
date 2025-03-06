@@ -9,6 +9,7 @@ import Workshop from "@/components/Workshop";
 import SectionWorkshop from "@/components/SectionWorkshop";
 import SectionTeam from "../components/SectionTeam";
 import Team from "@/components/Team";
+import "@/app/globals.css";
 
 // import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";

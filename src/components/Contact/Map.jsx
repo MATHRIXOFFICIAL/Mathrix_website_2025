@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Map = () => {
   return (
@@ -16,4 +16,4 @@ const Map = () => {
   );
 };
 
-export default Map;
+export default Map

@@ -250,3 +250,9 @@
     height: 35px;
   }
 }
+
+
+.avatar-stack{
+  justify-content: center;
+  align-items: center;
+}

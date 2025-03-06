@@ -21,7 +21,7 @@ export default function Intro() {
       </div>
 
       <div className="min-h-screen w-full flex items-center justify-center dmsans">
-        <LampDemo />
+        {/* <LampDemo /> */}
       </div>
     </div>
   );

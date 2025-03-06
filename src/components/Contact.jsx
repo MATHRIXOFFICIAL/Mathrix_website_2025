@@ -1,10 +1,9 @@
 import React from "react";
 import "../styles/contact.css";
-import ContactForm from "./../components/contact/ContactForm";
+import ContactForm from "./Contact/ContactForm";
 import { FaInstagram, FaWhatsapp, FaLinkedin } from "react-icons/fa";
-import Accordin from "./../components/contact/Accordin";
-import Map from "./contact/Map";
-import Footer from "./Footer";
+import Accordin from "./Contact/Accordin";
+import Map from "./Contact/Map";
 import Link from "next/link";
 import MenuBar from "./MenuBar";
 

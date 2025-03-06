@@ -69,17 +69,11 @@ export default function Intro() {
         <h2 className="text-4xl md:text-6xl font-extrabold">Mathrix&apos;25</h2>
       </div>
 
-<<<<<<< HEAD
-      <div className="min-h-screen w-full flex items-center justify-center dmsans">
-        {/* <LampDemo /> */}
-      </div>
-=======
       <main className="page-content p-10 flex flex-wrap justify-center gap-6">
         {cards.map((card, index) => (
           <Card key={index} {...card} />
         ))}
       </main>
->>>>>>> 98ce049826b005042f1b600ba7ee12f9348c262f
     </div>
   );
 }

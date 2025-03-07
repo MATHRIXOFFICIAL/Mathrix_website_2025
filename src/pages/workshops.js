@@ -7,32 +7,33 @@ import MenuBar from "@/components/MenuBar";
 import "../styles/schedule.css";
 import "../app/globals.css";
 import { LampDemo } from "@/components/ComingSoon";
+import { workshopDatacards } from "../../public/Data/Workshopdata";
 
-const cards = [
-  {
-    title: "GOOGLE FOR DEVELOPERS",
-    copy: "AI-Powered Fashion App with AlloyDB & Gemini 2.0 + Contextual Yoga Pose Recommender with Firestore, Vector Search & Gemini 2.0",
-    button: "Register Now",
-    imageId: "1545243424-0ce743321e11",
-  },
-  {
-    title: "AZURE DEVELOPER COMMUNITY",
-    copy: " AI: From Fundamentals to Generative Applications",
-    button: "Register Now",
-    imageId: "1531306728370-e2ebd9d7bb99",
-  },
-];
+// const cards = [
+//   {
+//     title: "GOOGLE FOR DEVELOPERS",
+//     copy: "AI-Powered Fashion App with AlloyDB & Gemini 2.0 + Contextual Yoga Pose Recommender with Firestore, Vector Search & Gemini 2.0",
+//     button: "Register Now",
+//     imageId: "/events/sess.jpg",
+//   },
+//   {
+//     title: "AZURE DEVELOPER COMMUNITY",
+//     copy: " AI: From Fundamentals to Generative Applications",
+//     button: "Register Now",
+//     imageId: "/events/workshop.jpeg",
+//   },
+// ];
 
 const Card = ({ title, copy, button, imageId }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
     <div
-      className={`card w-[300px] sm:w-[400px] md:w-[650px] lg:w-[600px] h-[250px] sm:h-[350px] md:h-[400px] ${
+      className={`card w-[300px] sm:w-[430px] md:w-[650px] lg:w-[600px] h-[250px] sm:h-[380px] md:h-[400px] rounded-xl ${
         hovered ? "hovered" : ""
       }`}
       style={{
-        backgroundImage: `url(https://images.unsplash.com/photo-${imageId}?q=80&fm=jpg&w=400&fit=max)`,
+        backgroundImage: imageId,
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -70,7 +71,7 @@ export default function Intro() {
       </div>
 
       <main className="page-content p-10 flex flex-wrap justify-center gap-6">
-        {cards.map((card, index) => (
+        {workshopDatacards.map((card, index) => (
           <Card key={index} {...card} />
         ))}
       </main>

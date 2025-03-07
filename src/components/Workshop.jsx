@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import "../styles/workshop.css";
-import workshopData from "../../public/Data/Workshopdata";
+import { workshopData } from "../../public/Data/Workshopdata";
 import Image from "next/image";
 
 export default function Workshop() {

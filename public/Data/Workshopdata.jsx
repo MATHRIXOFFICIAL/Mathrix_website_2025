@@ -1,4 +1,4 @@
-const workshopData = [
+export const workshopData = [
   {
     id: 1,
     name: "3+ Sessions",
@@ -14,4 +14,19 @@ const workshopData = [
   },
 ];
 
-export default workshopData;
+export const workshopDatacards = [
+  {
+    title: "GOOGLE FOR DEVELOPERS",
+    copy: "AI-Powered Fashion App with AlloyDB & Gemini 2.0 + Contextual Yoga Pose Recommender with Firestore, Vector Search & Gemini 2.0",
+    button: "Register Now",
+    imageId: "/events/sess.jpg",
+  },
+  {
+    title: "AZURE DEVELOPER COMMUNITY",
+    copy: " AI: From Fundamentals to Generative Applications",
+    button: "Register Now",
+    imageId: "/events/workshop.jpeg",
+  },
+];
+
+// export default workshopData;

@@ -8,6 +8,7 @@ import "../styles/schedule.css";
 import "../app/globals.css";
 import { LampDemo } from "@/components/ComingSoon";
 import { workshopDatacards } from "../../public/Data/Workshopdata";
+import Image from "next/image";
 
 // const cards = [
 //   {
@@ -32,12 +33,20 @@ const Card = ({ title, copy, button, imageId }) => {
       className={`card w-[300px] sm:w-[430px] md:w-[650px] lg:w-[600px] h-[250px] sm:h-[380px] md:h-[400px] rounded-xl ${
         hovered ? "hovered" : ""
       }`}
-      style={{
-        backgroundImage: imageId,
-      }}
+      // style={{
+      //   backgroundImage: imageId,
+      // }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
+      <div>
+        <Image
+          src={imageId}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover"
+        />
+      </div>
       <div className="overlay"></div>
       <div
         className="content"
@@ -50,7 +59,7 @@ const Card = ({ title, copy, button, imageId }) => {
         {hovered && (
           <>
             <p className="copy text-xs sm:text-base md:text-lg">{copy}</p>
-            <button className="btn text-xs sm:text-base">{button}</button>
+            {/* <button className="btn text-xs sm:text-base">{button}</button> */}
           </>
         )}
       </div>

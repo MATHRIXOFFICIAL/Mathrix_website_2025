@@ -12,6 +12,13 @@ body {
   background: linear-gradient(to bottom, #020107 0%, #000000 100%);
 }
 
+/* @media (max-width: 768px) {
+  .container {
+    min-width: 110vw;
+    min-height: 110%;
+  }
+} */
+
 .text {
   color: #fff;
   position: absolute;

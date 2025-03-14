@@ -201,21 +201,18 @@ h2 {
 @media (max-width: 1024px) {
   .eventgrid {
     grid-template-columns: repeat(3, 1fr);
-    /* 3 columns on tablets */
   }
 }
 
 @media (max-width: 768px) {
   .eventgrid {
     grid-template-columns: repeat(2, 1fr);
-    /* 2 columns on small tablets */
   }
 }
 
 @media (max-width: 480px) {
   .eventgrid {
     grid-template-columns: 1fr;
-    /* 1 column on mobile */
   }
 }
 
@@ -235,19 +232,18 @@ h2 {
     90deg,
     #0f3a9d,
     #0088ff
-  ); /* Blue cyber gradient */
+  );
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 0 10px rgba(0, 136, 255, 0.8); /* Neon glow effect */
+  box-shadow: 0 0 10px rgba(0, 136, 255, 0.8);
   text-transform: uppercase;
   letter-spacing: 1.5px;
   position: relative;
   overflow: hidden;
 }
 
-/* Add a hover effect with a glowing border */
 .buttonbuy button:hover {
   background: linear-gradient(90deg, #005bff, #a81fd2);
   transform: scale(1.1);

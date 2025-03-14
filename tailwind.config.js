@@ -55,6 +55,7 @@ module.exports = {
       },
       colors: {
         "primary-500": "#00eaff",
+        "secondary-500": "#14b8a6",
         "red-500": "#EB5160",
         "purple-500": "#8F3985",
         "green-500": "#8DAA91",

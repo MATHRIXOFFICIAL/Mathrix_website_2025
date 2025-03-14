@@ -20,6 +20,11 @@ const developers = [
     img: "/images/vimal1.jpg",
     linkedin: "https://www.linkedin.com/in/vimalesh-c-t/",
   },
+  {
+    name:"Viswanathan",
+    img:"/images/me.jpg",
+    linkedin:"https://www.linkedin.com/in/drummerviswa"
+  }
 ];
 
 export default function Footer() {

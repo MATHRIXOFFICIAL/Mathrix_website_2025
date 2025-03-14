@@ -53,7 +53,7 @@ export default function Intro() {
   }, []);
 
   return (
-    <div className="h-screen overflow-hidden relative" ref={container}>
+    <div className="h-screen overflow-hidden relative">
       <div className="z-0 inset-0 grid grid-cols-2 lg:grid-cols-4 overflow-hidden h-full absolute">
         {[2, 3, 1, 4].map((num) => (
           <div key={num} className="w-full h-full">
@@ -77,7 +77,7 @@ export default function Intro() {
       </div>
 
       <div className="absolute inset-0 flex flex-col gap-10 items-center justify-center text-center text-white z-10 pointer-events-none">
-        <h3 className="font-bold hammersmith uppercase text-6xl md:text-9xl flex justify-center items-center bg-gradient-to-b from-gray-300 to-black text-transparent bg-clip-text">
+        <h3 className="font-bold hammersmith uppercase text-6xl md:text-9xl flex justify-center items-center bg-gradient-to-b from-gray-300 to-green-900 text-transparent bg-clip-text">
           MATHRIX
         </h3>
         <div className="mt-5 md:mt-10 text-xl md:text-2xl font-bold">

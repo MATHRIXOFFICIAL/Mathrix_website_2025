@@ -55,10 +55,14 @@ const Card = ({ title, copy, button, imageId }) => {
           transition: "opacity 0.3s ease-in-out, transform 0.3s ease-in-out",
         }}
       >
-        <h2 className="title text-base sm:text-lg md:text-2xl">{title}</h2>
+        <h2 className="title text-base sm:text-lg md:text-2xl hammersmith">
+          {title}
+        </h2>
         {hovered && (
           <>
-            <p className="copy text-xs sm:text-base md:text-lg">{copy}</p>
+            <p className="copy text-xs sm:text-base md:text-lg dmsans">
+              {copy}
+            </p>
             {/* <button className="btn text-xs sm:text-base">{button}</button> */}
           </>
         )}
@@ -79,7 +83,7 @@ export default function Intro() {
         <h2 className="text-4xl md:text-6xl font-extrabold">Mathrix&apos;25</h2>
       </div>
 
-      <main className="page-content p-10 flex flex-wrap justify-center gap-6">
+      <main className="page-content p-10 flex flex-wrap justify-center items-center gap-6">
         {workshopDatacards.map((card, index) => (
           <Card key={index} {...card} />
         ))}

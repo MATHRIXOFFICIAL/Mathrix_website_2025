@@ -18,7 +18,7 @@ export default function Intro() {
       <section className="max-container">
         <div className="py-16">
           <div>
-            <h3 className="font-bold uppercase text-6xl flex justify-center items-center gradient-text hammersmith">
+            <h3 className="font-bold uppercase text-5xl md:text-6xl flex justify-center items-center gradient-text hammersmith">
               Schedule For MATHRIX&apos;25
             </h3>
             {/* <h3 className="flex justify-center items-center text-4xl mt-5 font-semibold gradient-text">

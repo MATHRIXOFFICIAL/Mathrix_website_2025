@@ -1,8 +1,10 @@
-import SponsorMathrix from "@/components/Sponsor page/SponsorMathrix";
+// import SponsorMathrix from "@/components/Sponsor page/SponsorMathrix";
 import { LampDemo } from "@/components/ComingSoon";
 import MenuBar from "@/components/MenuBar";
 import "../styles/schedule.css";
 import "../app/globals.css";
+import SponsorCard from "@/components/Sponsor page/SponsorCard";
+import SponsorMathrix from "@/components/Sponsor page/SponsorMathrix";
 
 // pages/sponsers.js
 export default function about() {
@@ -18,7 +20,8 @@ export default function about() {
       </div>
 
       <div className="min-h-screen w-full flex items-center justify-center dmsans">
-        <LampDemo />
+        {/* <LampDemo /> */}
+        <SponsorMathrix />
       </div>
     </div>
   );

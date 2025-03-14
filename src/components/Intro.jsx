@@ -58,6 +58,7 @@ export default function Intro() {
         {[2, 3, 1, 4].map((num) => (
           <div key={num} className="w-full h-full">
             <img
+              draggable="false"
               className="w-full h-full aspect-square object-cover brightness-50 hover:brightness-100"
               src={`/IntroImage/${num}.jpg`}
               alt={`Intro Image ${num}`}

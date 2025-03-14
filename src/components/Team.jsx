@@ -28,7 +28,7 @@ const Team = () => {
             <div className="cardteam">
               <div className="cardteam-img">
                 {/* <img src={TeamImg} alt={card.title} /> */}
-                <Image src="/images/1.jpg" alt="{data.name}" />
+                <Image draggable={false} src="/images/1.jpg" alt="{data.name}" />
               </div>
               <ul className="social-media">
                 <li>

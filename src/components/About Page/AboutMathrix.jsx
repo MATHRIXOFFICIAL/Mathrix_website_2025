@@ -17,6 +17,7 @@ export default function AboutMathrix() {
         <div className="flex flex-wrap md:flex-nowrap bg-yellow-500 align-center w-full p-4 md:p-10">
           <div className="w-full md:w-1/2">
             <Image
+              draggable={false}
               src={Background}
               alt="Background"
               className="w-full h-full object-cover bg-red-400"

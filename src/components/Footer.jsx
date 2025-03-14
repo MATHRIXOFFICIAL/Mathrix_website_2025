@@ -77,6 +77,7 @@ export default function Footer() {
                 <div key={index} className="developer-avatar">
                   <Link href={dev.linkedin} target="_blank">
                     <Image
+                      draggable="false"
                       src={dev.img}
                       alt={dev.name}
                       width={60}

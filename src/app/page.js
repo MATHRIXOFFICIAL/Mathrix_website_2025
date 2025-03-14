@@ -27,6 +27,7 @@ export default function Home() {
 
   return (
     <main
+    className="no-scrollbar"
       style={{
         width: "100vw",
         height: "100vh",

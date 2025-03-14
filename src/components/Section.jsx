@@ -20,6 +20,7 @@ export default function Section() {
     >
       <div className="absolute inset-0 w-full h-full">
         <Image
+          draggable={false}
           className="w-full h-full object-cover"
           src="/images/b1.jpg"
           alt="Background"

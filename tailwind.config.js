@@ -54,6 +54,7 @@ module.exports = {
         opacity: "opacity 1s ease-in-out",
       },
       colors: {
+        "primary-500": "#00eaff",
         "red-500": "#EB5160",
         "purple-500": "#8F3985",
         "green-500": "#8DAA91",

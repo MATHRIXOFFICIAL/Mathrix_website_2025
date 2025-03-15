@@ -20,6 +20,11 @@ const developers = [
     img: "/images/vimal1.jpg",
     linkedin: "https://www.linkedin.com/in/vimalesh-c-t/",
   },
+  {
+    name:"Viswanathan",
+    img:"/images/me.jpg",
+    linkedin:"https://www.linkedin.com/in/drummerviswa"
+  }
 ];
 
 export default function Footer() {
@@ -77,6 +82,7 @@ export default function Footer() {
                 <div key={index} className="developer-avatar">
                   <Link href={dev.linkedin} target="_blank">
                     <Image
+                      draggable="false"
                       src={dev.img}
                       alt={dev.name}
                       width={60}

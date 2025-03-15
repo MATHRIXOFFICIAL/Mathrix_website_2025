@@ -7,7 +7,7 @@ const Slide = ({ slide, current, handleSlideClick }) => {
       className={`slide ${current === slide.index ? "active" : ""}`}
       onClick={() => handleSlideClick(slide.index)}
     >
-      <Image src={slide.image} alt={slide.title} />
+      <Image draggable={false} src={slide.image} alt={slide.title} />
       <p>{slide.title}</p>
     </li>
   );

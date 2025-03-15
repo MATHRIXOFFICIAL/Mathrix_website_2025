@@ -61,6 +61,7 @@ export default function Workshop() {
             <div className="card">
               <div className="img-content">
                 <Image
+                  draggable={false}
                   src={items.img}
                   alt={items.name}
                   width={800}

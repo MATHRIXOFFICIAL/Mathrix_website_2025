@@ -52,19 +52,20 @@ export default function Events() {
   return (
     <div ref={sectionRef} className="divevents w-full pr-5">
       <div className="background-overlay black-bg">
-        {isVisible && particles}{" "}
+        {isVisible && particles}
         {/* Particles appear when section is visible */}
       </div>
       <div>
-        <h2 className="text-center text-4xl font-bold mb-8 text-white dmsans">
+        <h1 className="text-3xl text-center md:text-4xl underline font-bold text-secondary-500">
           Upcoming Events
-        </h2>
+        </h1>
         <div className="eventgrid">
           {data.map((items, key) => (
             <div className="card-container" key={key}>
               <div className="card">
                 <div className="img-content">
                   <Image
+                    draggable="false"
                     src={items.img}
                     alt={items.name}
                     width={800}

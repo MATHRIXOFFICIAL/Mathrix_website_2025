@@ -21,8 +21,8 @@ const developers = [
     linkedin: "https://www.linkedin.com/in/vimalesh-c-t/",
   },
   {
-    name:"Viswanathan",
-    img:"/images/me.jpg",
+    name:"Viswanathan P",
+    img:"/images/viswa.jpg",
     linkedin:"https://www.linkedin.com/in/drummerviswa"
   }
 ];

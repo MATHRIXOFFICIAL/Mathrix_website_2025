@@ -13,6 +13,10 @@ export default function RootLayout({ children }) {
         <link rel="icon" type="image/png" href="/images/logo.png" />
         <link rel="icon" type="image/x-icon" href="/images/logo.png" />
       </head>
+      <meta
+        name="google-site-verification"
+        content="nqWcOebvcRgz_uvBBWOVr5rn3ag0M8KVzMMNfELE7Ck"
+      />
       <body className="no-scrollbar">
         {/* <Header/> */}
         {children}

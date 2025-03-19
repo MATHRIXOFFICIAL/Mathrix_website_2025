@@ -97,7 +97,7 @@ export default function Description() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 3, duration: 1 }}
                 >
-                  29th March 2025
+                  28th March 2025
                 </motion.h2>
               </div>
             </div>

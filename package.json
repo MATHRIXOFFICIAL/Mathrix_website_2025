@@ -23,7 +23,7 @@
     "lenis": "^1.1.19",
     "mini-svg-data-uri": "^1.4.4",
     "motion": "^12.4.2",
-    "next": "^15.1.4",
+    "next": "^15.2.3",
     "react": "^18.3.1",
     "react-chrono": "^2.6.1",
     "react-dom": "^18.3.1",

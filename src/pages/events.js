@@ -78,13 +78,19 @@ export default function Intro() {
             </div>
           ))}
         </div>
-        <button
-          type="button"
-          onClick={() => console.log("Register")}
-          class="floating-card text-white bg-secondary-500 my-8 hover:text-secondary-500 border border-gray-500 hover:bg-white focus:ring-4 focus:outline-none focus:ring-secondary-500 font-semibold rounded-lg text-xl px-24 py-4 text-center me-2 mb-2 dark:border-secondary-500 dark:text-secondary-500 dark:hover:text-white dark:hover:bg-secondary-500 dark:focus:ring-secondary-500"
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSd8_t6sjSCVOqM3Zanwt3SyySgv7bpnB9T9oEySyWO5dZCZCA/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Register
-        </button>
+          <button
+            type="button"
+            onClick={() => console.log("Register")}
+            class="floating-card text-white bg-secondary-500 my-8 hover:text-secondary-500 border border-gray-500 hover:bg-white focus:ring-4 focus:outline-none focus:ring-secondary-500 font-semibold rounded-lg text-xl px-24 py-4 text-center me-2 mb-2 dark:border-secondary-500 dark:text-secondary-500 dark:hover:text-white dark:hover:bg-secondary-500 dark:focus:ring-secondary-500"
+          >
+            Register
+          </button>
+        </a>
       </section>
       <Section
         title="Technical Events"

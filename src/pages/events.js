@@ -127,39 +127,43 @@ const Section = ({ title, events, classes, reference }) => (
   </section>
 );
 const EventCard = ({ event }) => (
-  <div className="card my-16 md:my-2 lg:my-0">
-    <div className="card-inner">
-      <div className="card-front">
-        <div className="border text-white border-secondary-500 rounded-xl flex flex-col md:flex-row overflow-hidden shadow-md transition-transform hover:scale-105">
+  <div className="card my-16 md:my-2 lg:my-0 w-full min-w-[250px] max-w-[200px] lg:max-w-[500px] min-h-[200px]">
+    <div className="card-inner w-full h-full">
+      <div className="card-front w-full h-full">
+        <div className="border text-white border-secondary-500 rounded-xl flex flex-col md:flex-row overflow-hidden shadow-md transition-transform hover:scale-105 min-h-[200px] lg:max-h-[200px] max-h-[300px]">
           <Image
             draggable={false}
             src={event.img}
             width={150}
             height={150}
-            className="w-full md:w-1/3 object-cover"
+            className="w-full md:w-2/5 object-cover min-h-[200px] max-h-[200px]"
             alt={event.name}
           />
-          <div className="p-4 flex flex-col justify-between w-full text-start">
+          <div className="p-4 flex flex-col justify-between w-full text-start flex-grow">
             <h2 className="lg:text-2xl text-sm font-bold text-secondary-500">
               {event.name}
             </h2>
-            <p className="text-sm hidden lg:block indent-5">
+            <p className="text-sm hidden lg:block indent-5 my-0.5">
               {event.description}
             </p>
-            <div className="flex items-center gap-1.5 lg:text-sm text-xs text-gray-400">
+            <div className="flex items-center gap-1 lg:text-sm text-xs text-gray-400">
               <FaLocationDot className="text-secondary-500" />
-              <span className="font-semibold">{event.location}</span>
+              <span className="font-semibold text-xs text-nowrap">
+                {event.location}
+              </span>
               <IoIosTime className="text-secondary-500" />
-              <span className="font-semibold">{event.time}</span>
+              <span className="font-semibold text-xs text-nowrap">
+                {event.time}
+              </span>
               <RiTeamFill className="text-secondary-500 hidden md:block" />
-              <span className="hidden md:block font-semibold">
+              <span className="hidden md:block font-semibold text-xs text-nowrap">
                 {event.teamSize}
               </span>
             </div>
           </div>
         </div>
       </div>
-      <div className="card-back flex flex-col text-2xl justify-center">
+      <div className="card-back flex flex-col text-2xl justify-center min-h-[200px]">
         <h1 className="text-secondary-500 font-bold text-2xl underline">
           Rules
         </h1>

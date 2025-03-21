@@ -179,7 +179,7 @@ const eventData = [
   {
     id: 13,
     name: 'Conundrum Carnival (Potpourri)',
-    img: '/images/inf.gif',
+    img: '/events/Carnival.webp',
     type: 'Math',
     time: '1:45 PM',
     location: 'Ramanujam Hall',
@@ -193,7 +193,7 @@ const eventData = [
       "Judge's decision is final",
     ],
     description:
-      "It is a fun and interactive team event designed to test participants' team spirit, understanding, and collaboration. Through engaging rounds, teams will tackle mathematical questions and challenges that assess their problem-solving skills and synergy.",
+      "A dynamic team challenge where collaboration and problem-solving unlock the path to victory!",
   },
 ]
 

@@ -1,8 +1,7 @@
 import React from 'react'
 import '../../app/globals.css'
-import { ags, image1, viral } from '../../../public/SponsorImage/index'
-import SponsorCard from './SponsorCard'
 import '../../styles/sponsor.css'
+import Image from 'next/image'
 
 const SponsorMathrix = () => {
   const Sponsors = [
@@ -35,24 +34,20 @@ const SponsorMathrix = () => {
 
   return (
     <div className='min-h-screen p-4'>
-      <div className='flex flex-col gap-5 justify-center items-center py-4'>
-        <p className='text-4xl font-extrabold text-red-500 text-center hammersmith'>
-          {/* Our Sponsors */}
-        </p>
-        <p className='text-white text-3xl text-center mt-0 hammersmith'>
-          We are proud to present our incredible lineup of sponsors!
-        </p>
-
+      <div className='flex flex-col gap-2 justify-center items-center py-4'>
         {/* Responsive Grid */}
         <div className='gridcontainer'>
           {Sponsors.map((item, key) => (
             <div key={key} className='book'>
               <p className='sponsortitle dmsans'>{item.sponsortype}</p>
               <div className='cover'>
-                <img
+                <Image
                   src={item.image}
                   alt={item.name}
-                  className='sponsor-image'
+                  className='sponsor-image h-full w-full object-cover cursor-default'
+                  draggable={false}
+                  width={64}
+                  height={64}
                 />
               </div>
             </div>

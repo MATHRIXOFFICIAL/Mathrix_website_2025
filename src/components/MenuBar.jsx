@@ -16,6 +16,14 @@ const MenuBar = () => {
   const toggleSubMenu = (index) => {
     setSubMenuActive((prev) => ({ ...prev, [index]: !prev[index] }));
   };
+  const handleRegister = () => {
+    console.log("Register button clicked!");
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSd8_t6sjSCVOqM3Zanwt3SyySgv7bpnB9T9oEySyWO5dZCZCA/viewform",
+      "_blank"
+    );
+    toggleMenu();
+  };
 
   return (
     <div className="fixed top-5 right-5 z-50">
@@ -69,6 +77,17 @@ const MenuBar = () => {
           </li>
           <li className="hover:text-yellow-300 text-lg md:text-xl">
             <Link href="/contact">Contact</Link>
+          </li>
+          <li className="hover:text-primary-500 text-lg md:text-xl">
+            <>
+              <button
+                onClick={handleRegister}
+                onTouchStart={handleRegister}
+                className="bg-secondary-500 hover:bg-white text-white hover:text-secondary-500 px-4 py-2 rounded-lg"
+              >
+                Register
+              </button>
+            </>
           </li>
         </ul>
       </div>

@@ -15,6 +15,7 @@ html, body {
 
 .floating-card {
   animation: floating 3s ease-in-out infinite;
+  pointer-events: auto;
 }
 
 .container {
@@ -121,4 +122,13 @@ ul.list-disc li {
   border-radius: 10px;
   font-size: 24px;
   transform: rotateY(180deg);
+}
+
+button {
+  position: relative;
+  z-index: 1000;
+}
+
+.floating-card, .card__content {
+  pointer-events: auto !important;
 }

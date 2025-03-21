@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import "../app/globals.css";
 import MenuBar from "@/components/MenuBar";
 import "../styles/schedule.css";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+const Image = dynamic(() => import("next/image"));
 import eventData from "../../public/Data/Eventsdata";
 import { FaLocationDot } from "react-icons/fa6";
 import { RiTeamFill } from "react-icons/ri";
@@ -37,13 +38,20 @@ export default function Intro() {
       refMain.current?.scrollIntoView({ behavior: "smooth" });
     }
   };
+  const handleRegister = () => {
+    console.log("Register button clicked!");
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSd8_t6sjSCVOqM3Zanwt3SyySgv7bpnB9T9oEySyWO5dZCZCA/viewform",
+      "_blank"
+    );
+  };
 
   return (
     <div className="container min-h-screen w-full flex flex-col items-center px-4 md:px-8 scroll-smooth">
       <MenuBar />
       <section
         ref={refMain}
-        className="h-screen w-full flex flex-col items-center my-24"
+        className="h-screen w-full flex flex-col items-center my-24 floating-card"
       >
         <div className="text-center text-white mt-16 mb-10 hammersmith">
           <h1 className="text-5xl md:text-6xl font-extrabold text-teal-500">
@@ -53,44 +61,43 @@ export default function Intro() {
             Mathrix&apos;25
           </h2>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-9 cursor-pointer min-w-fit px-16 w-full place-items-center gap-4">
-          {eventCards.map((eventCard) => (
-            <div
-              onClick={() => handleClick(eventCard.eventType)}
-              key={eventCard.key}
-              className="relative min-h-36 min-w-64 max-w-[300px] max-h-[200px] rounded-xl flex items-center justify-center overflow-hidden hover:scale-110 card col-span-3 transition-all duration-[0.6s] ease-[cubic-bezier(0.23,1,0.320,1)];  floating-card"
-            >
-              <Image
-                draggable={false}
-                src={eventCard.eventTypeImage}
-                width={500}
-                height={500}
-                className="object-cover w-full h-full"
-                alt={eventCard.eventType}
-              />
-              <div className="card__content -translate-x-2/4 -translate-y-2/4 rotate-0 duration-[0.6s] ease-[cubic-bezier(0.23,1,0.320,1)]; translate-all absolute top-1/2 left-1/2 w-full h-full p-20 box-border bg-black opacity-0 scale-110 hover:opacity-90">
-                <div className="text-center font-sans font-bold w-full h-full flex items-center justify-center">
-                  <p className="font-bold text-3xl text-white transition-all duration-[0.6s] ease-[cubic-bezier(0.23,1,0.320,1)];">
-                    {eventCard.eventType}
-                  </p>
+
+        <div className="z-50 w-full flex flex-col-reverse lg:flex-col items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-9 cursor-pointer min-w-fit px-16 w-full place-items-center gap-4">
+            {eventCards.map((eventCard) => (
+              <div
+                onClick={() => handleClick(eventCard.eventType)}
+                key={eventCard.key}
+                className="relative min-h-36 min-w-64 max-w-[300px] max-h-[200px] rounded-xl flex items-center justify-center overflow-hidden hover:scale-110 card col-span-3 transition-all duration-[0.6s] ease-[cubic-bezier(0.23,1,0.320,1)];"
+              >
+                <Image
+                  draggable={false}
+                  src={eventCard.eventTypeImage}
+                  width={500}
+                  height={500}
+                  className="object-cover w-full h-full"
+                  alt={eventCard.eventType}
+                  priority={true}
+                />
+                <div className="card__content -translate-x-2/4 -translate-y-2/4 rotate-0 duration-[0.6s] ease-[cubic-bezier(0.23,1,0.320,1)]; translate-all absolute top-1/2 left-1/2 w-full h-full p-20 box-border bg-black opacity-0 scale-110 hover:opacity-90">
+                  <div className="text-center font-sans font-bold w-full h-full flex items-center justify-center">
+                    <p className="font-bold text-3xl text-white transition-all duration-[0.6s] ease-[cubic-bezier(0.23,1,0.320,1)];">
+                      {eventCard.eventType}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSd8_t6sjSCVOqM3Zanwt3SyySgv7bpnB9T9oEySyWO5dZCZCA/viewform"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+            ))}
+          </div>
           <button
-            type="button"
-            onClick={() => console.log("Register")}
-            class="floating-card text-white bg-secondary-500 my-8 hover:text-secondary-500 border border-gray-500 hover:bg-white focus:ring-4 focus:outline-none focus:ring-secondary-500 font-semibold rounded-lg text-xl px-24 py-4 text-center me-2 mb-2 dark:border-secondary-500 dark:text-secondary-500 dark:hover:text-white dark:hover:bg-secondary-500 dark:focus:ring-secondary-500"
+            aria-label="Register for Mathrix'25 Events"
+            onClick={handleRegister}
+            onTouchStart={handleRegister}
+            className="text-white bg-secondary-500 sm:mb-4 mb-8 my-8 hover:text-secondary-500 border border-gray-500 hover:bg-white focus:ring-4 focus:outline-none focus:ring-secondary-500 font-semibold rounded-lg text-xl lg:px-24 px-12 lg:py-4 py-2 text-center me-2 dark:border-secondary-500 dark:text-secondary-500 dark:hover:text-white dark:hover:bg-secondary-500 dark:focus:ring-secondary-500"
           >
             Register
           </button>
-        </a>
+        </div>
       </section>
       <Section
         title="Technical Events"
@@ -119,54 +126,78 @@ const Section = ({ title, events, classes, reference }) => (
     <h2 className="text-4xl py-8 md:text-5xl font-extrabold underline decoration-secondary-500">
       {title}
     </h2>
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-6 max-w-6xl mx-auto mt-8">
-      {events.map((event) => (
-        <EventCard key={event.id} event={event} />
+    <div
+      className={`grid px-6 max-w-6xl mx-auto mt-8 gap-6
+      ${
+        events.length % 2 === 1
+          ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 place-items-center"
+          : "grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
+      }`}
+    >
+      {events.map((event, index) => (
+        <div
+          key={event.id}
+          className={`w-full flex justify-center ${
+            events.length % 2 === 1 && index === events.length - 1
+              ? "md:col-span-2"
+              : ""
+          }`}
+        >
+          <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+            <EventCard event={event} />
+          </div>
+        </div>
       ))}
     </div>
   </section>
 );
+
 const EventCard = ({ event }) => (
-  <div className="card my-16 md:my-2 lg:my-0">
-    <div className="card-inner">
-      <div className="card-front">
-        <div className="border text-white border-secondary-500 rounded-xl flex flex-col md:flex-row overflow-hidden shadow-md transition-transform hover:scale-105">
+  <div className="card my-16 md:my-2 lg:my-0 w-full min-w-[250px] max-w-[500px] min-h-[200px]">
+    <div className="card-inner w-full h-full">
+      <div className="card-front w-full h-full">
+        <div className="border text-white border-secondary-500 rounded-xl flex flex-col md:flex-row overflow-hidden shadow-md transition-transform hover:scale-105 min-h-[200px] lg:max-h-[200px] max-h-[300px]">
           <Image
             draggable={false}
             src={event.img}
             width={150}
             height={150}
-            className="w-full md:w-1/3 object-cover"
+            priority={true}
+            className="w-full md:w-2/5 object-cover min-h-[200px] max-h-[200px]"
             alt={event.name}
           />
-          <div className="p-4 flex flex-col justify-between w-full text-start">
-            <h2 className="lg:text-2xl text-sm font-bold text-secondary-500">
+          <div className="p-4 flex flex-col justify-between w-full text-start flex-grow min-w-[250px] max-w-[500px]">
+            <h2 className="lg:text-start text-center lg:text-2xl text-sm font-bold text-secondary-500">
               {event.name}
             </h2>
-            <p className="text-sm hidden lg:block indent-5">
+            <p className="text-sm hidden lg:block indent-5 my-0.5">
               {event.description}
             </p>
-            <div className="flex items-center gap-1.5 lg:text-sm text-xs text-gray-400">
+            <div className="flex justify-center items-center gap-1 lg:text-sm text-xs text-gray-400">
               <FaLocationDot className="text-secondary-500" />
-              <span className="font-semibold">{event.location}</span>
+              <span className="font-semibold text-xs text-nowrap">
+                {event.location}
+              </span>
               <IoIosTime className="text-secondary-500" />
-              <span className="font-semibold">{event.time}</span>
+              <span className="font-semibold text-xs text-nowrap">
+                {event.time}
+              </span>
               <RiTeamFill className="text-secondary-500 hidden md:block" />
-              <span className="hidden md:block font-semibold">
+              <span className="hidden md:block font-semibold text-xs text-nowrap">
                 {event.teamSize}
               </span>
             </div>
           </div>
         </div>
       </div>
-      <div className="card-back flex flex-col text-2xl justify-center">
+      <div className="card-back flex flex-col text-2xl justify-center min-w-[250px] max-w-[500px] min-h-[200px] sm:min-h-[200px] max-h-[200px]">
         <h1 className="text-secondary-500 font-bold text-2xl underline">
           Rules
         </h1>
         <ul className="list-inside">
-          {event.rules.map((e) => (
-            <li key={e} className="text-gray-200 lg:text-lg text-sm">
-              {e}
+          {event.rules.map((rule, index) => (
+            <li key={index} className="text-gray-200 lg:text-lg text-sm">
+              {rule}
             </li>
           ))}
         </ul>

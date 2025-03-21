@@ -1,7 +1,7 @@
 .gridcontainer {
   display: grid;
   margin-top: 40px;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10rem;
   justify-content: center;
   align-items: center;
@@ -13,19 +13,17 @@
   position: relative;
   width: 220px;
   height: 250px;
-  background-color: whitesmoke;
-   /* background-color: teal; */
+  background-color: #14b8a6;
+  /* background-color: teal; */
   border-radius: 10px;
-  box-shadow: 1px 1px 12px #000;
+  box-shadow: 4px 4px 8px #14b8a6;
   perspective: 1200px; /* Controls the depth of 3D effect */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
+  color: #fff;
+  
 }
-
-
-
 
 /* Flip Cover */
 .cover {
@@ -53,10 +51,12 @@
 
 /* Sponsor Title */
 .sponsortitle {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 25px;
   text-align: center;
   padding: 30px;
+  font-family: "Hammersmith One", serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 /* Sponsor Image */
@@ -70,18 +70,18 @@
 .sponsor-image {
   /* display: block; */
   padding: 20px;
-  width: 100%; 
-  height: 100%; 
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: 10px;
-   mix-blend-mode: multiply;
-  
+  mix-blend-mode: multiply;
+  border: #14b8a6 5px solid;
 }
 
 /* 🔹 Responsive Adjustments */
 @media (max-width: 768px) {
   .gridcontainer {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
   }
   .book {

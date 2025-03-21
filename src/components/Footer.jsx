@@ -21,9 +21,9 @@ const developers = [
     linkedin: "https://www.linkedin.com/in/vimalesh-c-t/",
   },
   {
-    name:"Viswanathan P",
-    img:"/images/viswa.jpg",
-    linkedin:"https://www.linkedin.com/in/drummerviswa"
+    name: "Viswanathan P",
+    img: "/images/viswa.jpg",
+    linkedin: "https://www.linkedin.com/in/drummerviswa/",
   }
 ];
 
@@ -34,7 +34,7 @@ export default function Footer() {
         {/* Left Section */}
         <div className="footer-left flex flex-col gap-10">
           <h2 className="footer-logo-text">MATHRIX</h2>
-          <p className="footer-description">
+          <p className="footer-description dmsans">
             Explore the world of mathematics and technology with us. Join our
             events, workshops, and competitions to unlock your potential.
           </p>
@@ -43,7 +43,7 @@ export default function Footer() {
         {/* Center Links */}
         <div className="footer-center">
           <h3 className="footer-heading">Quick Links</h3>
-          <ul className="footer-links">
+          <ul className="footer-links dmsans">
             <li>
               <Link href="/events">Events</Link>
             </li>
@@ -76,7 +76,7 @@ export default function Footer() {
 
           {/* ✅ Developer Section Directly Below Social Icons */}
           <div className="developer-corner">
-            <p className="developer-title">Developed by TechMathrix Team</p>
+            <p className="developer-title dmsans">Developed by TechMathrix Team</p>
             <div className="developer-corner-avatars">
               {developers.map((dev, index) => (
                 <div key={index} className="developer-avatar">
@@ -98,7 +98,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="footer-bottom">
+      <div className="footer-bottom dmsans">
         <p>© 2025 Mathrix. All Rights Reserved.</p>
       </div>
     </footer>

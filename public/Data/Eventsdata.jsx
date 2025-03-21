@@ -19,7 +19,7 @@ const eventData = [
   {
     id: 2,
     name: 'Pseudo2Code',
-    img: '/events/pseudocode.jpeg',
+    img: '/events/pseudo2code.webp',
     type: 'Technical',
     location: 'LH6',
     time: '10:00 AM',
@@ -130,7 +130,7 @@ const eventData = [
   {
     id: 9,
     name: 'Breaking Math (Quiz)',
-    img: '/events/Numerix nexus .png',
+    img: '/events/BreakingMath.webp',
     type: 'Math',
     time: '10:00 AM',
     location: 'Ramanujan Hall (DOM)',
@@ -179,7 +179,7 @@ const eventData = [
   {
     id: 13,
     name: 'Conundrum Carnival (Potpourri)',
-    img: '/images/inf.gif',
+    img: '/events/Carnival.webp',
     type: 'Math',
     time: '1:45 PM',
     location: 'Ramanujam Hall',
@@ -193,7 +193,7 @@ const eventData = [
       "Judge's decision is final",
     ],
     description:
-      "It is a fun and interactive team event designed to test participants' team spirit, understanding, and collaboration. Through engaging rounds, teams will tackle mathematical questions and challenges that assess their problem-solving skills and synergy.",
+      "A dynamic team challenge where collaboration and problem-solving unlock the path to victory!",
   },
 ]
 

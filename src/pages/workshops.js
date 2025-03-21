@@ -25,48 +25,28 @@ import Image from "next/image";
 //   },
 // ];
 
-const Card = ({ title, copy, button, imageId }) => {
-  const [hovered, setHovered] = useState(false);
-
+const Card = ({ title, copy, imageId }) => {
   return (
-    <div
-      className={`card w-[300px] sm:w-[430px] md:w-[650px] lg:w-[600px] h-[250px] sm:h-[380px] md:h-[400px] rounded-xl ${
-        hovered ? "hovered" : ""
-      }`}
-      // style={{
-      //   backgroundImage: imageId,
-      // }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-    >
-      <div>
-        <Image
-          draggable={false}
-          src={imageId}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover"
-        />
-      </div>
-      <div className="overlay"></div>
-      <div
-        className="content"
-        style={{
-          transform: hovered ? "translateY(0)" : "translateY(20px)",
-          transition: "opacity 0.3s ease-in-out, transform 0.3s ease-in-out",
-        }}
-      >
-        <h2 className="title text-base sm:text-lg md:text-2xl hammersmith">
+    <div className="group relative w-[300px] sm:w-[430px] md:w-[650px] lg:w-[600px] h-[250px] sm:h-[380px] md:h-[400px] rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+      {/* Background Image */}
+      <Image
+        draggable={false}
+        src={imageId}
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        className="object-cover transition-transform duration-300 group-hover:scale-110"
+        alt="Workshop"
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-50 transition-opacity duration-300"></div>
+
+      {/* Content */}
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 opacity-0 translate-y-4">
+        <h2 className="text-base sm:text-lg md:text-2xl font-bold hammersmith">
           {title}
         </h2>
-        {hovered && (
-          <>
-            <p className="copy text-xs sm:text-base md:text-lg dmsans">
-              {copy}
-            </p>
-            {/* <button className="btn text-xs sm:text-base">{button}</button> */}
-          </>
-        )}
+        <p className="text-xs sm:text-base md:text-lg dmsans">{copy}</p>
       </div>
     </div>
   );
@@ -74,17 +54,19 @@ const Card = ({ title, copy, button, imageId }) => {
 
 export default function Intro() {
   return (
-    <div className="container1 min-h-screen w-full h-full flex flex-col items-center px-4 md:px-8">
+    <div className="container1 min-h-screen w-full flex flex-col items-center px-4 md:px-8">
       <MenuBar />
 
-      <div className="flex flex-col text-white text-center md:text-left mt-10 md:mt-30 mb-10 hammersmith">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-teal-500 text-center">
+      <div className="flex flex-col text-white text-center mt-10 mb-10 hammersmith">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-teal-500">
           Workshops
         </h1>
-        <h2 className="text-4xl md:text-6xl font-extrabold">Mathrix&apos;25</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
+          Mathrix&apos;25
+        </h2>
       </div>
 
-      <main className="page-content p-10 flex flex-wrap justify-center items-center gap-6">
+      <main className="p-6 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
         {workshopDatacards.map((card, index) => (
           <Card key={index} {...card} />
         ))}

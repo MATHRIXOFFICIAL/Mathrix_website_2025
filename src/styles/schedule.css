@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 @keyframes floating {
@@ -77,11 +78,12 @@ ul.list-disc li {
   line-height: 1.6;
   font-weight: 500;
 }
- 
+
 .card {
   width: 100%;
   height: 200px;
   perspective: 1000px;
+  z-index: 9999;
 }
 
 .card-inner {
@@ -129,6 +131,7 @@ button {
   z-index: 1000;
 }
 
-.floating-card, .card__content {
+.floating-card,
+.card__content {
   pointer-events: auto !important;
 }

@@ -29,6 +29,7 @@
 - **Breaking Math (Quiz)**
 - **Infinity Adrift (Shipwreck)**
 - **Pi-Rates of the Lost Equation (Treasure Hunt)**
+- **Conundrum Carnival**
 
 📌 [Register Now](https://mathrix.in/events)
 

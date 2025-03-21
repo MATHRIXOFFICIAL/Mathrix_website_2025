@@ -126,13 +126,32 @@ const Section = ({ title, events, classes, reference }) => (
     <h2 className="text-4xl py-8 md:text-5xl font-extrabold underline decoration-secondary-500">
       {title}
     </h2>
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 px-6 max-w-6xl mx-auto mt-8">
-      {events.map((event) => (
-        <EventCard key={event.id} event={event} />
+    <div
+      className={`grid px-6 max-w-6xl mx-auto mt-8 gap-6
+      ${
+        events.length % 2 === 1
+          ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-2 place-items-center"
+          : "grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
+      }`}
+    >
+      {events.map((event, index) => (
+        <div
+          key={event.id}
+          className={`w-full flex justify-center ${
+            events.length % 2 === 1 && index === events.length - 1
+              ? "md:col-span-2"
+              : ""
+          }`}
+        >
+          <div className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+            <EventCard event={event} />
+          </div>
+        </div>
       ))}
     </div>
   </section>
 );
+
 const EventCard = ({ event }) => (
   <div className="card my-16 md:my-2 lg:my-0 w-full min-w-[250px] max-w-[500px] min-h-[200px]">
     <div className="card-inner w-full h-full">
@@ -143,17 +162,18 @@ const EventCard = ({ event }) => (
             src={event.img}
             width={150}
             height={150}
+            priority={true}
             className="w-full md:w-2/5 object-cover min-h-[200px] max-h-[200px]"
             alt={event.name}
           />
-          <div className="p-4 flex flex-col justify-between w-full text-start flex-grow">
-            <h2 className="lg:text-2xl text-sm font-bold text-secondary-500">
+          <div className="p-4 flex flex-col justify-between w-full text-start flex-grow min-w-[250px] max-w-[500px]">
+            <h2 className="lg:text-start text-center lg:text-2xl text-sm font-bold text-secondary-500">
               {event.name}
             </h2>
             <p className="text-sm hidden lg:block indent-5 my-0.5">
               {event.description}
             </p>
-            <div className="flex items-center gap-1 lg:text-sm text-xs text-gray-400">
+            <div className="flex justify-center items-center gap-1 lg:text-sm text-xs text-gray-400">
               <FaLocationDot className="text-secondary-500" />
               <span className="font-semibold text-xs text-nowrap">
                 {event.location}
@@ -170,7 +190,7 @@ const EventCard = ({ event }) => (
           </div>
         </div>
       </div>
-      <div className="card-back flex flex-col text-2xl justify-center min-h-[200px]">
+      <div className="card-back flex flex-col text-2xl justify-center min-w-[250px] max-w-[500px] min-h-[200px] sm:min-h-[200px] max-h-[200px]">
         <h1 className="text-secondary-500 font-bold text-2xl underline">
           Rules
         </h1>

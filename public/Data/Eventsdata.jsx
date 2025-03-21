@@ -19,7 +19,7 @@ const eventData = [
   {
     id: 2,
     name: 'Pseudo2Code',
-    img: '/events/pseudocode.jpeg',
+    img: '/events/pseudo2code.webp',
     type: 'Technical',
     location: 'LH6',
     time: '10:00 AM',
@@ -130,7 +130,7 @@ const eventData = [
   {
     id: 9,
     name: 'Breaking Math (Quiz)',
-    img: '/events/Numerix nexus .png',
+    img: '/events/BreakingMath.webp',
     type: 'Math',
     time: '10:00 AM',
     location: 'Ramanujan Hall (DOM)',

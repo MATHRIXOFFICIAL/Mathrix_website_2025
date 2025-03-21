@@ -179,7 +179,7 @@ const eventData = [
   {
     id: 13,
     name: 'Conundrum Carnival (Potpourri)',
-    img: '/events/Pirates of the Lost Equation.jpeg',
+    img: '/images/inf.gif',
     type: 'Math',
     time: '1:45 PM',
     location: 'Ramanujam Hall',

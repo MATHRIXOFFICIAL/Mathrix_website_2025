@@ -6,7 +6,7 @@ const eventData = [
     name: 'SQL Heist',
     img: '/events/SQL_Heist.jpeg',
     type: 'Technical',
-    location: 'Dept.of Mathematics Lab',
+    location: 'RCC Lab',
     teamSize: '1-2',
     time: '10:00 AM',
     rules: [
@@ -21,7 +21,7 @@ const eventData = [
     name: 'Pseudo2Code',
     img: '/events/pseudocode.jpeg',
     type: 'Technical',
-    location: 'LH6',
+    location: 'Dept of Mathematics Lab',
     time: '10:00 AM',
     teamSize: '1-2',
     rules: [
@@ -48,7 +48,7 @@ const eventData = [
   },
   {
     id: 4,
-    name: 'Art Attack',
+    name: 'Ellam design la irukku',
     img: '/events/Art Attack.jpeg',
     type: 'Non Technical',
     time: '10:00 AM',
@@ -65,12 +65,12 @@ const eventData = [
   },
   {
     id: 5,
-    name: 'Paper Presentation',
+    name: 'Thought Exchange',
     img: '/events/paperpresentation.png',
     type: 'Non Technical',
-    location: 'Dr. Natesan Hall (RCC)',
+    location: 'Vivek Auditorium',
     teamSize: '2',
-    time: '2:30 PM',
+    time: '2:00 PM',
     rules: [
       'Submit abstract before event day.',
       'Time limit: 10 mins presentation + 5 mins Q&A.',
@@ -84,8 +84,8 @@ const eventData = [
     name: 'Mystery Mansion',
     img: '/events/mysterymansion.jpeg',
     type: 'Non Technical',
-    time: '10:00 AM',
-    location: 'LH 1',
+    time: '2:00 AM',
+    location: 'LH 1 and EG Hall 49', 
     teamSize: '1-3',
     rules: [
       'Solve puzzles to escape the mansion.',
@@ -100,7 +100,7 @@ const eventData = [
     name: 'Wordviz',
     img: '/events/wordviz.jpeg',
     type: 'Non Technical',
-    time: '10:00 AM',
+    time: '1:30 AM',
     location: 'LH 2',
     teamSize: '1-2',
     rules: [
@@ -133,7 +133,7 @@ const eventData = [
     img: '/events/Numerix nexus .png',
     type: 'Math',
     time: '10:00 AM',
-    location: 'Ramanujan Hall (DOM)',
+    location: 'DH-30 (DOM)',
     teamSize: '2-4',
     rules: [
       'Quiz format with multiple rounds.',
@@ -165,7 +165,7 @@ const eventData = [
     name: 'Pi-Rates of the Lost Equation \n (Treasure Hunt)',
     img: '/events/Pirates of the Lost Equation.jpeg',
     type: 'Math',
-    time: '1:45 PM',
+    time: '10:00 AM',
     location: 'LH 48',
     teamSize: '2-4',
     rules: [

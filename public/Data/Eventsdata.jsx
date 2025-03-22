@@ -73,11 +73,11 @@ const eventData = [
     time: '2:00 PM',
     rules: [
       'Submit abstract before event day.',
-      'Time limit: 10 mins presentation + 5 mins Q&A.',
+      'Time limit: 5 mins presentation + 2 mins Q&A.',
       'Judge’s decision is final.',
     ],
     description:
-      'Showcase your research and innovative ideas! Present your paper in front of an expert panel.',
+      'This team-based event challenges participants to select a topic from a provided list and present their research in an engaging, informative way. The event fosters teamwork, critical thinking, and effective communication while encouraging exploration across the fields.',
   },
   {
     id: 6,
@@ -109,7 +109,7 @@ const eventData = [
       'Time limit: 5 mins per round.',
     ],
     description:
-      'A fun wordplay challenge that tests your vocabulary, creativity, and storytelling skills!',
+      "An engaging and fun event where participants decode visual puzzles, word arrangements ,and abstract clues to uncover hidden words, proverbs, phrases, and idioms.",
   },
   {
     id: 8,
@@ -141,7 +141,7 @@ const eventData = [
       'No external help allowed.',
     ],
     description:
-      'A battle of wits and math knowledge! Compete in a thrilling quiz to prove your numerical supremacy.',
+      'Breaking Math is an engaging mathematical quiz designed to test participants’problem-solving skills and mathematical expertise. This event provides a unique platform for participants to showcase their knowledge and analytical abilities.',
   },
   {
     id: 11,

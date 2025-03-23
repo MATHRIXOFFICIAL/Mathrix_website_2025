@@ -30,6 +30,23 @@ const SponsorMathrix = () => {
       sponsortype: 'Prize Partner',
       name: 'Viral',
     },
+
+    {
+      image: '/SponsorImage/gp.png',
+      sponsortype: 'Branding Sponsor',
+      name: 'Viral',
+    },
+    {
+      image: '/SponsorImage/inc.jpg',
+      sponsortype: 'Event Sponsor',
+      name: 'Viral',
+    },
+
+    {
+      image: '/SponsorImage/ap.jpeg',
+      sponsortype: 'Memento Sponsor',
+      name: 'Viral',
+    },
   ]
 
   return (

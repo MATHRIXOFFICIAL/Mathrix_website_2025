@@ -67,7 +67,7 @@ const eventData = [
     id: 5,
     name: 'Thought Exchange',
     img: '/events/paperpresentation.png',
-    type: 'Non Technical',
+    type: 'Technical',
     location: 'Vivek Auditorium',
     teamSize: '2',
     time: '2:00 PM',
@@ -77,7 +77,7 @@ const eventData = [
       'Judge’s decision is final.',
     ],
     description:
-      'This team-based event challenges participants to select a topic from a provided list and present their research in an engaging, informative way. The event fosters teamwork, critical thinking, and effective communication while encouraging exploration across the fields.',
+      'A team-based event where participants research and present a chosen topic, fostering teamwork, critical thinking, and communication.',
   },
   {
     id: 6,
@@ -85,7 +85,7 @@ const eventData = [
     img: '/events/mysterymansion.jpeg',
     type: 'Non Technical',
     time: '2:00 AM',
-    location: 'LH 1 and EG Hall 49', 
+    location: 'LH 1 and EG Hall 49',
     teamSize: '1-3',
     rules: [
       'Solve puzzles to escape the mansion.',
@@ -109,7 +109,7 @@ const eventData = [
       'Time limit: 5 mins per round.',
     ],
     description:
-      "An engaging and fun event where participants decode visual puzzles, word arrangements ,and abstract clues to uncover hidden words, proverbs, phrases, and idioms.",
+      'An engaging and fun event where participants decode visual puzzles, word arrangements ,and abstract clues to uncover hidden words, proverbs, phrases, and idioms.',
   },
   {
     id: 8,
@@ -141,7 +141,7 @@ const eventData = [
       'No external help allowed.',
     ],
     description:
-      'Breaking Math is an engaging mathematical quiz designed to test participants’problem-solving skills and mathematical expertise. This event provides a unique platform for participants to showcase their knowledge and analytical abilities.',
+      'Breaking Math is a quiz that tests problem-solving skills and mathematical expertise, offering a platform to showcase knowledge and analytical abilities.',
   },
   {
     id: 11,
@@ -187,13 +187,13 @@ const eventData = [
     rules: [
       'It is a team Event',
       'Three Participants per team',
-      'the Event consist of 3 rounds including prelims' ,
+      'the Event consist of 3 rounds including prelims',
       'Usage of any kind of electronic gadgets is strictly prohibited',
       'Further rules will be disclosed on spot',
       "Judge's decision is final",
     ],
     description:
-      "A dynamic team challenge where collaboration and problem-solving unlock the path to victory!",
+      'A dynamic team challenge where collaboration and problem-solving unlock the path to victory!',
   },
 ]
 

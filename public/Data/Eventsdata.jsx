@@ -116,7 +116,7 @@ const eventData = [
     name: 'Through The Lens\n (Online Event)',
     img: '/events/ThroughTheLens.jpeg',
     type: 'Non Technical',
-    time: '14th - 23th March',
+    time: '19th - 25th March',
     location: 'Online',
     teamSize: '2',
     rules: [

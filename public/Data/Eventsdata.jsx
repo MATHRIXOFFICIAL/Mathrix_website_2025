@@ -68,9 +68,9 @@ const eventData = [
     name: 'Thought Exchange',
     img: '/events/paperpresentation.png',
     type: 'Technical',
-    location: 'Vivek Auditorium',
+    location: 'Natesan Seminar hall RCC ', 
     teamSize: '2',
-    time: '2:00 PM',
+    time: '1:00 PM',
     rules: [
       'Submit abstract before event day.',
       'Time limit: 5 mins presentation + 2 mins Q&A.',
@@ -84,7 +84,7 @@ const eventData = [
     name: 'Mystery Mansion',
     img: '/events/mysterymansion.jpeg',
     type: 'Non Technical',
-    time: '2:00 AM',
+    time: '10:00 AM',
     location: 'LH 1 and EG Hall 49',
     teamSize: '1-3',
     rules: [
@@ -100,7 +100,7 @@ const eventData = [
     name: 'Wordviz',
     img: '/events/wordviz.jpeg',
     type: 'Non Technical',
-    time: '1:30 AM',
+    time: '10:00 AM',
     location: 'LH 2',
     teamSize: '1-2',
     rules: [

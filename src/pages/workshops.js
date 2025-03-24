@@ -54,23 +54,27 @@ const Card = ({ title, copy, imageId }) => {
 
 export default function Intro() {
   return (
-    <div className="container1 min-h-screen w-full flex flex-col items-center px-4 md:px-8">
+    <div className='container1 min-h-screen w-full flex flex-col items-center px-4 md:px-8'>
       <MenuBar />
 
-      <div className="flex flex-col text-white text-center mt-10 mb-10 hammersmith">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-teal-500">
+      <div className='flex flex-col text-white text-center mt-10 mb-10 hammersmith'>
+        <h1 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-teal-500'>
           Workshops
         </h1>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
+        <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold'>
           Mathrix&apos;25
         </h2>
+
+        <h1 className='text-2xl mt-4 sm:text-3xl md:text-4xl lg:text-5xl font-extrabold '>
+          ( Workshops Date : 15th March 2025 ) 
+        </h1>
       </div>
 
-      <main className="p-6 flex flex-wrap justify-center items-center gap-4 sm:gap-6">
+      <main className='p-6 flex flex-wrap justify-center items-center gap-4 sm:gap-6'>
         {workshopDatacards.map((card, index) => (
           <Card key={index} {...card} />
         ))}
       </main>
     </div>
-  );
+  )
 }

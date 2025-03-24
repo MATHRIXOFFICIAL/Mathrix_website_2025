@@ -41,7 +41,7 @@ export const Events = [
     name: 'Ellam Design La Irukku (Designing)',
     date: '28th MARCH',
     time: '10:00 AM - 12:00 PM',
-    venue: ' Dept Lab (Main)',
+    venue: ' Dept Lab (Mini)',
     iconBg: '#33ffb8', // Unique color
     points: 'Conducted by Developers Community',
   },

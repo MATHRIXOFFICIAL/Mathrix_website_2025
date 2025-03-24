@@ -61,15 +61,15 @@ body {
 }
 
 .vertical-timeline-element-content:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
   background: rgba(255, 255, 255, 0.15);
 }
 
 .custom-date {
-  color: #00eaff !important;
-  font-size: 18px !important;
+  color: #3fddb8 !important;
+  font-size: 24px !important;
   font-weight: bold;
-  text-shadow: 0 1px 3px rgba(0, 255, 255, 0.6);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 ul.list-disc li {

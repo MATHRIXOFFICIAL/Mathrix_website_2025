@@ -1,23 +1,161 @@
+import { time } from "framer-motion";
+
 export const Events = [
   {
-    name: "Workshop",
-    date: "15th MARCH",
-    iconBg: "#33ffd3", // Unique color
-    points: "Conducted by GOOGLE Developer Community & AZURE User Group Chennai.",
-  },
-  {
-    name: "Session",
-    date: "22nd MARCH",
-    iconBg: "#33ffb8", // Unique color
-    points: "Conducted by Developers Community",
-  },
-  {
-    name: "MATHRIX'25",
-    date: "29th MARCH",
-    iconBg: "#33ff8b", // Unique color
+    name: 'Breaking Math (Quiz) (1st round)',
+    date: '28th MARCH',
+    time: '10:00 AM - 12:00 PM',
+    venue: ' Drawing hall 30',
+    iconBg: '#33ffd3', // Unique color
     points:
-      " Mathrix is the annual intercollegiate symposium where mathematics meets technology! Hosted by the Department of Mathematics, College of Engineering Guindy, Anna University.",
+      'Conducted by GOOGLE Developer Community & AZURE User Group Chennai.',
   },
+  {
+    name: 'Code Mathrix (1st Round)',
+    date: '28th MARCH',
+    time: '10:00 AM - 12:00 PM',
+    venue: ' RCC Lab',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'SQL Heist (1st round)',
+    date: '28th MARCH',
+    time: '10:00 AM - 12:00 PM',
+    venue: ' RCC Lab',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'Pseudo 2 Code (1st Round)',
+    date: '28th MARCH',
+    time: '10:00 AM - 12:00 PM',
+    venue: ' Dept Lab (Main)',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'Ellam Design La Irukku (Designing)',
+    date: '28th MARCH',
+    time: '10:00 AM - 12:00 PM',
+    venue: ' Dept Lab (Main)',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'Pi-rates of the Lost Equation (Treasure Hunt)',
+    date: '28th MARCH',
+    time: '10:00 AM - 12:00 PM',
+    venue: ' LH 48 , Dept',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'Mystery Mansion (1st round)',
+    date: '28th MARCH',
+    time: '10:00 AM - 12:00 PM',
+    venue: ' LH 1',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'WordViz (1st round)',
+    date: '28th MARCH',
+    time: '10:00 AM - 12:00 PM',
+    venue: ' LH 2',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'Infinity Adrift (Shipwreck) ',
+    date: '28th MARCH',
+    time: '11:00 AM - 12:00 PM',
+    venue: ' LH 5',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'SQL Heist (2nd round) ',
+    date: '28th MARCH',
+    time: '1:00 PM - 1:40 PM',
+    venue: ' RCC Lab',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'WordViz (2nd round) ',
+    date: '28th MARCH',
+    time: '1:30 PM - 2:00 PM',
+    venue: ' LH 2',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'Conundrum Carnival (Potpourri) ',
+    date: '28th MARCH',
+    time: '1:45 PM - 4:00 PM',
+    venue: ' Ramanujam Hall',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'Pseudo2Code (2nd Round) ',
+    date: '28th MARCH',
+    time: '1:45 PM - 2:45 PM',
+    venue: ' Dept Lab (Main)',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'Breaking Math (Quiz) (2nd Round) ',
+    date: '28th MARCH',
+    time: '2:00 PM - 3:00 PM',
+    venue: ' Vivek Auditorium',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'Paper Presentation (The Thought Exchange)  ',
+    date: '28th MARCH',
+    time: '2:00 PM - 3:00 PM',
+    venue: ' Dr Natesan Seminar Hall (RCC)',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'Mystery Mansion (2nd round)  ',
+    date: '28th MARCH',
+    time: '2:00 PM - 3:45 PM',
+    venue: ' LH 6 and EG hall 49',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  {
+    name: 'Code Mathrix(2nd Round) ',
+    date: '28th MARCH',
+    time: '2:45 PM - 3:45 PM',
+    venue: ' RCC Lab ',
+    iconBg: '#33ffb8', // Unique color
+    points: 'Conducted by Developers Community',
+  },
+
+  
+
   // {
   //   name: "SQL Heist (1st round)",
   //   date: "10:00 AM - 12:00 PM",
@@ -96,4 +234,4 @@ export const Events = [
   //   iconBg: "#4682B4", // Unique color
   //   points: "Compete with the best in word challenges.",
   // },
-];
+]

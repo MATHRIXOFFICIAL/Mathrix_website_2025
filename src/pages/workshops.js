@@ -27,7 +27,7 @@ import Image from "next/image";
 
 const Card = ({ title, copy, imageId }) => {
   return (
-    <div className="group relative w-[300px] sm:w-[430px] md:w-[650px] lg:w-[600px] h-[250px] sm:h-[380px] md:h-[400px] rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+    <div className="cursor-not-allowed group relative w-[300px] sm:w-[430px] md:w-[650px] lg:w-[600px] h-[250px] sm:h-[380px] md:h-[400px] rounded-xl overflow-hidden transition-transform duration-300 hover:scale-105">
       {/* Background Image */}
       <Image
         draggable={false}
@@ -47,6 +47,14 @@ const Card = ({ title, copy, imageId }) => {
           {title}
         </h2>
         <p className="text-xs sm:text-base md:text-lg dmsans">{copy}</p>
+        {/* on top of the center of card
+          Workshop completed
+        */}
+        <div className="absolute inset-0 bg-black opacity-20 group-hover:opacity-50 transition-opacity duration-300">
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-4 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 opacity-0 translate-y-4 backdrop-filter backdrop-blur-sm mt-4">
+            <h1 className="text-xl font-bold mt-24 text-secondary-500">Completed</h1>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -65,8 +73,8 @@ export default function Intro() {
           Mathrix&apos;25
         </h2>
 
-        <h1 className='text-2xl mt-4 sm:text-3xl md:text-4xl lg:text-5xl font-extrabold '>
-          ( Workshops Date : 15th March 2025 ) 
+        <h1 className='text-xl mt-4 sm:text-xl md:text-xl lg:text-xl font-extrabold '>
+          Workshops Date : <span className="text-secondary-500 underline">15th March 2025</span> 
         </h1>
       </div>
 

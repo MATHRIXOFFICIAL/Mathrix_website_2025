@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../app/globals.css";
-import { FaRegBuilding } from 'react-icons/fa'
-import { IoTime } from 'react-icons/io5'
+import { FaRegBuilding } from "react-icons/fa";
+import { IoTime } from "react-icons/io5";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -19,13 +19,13 @@ export default function Intro() {
 
       <section className="max-container">
         <div className="py-16">
-          <div>
-            <h3 className="font-bold uppercase text-5xl md:text-6xl flex justify-center items-center gradient-text hammersmith">
-              Schedule For MATHRIX&apos;25
-            </h3>
-            {/* <h3 className="flex justify-center items-center text-4xl mt-5 font-semibold gradient-text">
-              March 15 , March 22 and March 29
-            </h3> */}
+          <div className="text-center text-white hammersmith">
+            <h1 className="text-5xl md:text-6xl font-extrabold text-teal-500">
+              Schedules
+            </h1>
+            <h2 className="text-4xl md:text-5xl font-extrabold">
+              Mathrix&apos;25
+            </h2>
           </div>
           <div className="mt-12 flex">
             <VerticalTimeline>
@@ -35,23 +35,32 @@ export default function Intro() {
                     key={index}
                     date={exp.date}
                     contentStyle={{
-                      background: '#f3f4f6',
-                      borderBottom: '8px',
-                      borderStyle: 'solid',
+                      background: "#f3f4f6",
+                      borderBottom: "8px",
+                      borderStyle: "solid",
                       borderBottomColor: exp.iconBg,
-                      boxShadow: 'none',
+                      boxShadow: "none",
+                      padding: "1.5rem",
+                      borderRadius: "5px",
+                      marginVertical: "1rem",
                     }}
-                    dateClassName='custom-date hammersmith'
+                    className="mx-8 lg:mx-0 w-64 lg:w-[30rem]"
+                    dateClassName="custom-date hammersmith mx-8 lg:text-lg text-sm font-extrabold"
+                    iconStyle={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
                   >
                     <div>
-                      <h3 className='text-black text-lg font-poppins font-bold hammersmith'>
+                      <h3 className="text-secondary-500 text-lg font-poppins font-bold hammersmith">
                         {exp.name}
                       </h3>
-                      <h3 className='text-black text-xl flex gap-2 items-center mt-2 font-poppins font-bold hammersmith'>
+                      <h3 className="text-black text-md flex gap-2 items-center mt-2 font-poppins font-bold hammersmith">
                         <IoTime />
                         {exp.time}
                       </h3>
-                      <h3 className='text-black text-xl font-poppins font-bold flex gap-2 mt-2 items-center hammersmith'>
+                      <h3 className="text-black text-md font-poppins font-bold flex gap-2 mt-2 items-center hammersmith">
                         <FaRegBuilding />
                         {exp.venue}
                       </h3>
@@ -60,7 +69,7 @@ export default function Intro() {
                       {exp.points}
                     </ul> */}
                   </VerticalTimelineElement>
-                )
+                );
               })}
             </VerticalTimeline>
           </div>
